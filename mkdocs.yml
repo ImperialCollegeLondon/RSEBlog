@@ -1,0 +1,10 @@
+site_name: Reseach Software Engineering Team Blog
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      categories: true
