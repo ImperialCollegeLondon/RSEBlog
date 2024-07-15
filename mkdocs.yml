@@ -5,6 +5,7 @@ repo_url: https://github.com/ImperialCollegeLondon/RSEBlog
 
 theme:
   name: material
+  logo: assets/imperial_bw.svg
 
 plugins:
   - search
