@@ -8,9 +8,15 @@ theme:
 
 plugins:
   - search
+  - tags:
+      tags_file: tags.md 
   - blog:
       blog_dir: .
       categories: true
+      categories_allowed:
+        - Events
+        - Technology
+      categories_toc: true
   - rss:
       match_path: posts/.*
       date_from_meta:
