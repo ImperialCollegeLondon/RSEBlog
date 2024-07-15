@@ -1,4 +1,7 @@
 site_name: Reseach Software Engineering Team Blog
+site_description: The Research Software Engineering Team Blog
+site_url: https://imperialcollegelondon.github.io/RSEBlog/
+repo_url: https://github.com/ImperialCollegeLondon/RSEBlog
 
 theme:
   name: material
@@ -8,3 +11,10 @@ plugins:
   - blog:
       blog_dir: .
       categories: true
+  - rss:
+      match_path: posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags 
