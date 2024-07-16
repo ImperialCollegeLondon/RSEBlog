@@ -1,3 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://imperialcollegelondon.github.io/RSEBlog/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://imperialcollegelondon.github.io/RSEBlog/archive/2024/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://imperialcollegelondon.github.io/RSEBlog/category/events/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://imperialcollegelondon.github.io/RSEBlog/tags/</loc>
+         <lastmod>2024-07-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
