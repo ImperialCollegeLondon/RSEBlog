@@ -2,6 +2,12 @@
 date: 2024-06-26
 authors:
   - cc-a
+categories:
+  - Events
+tags:
+  - GitHub Actions
+  - Environment
+  - Continuous integration
 ---
 
 # Adopting a more rational use of Continuous Integration with GitHub Actions
