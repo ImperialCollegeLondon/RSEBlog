@@ -1,7 +1,11 @@
 ---
 date: 2024-07-22
 authors:
-  - cc-a
+  - AdrianDAlessandro
+  - Benjamin
+  - jamesturner246
+  - SaranjeetKaur
+  - tsmbland
 categories:
   - Events
 tags:
