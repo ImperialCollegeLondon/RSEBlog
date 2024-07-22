@@ -19,6 +19,8 @@ The central RSE team at Imperial recently attended the [PyData London 2024](http
 
 With Artificial Intelligence, in particular Large Language Models (LLMs) being a significant topic in the wider world, it was naturally a very significant topic that was seen across the whole conference. Most talks involved some kind of data processing or Machine Learning workflow. Scratching beneath the surface, we found some additional highlights.
 
+<!-- more -->
+
 ## Open source software and community building
 
 ![Keynote by Tania Allard at PyData London 2024](images/tania_keynote.png)
