@@ -24,7 +24,7 @@ With Artificial Intelligence, in particular Large Language Models (LLMs) being a
 ## Open source software and community building
 
 ![Keynote by Tania Allard at PyData London 2024](images/tania_keynote.png)
-
+<!-- markdownlint-disable-next-line MD036 -->
 *Source: Keynote by Tania Allard at PyData London 2024*
 
 A few talks and sessions at PyData touched on Open Source Software. Tania Allard presented a [keynote](https://www.youtube.com/watch?v=9AuuhrQDv0E&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=29) on “[The art of building and sustaining successful OSS tools and infrastructure](https://speakerdeck.com/trallard/2024-pydata-lndn)” discussing factors that contribute to an open-source project’s success and sustainability. She also touched upon how to empower developers, users, and maintainers in a sustainable way and not at the expense of the open-source ecosystem.
@@ -34,7 +34,7 @@ Cheuk Ting Ho led an interesting unconference style discussion on “How to defi
 There was also another lightning talk presented on [open source science](https://www.opensource.science/), a NumFOCUS initiative connecting scientists and OSS developers.
 
 ![Deb Nicholson’s talk at PyData London 2024](images/deb_open_source_leadership.png)
-
+<!-- markdownlint-disable-next-line MD036 -->
 *Source: Deb Nicholson’s talk at PyData London 2024*
 
 Deb Nicholson presented her thoughts on “[Open source leadership: what to give away and what to bring in](https://www.youtube.com/watch?v=qqZP7OBTL70&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=48)”. She provided guidance on steps that the open source leaders can take to establish a balance between the tasks that they do. For example, maintainers or dedicated resources can be responsible for the project’s admin work. Whereas tasks that require a casual timeline and are more enjoyable might be delegated to volunteers. Work that needs constant attention (say, it demands 30-40 hours of time commitment per week) or involves any security risks, should definitely be done by a dedicated staff. As open source projects evolve, they should look for strategies and action plans to reallocate their work in a sustainable way.
@@ -79,7 +79,7 @@ Particularly exciting to members of the RSE team, Andy Fundinger gave an [overvi
 ## Honourable mentions
 
 ![John Sandall’s talk at PyData London 2024](images/john_talk.png)
-
+<!-- markdownlint-disable-next-line MD036 -->
 *Source: John Sandall’s talk at PyData London 2024*
 
 There were some unique talks that discussed less standard topics in the ML and Data Science space, including a talk by John Sandall about [creating a folk music recommendation system](https://www.youtube.com/watch?v=kifvWDrld2s) using an online sheet music database. The presenter played the violin to demonstrate the types of folk songs the clustering method found in each category, and used LLMs to algorithmically name the clusters.
