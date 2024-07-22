@@ -27,6 +27,10 @@ The work for the dev day was organised into various [issues](https://github.com/
 
 I focused on [improving the consistency of glossaries across languages](https://github.com/r-devel/r-dev-day/issues/8) in the R project on [Weblate](https://translate.rx.studio/projects/r-project/glossary/). The current glossary on Weblate is not consistent across different languages. Hence, I created a combined glossary by reviewing the glossary for each language currently listed on the Weblate. The code snippet for the same and the combined glossary that it generates are available in the [issue comments](https://github.com/r-devel/r-dev-day/issues/8). The next steps for this work is to share the combined glossary with the [translations team leaders](https://contributor.r-project.org/translations/Conventions_for_Languages/#languages-and-contributions) and ask if they would be happy for the glossary to be managed globally, so that the glossary is common across languages and new terms can only be added by the Weblate Admins.  Any translator could suggest a new term by contacting the team leader or posting on the #core-translation channel of the [R Contributors Slack](https://contributor.r-project.org/slack).
 
+![Glossary on Weblate for the R project](images/r_dev_day_2024/weblate.png)
+
+*Source: [Glossary on Weblate for the R project](https://translate.rx.studio/projects/r-project/glossary/)*
+
 ### Other Contributions
 
 Other contributors worked on issues such as [Bug 17713](https://bugs.r-project.org/show_bug.cgi?id=17713) and [Bug 18472](https://bugs.r-project.org/show_bug.cgi?id=18472) on [Bugzilla](https://bugs.r-project.org/), and [improving the `substr()` documentation](https://github.com/r-devel/r-dev-day/issues/5).
@@ -44,6 +48,10 @@ At the event, there was a line of speakers presenting all things R, each offerin
 [Myles Mitchell](https://www.linkedin.com/in/myles-mitchell-4009aa98)’s talk, “[Using R to Teach R](https://myles-mitchell.github.io/satrdays-2024/#1)” focused on how [Jumping Rivers](https://www.jumpingrivers.com/) utilises R in their training stack to deliver both R and non-R [training courses](https://www.jumpingrivers.com/training/). Myles described their standardised approach, which includes a central repository with internal R packages for building courses. He acknowledged some drawbacks, such as a restrictive course structure, but emphasised that the benefits of using this approach, such as reduced duplication and ability to conduct numerous courses, outweigh these limitations.
 
 [Matt Thomas](https://www.linkedin.com/in/matthewgthomas/) in his talk, “Where data meets disaster: A journey through the British Red Cross’s ‘[humaniverse](https://github.com/humaniverse)’” shared about the British Red Cross’s ‘humaniverse‘ project which is a collection of R packages that clean and summarise public UK humanitarian data into a tidy data format, aiding in disaster response and preparedness.
+
+![The humaniverse project](images/r_dev_day_2024/humaniverse.png)
+
+*Source: The [humaniverse](https://github.com/humaniverse) project*
 
 [Charlie Gao](https://github.com/shikokuchuo) presented a talk on how [mirai can be used with Shiny and Plumber applications](https://shikokuchuo.net/satRdays-London-2024/#/title-slide). [Mirai](https://cran.r-project.org/web/packages/mirai/index.html) is a lightweight R package for parallel code execution and distributed computing. He mentioned that mirai is a simple and robust package which is highly performant and is designed for production. It has been added as the first alternative communications backend for the parallel package in base R.
 
