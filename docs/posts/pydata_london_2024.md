@@ -23,7 +23,7 @@ With Artificial Intelligence, in particular Large Language Models (LLMs) being a
 
 ## Open source software and community building
 
-![Keynote by Tania Allard at PyData London 2024](images/tania_keynote.png)
+![Keynote by Tania Allard at PyData London 2024](images/pydata_london_2024/tania_keynote.png)
 <!-- markdownlint-disable-next-line MD036 -->
 *Source: Keynote by Tania Allard at PyData London 2024*
 
@@ -33,7 +33,7 @@ Cheuk Ting Ho led an interesting unconference style discussion on “How to defi
 
 There was also another lightning talk presented on [open source science](https://www.opensource.science/), a NumFOCUS initiative connecting scientists and OSS developers.
 
-![Deb Nicholson’s talk at PyData London 2024](images/deb_open_source_leadership.png)
+![Deb Nicholson’s talk at PyData London 2024](images/pydata_london_2024/deb_open_source_leadership.png)
 <!-- markdownlint-disable-next-line MD036 -->
 *Source: Deb Nicholson’s talk at PyData London 2024*
 
@@ -47,7 +47,7 @@ Due to the nuance and relative complexity of each application, many ML developer
 
 For streaming and aggregation, attendants were spoilt for choice for low-latency data streaming solutions, with [Bytewax](https://bytewax.io/), [Hopsworks](https://www.hopsworks.ai/) and [CSP](https://docs.cloudera.com/csp-ce/latest/index.html) all presenting solutions. These projects provide reusable building blocks for integrating with various real-time (and offline, for model training) data sources, performing efficient and customisable preprocessing, and presenting to the final data sink as aggregated time-synchronised dataframes.
 
-![Dask documentation](images/dask_document.png)
+![Dask documentation](images/pydata_london_2024/dask_document.png)
 
 *Source: [Dask documentation](https://docs.dask.org/en/stable/?wvideo=l9sgt2saht)*
 
@@ -61,7 +61,7 @@ Crafting, calibrating and evaluating models for now-casting and forecasting as w
 
 For Bayesian enthusiasts, a talk as well as a hackathon by two of the core developers of [PyMC5](https://www.pymc.io/welcome.html), Chris Fonnesbeck and Thomas Wiecki, was useful and illustrated how [Bayesian computing](https://www.youtube.com/watch?v=99Rmi_CjqME&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=12) can be facilitated within the Python framework. There are plenty of well-documented Jupyter notebooks on their [website](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html) with [examples](https://www.pymc.io/projects/examples/en/latest/gallery.html) from regression, model selection, factor analysis and reliability statistics.
 
-![Figure obtained from PyMC documentation](images/pymc_plot.png)
+![Figure obtained from PyMC documentation](images/pydata_london_2024/pymc_plot.png)
 
 *Source: Figure obtained from [PyMC documentation](https://www.pymc.io/projects/examples/en/latest/introductory/api_quickstart.html)*
 
@@ -71,14 +71,14 @@ Furthermore, there was a talk on [Synthetic Data in Financial Time Series](https
 
 Putting the 'Py' in PyData, some talks covered more general aspects of the Python ecosystem. In a humorous talk, Quazi Nafiul Islam gave an overview of the [evolutionary saga of Python packaging](https://youtu.be/95pi4210XAM?si=dY-6IBxAfZCuDojD), from the origins of [Eggs](https://python101.pythonlibrary.org/chapter38_eggs.html) to sophisticated modern tools such as [poetry](https://python-poetry.org/), [PDM](https://pdm-project.org/en/latest/) and [UV](https://astral.sh/blog/uv). He discussed some of the particular challenges relevant to Python packaging, including challenges combining source code and binaries, and cross-platform compatibility. We certainly came away appreciating the progress that has been made with modern tools, and feeling lucky to be Python developers now rather than 20 years ago!
 
-![Quazi Nafiul Islam’s talk at PyData London 2024](images/quazi_talk.png)
+![Quazi Nafiul Islam’s talk at PyData London 2024](images/pydata_london_2024/quazi_talk.png)
 *Source: Quazi Nafiul Islam’s talk at PyData London 2024*
 
 Particularly exciting to members of the RSE team, Andy Fundinger gave an [overview of the python package 'hypothesis'](https://youtu.be/NL7-eNPr_oI?si=WI7II3v5mt7Wz-b4), a [package](https://hypothesis.readthedocs.io/en/latest/) that allows developers to automatically generate unit tests for their functions, and automates the parameterisation of these tests to cover a wide range of inputs and edge cases. We're excited to implement this tool in current and future projects to increase the robustness of our software.
 
 ## Honourable mentions
 
-![John Sandall’s talk at PyData London 2024](images/john_talk.png)
+![John Sandall’s talk at PyData London 2024](images/pydata_london_2024/john_talk.png)
 <!-- markdownlint-disable-next-line MD036 -->
 *Source: John Sandall’s talk at PyData London 2024*
 
