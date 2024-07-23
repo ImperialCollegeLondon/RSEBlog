@@ -9,7 +9,9 @@ authors:
 categories:
   - Events
 tags:
-  - Conference
+  - Machine Learning
+  - Open source
+  - PyData
   - Python
 ---
 
