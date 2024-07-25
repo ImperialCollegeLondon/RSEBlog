@@ -9,49 +9,49 @@ tags:
   - Object Oriented Programming (OOP) / Functional Programming
   - Python
   - Financial Data Science
-  - Software Engineering principles 
+  - Software Engineering principles
 ---
 
 # Understanding software design patterns in Financial Data Science
 
 `Design Patterns` were first introduced in a book titled [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
 , published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson and John Vissides, also known as the `Gang of Four`.
-The book lies at the basis of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly occurring problem. 
-One does not just find them in software development, but throughout engineering practice, as 
+The book lies at the basis of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly occurring problem.
+One does not just find them in software development, but throughout engineering practice, as
 their philosophy is to find standard solutions to common problems in a given field, say, the `Schmidt coupling` in mechanical engineering, see also
  [20 Mechanical Principles combined in a Useless Lego Machine" on YouTube [sic!]](https://www.youtube.com/watch?v=M1-YeqGynlw)
 
-There are, also standard designs for car engines, for instance the four-stroke engine, or the shape of a kitchen sink in plumbing and house design. 
-This is exactly what design patterns are for software. Each patter solves a particular problem. 
-Some of these patterns focus in object creation, some of them focus on testing structure, say a system of objects, and some of them focus on how 
+There are, also standard designs for car engines, for instance the four-stroke engine, or the shape of a kitchen sink in plumbing and house design.
+This is exactly what design patterns are for software. Each patter solves a particular problem.
+Some of these patterns focus in object creation, some of them focus on testing structure, say a system of objects, and some of them focus on how
 objects should communicate.
 
-There is only one problem: The book referenced above is about 30 years old and much has changed in the computing world, including the evolution of 
-programming languages. "Move fast and fail fast" mentality of start-ups, or, often occurring in the quantitative analysis world in finance 
-the "focus on the question at hand to answer a particular problem, while caring to a lesser degree, or not at all, on the design of the program". 
-Many Jupyter notebooks that are written in isolation, are a prime example of that. In that sense many data scientists are stuck on the "make it work" 
+There is only one problem: The book referenced above is about 30 years old and much has changed in the computing world, including the evolution of
+programming languages. "Move fast and fail fast" mentality of start-ups, or, often occurring in the quantitative analysis world in finance
+the "focus on the question at hand to answer a particular problem, while caring to a lesser degree, or not at all, on the design of the program".
+Many Jupyter notebooks that are written in isolation, are a prime example of that. In that sense many data scientists are stuck on the "make it work"
 mantra, rather than progressing to "make it right", and, finally, "make it fast". That is not meant as a criticism, as more often than not, we rework, rewrite or re-manufacture entire parts of our code to achieve the "make it work" step and over-designing a piece of code can be seen as an issue in itself, at least at the prototyping, or "prove of concept" stage. For more mature systems this, however, leads to plenty of technical issues, which are difficult or even impossible to maintain.
 
-Also, "Object-Oriented programming" is not a prime style of writing software anymore, and many modern language have solid "functional programming" 
-support natively supported. One of such as language is Python, where functions are considered first-class citizens, i.e. we can pass them around 
+Also, "Object-Oriented programming" is not a prime style of writing software anymore, and many modern language have solid "functional programming"
+support natively supported. One of such as language is Python, where functions are considered first-class citizens, i.e. we can pass them around
 like other objects and even make functions take other functions as input parameters.
-Some of the patterns introduced in the gang of four book are still useful, for example, the "Bridge" or "Command" pattern, while others, say the 
-"Singleton" pattern receive less attention nowadays. Also, we can make use of modern features available in Python 
-(and many other programming languages), for instance higher-order functions, partial function application, data structures 
+Some of the patterns introduced in the gang of four book are still useful, for example, the "Bridge" or "Command" pattern, while others, say the
+"Singleton" pattern receive less attention nowadays. Also, we can make use of modern features available in Python
+(and many other programming languages), for instance higher-order functions, partial function application, data structures
 such as dictionaries and tuples, or patterns relying on Python's structural typing and protocol classes.
 
-This blog is aimed at providing an overview of design patterns that one can make use for in Financial Data Science applications. 
-It does not claim to be exhaustive, and you are encouraged to take a look at the original publication, or even, to take the 
+This blog is aimed at providing an overview of design patterns that one can make use for in Financial Data Science applications.
+It does not claim to be exhaustive, and you are encouraged to take a look at the original publication, or even, to take the
 concepts provided and to implement them in another language of your choice.
 
 
 <!-- more -->
 
 ## A necessary detour: Unified Modeling Language (UML)
-Before we delve into the realm of Design Patterns, we should first describe how we can define objects and properties on the 
-drawing board, similarly as an architect first works on a blueprint before manifesting their ideas in the real world. 
-In software architecture one such a tool is the `Unified Modeling Language (UML)`. It is a standardised visual modeling 
-language used in the field of software engineering to specify, visualize, construct, and document the artifacts of software systems. 
+Before we delve into the realm of Design Patterns, we should first describe how we can define objects and properties on the
+drawing board, similarly as an architect first works on a blueprint before manifesting their ideas in the real world.
+In software architecture one such a tool is the `Unified Modeling Language (UML)`. It is a standardised visual modeling
+language used in the field of software engineering to specify, visualize, construct, and document the artifacts of software systems.
 UML is not a programming language but rather a tool used to help software developers visualise the design of a system.
 
 ### How does UML help us in Software Engineering?
@@ -128,9 +128,9 @@ Context "1" *-- "*" Strategy
 <!-- markdownlint-disable-next-line MD036 -->
 *The rendered result should look similar to the above figure.*
 
-We can now use this our blueprint and engineer software that implements the abstract pattern. 
-As an example we pick pricing a European call and put option using the `Black-Scholes-Merton` equation, which is 
-a common task in pricing a vanilla derivative.  
+We can now use this our blueprint and engineer software that implements the abstract pattern.
+As an example we pick pricing a European call and put option using the `Black-Scholes-Merton` equation, which is
+a common task in pricing a vanilla derivative.
 
 The Black-Scholes equation for a European call option is given by:
 
