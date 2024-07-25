@@ -135,6 +135,7 @@ As an example we pick pricing a European call and put option using the `Black-Sc
 a common task in pricing a vanilla derivative.
 
 The Black-Scholes partial differential equation is given by:
+
 $$
 \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + r S \frac{\partial V}{\partial S} - r V = 0
 $$
@@ -149,13 +150,13 @@ where:
 
 Without proof, the following expressions for the price of a European put and call option solve the Black-Scholes equation:
 
-#### European Call Option Price
+#### European call option price
 
 $$
 c = S_0 N(d_1) - K e^{-rT} N(d_2)
 $$
 
-#### European Put Option Price
+#### European put option price
 
 $$
 p = K e^{-rT} N(-d_2) - S_0 N(-d_1)
