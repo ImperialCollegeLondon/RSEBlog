@@ -1,0 +1,28 @@
+name: CI checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  release:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v3.0.0
+        with:
+          poetry-version: 1.8.3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: poetry
+      - name: Install dependencies
+        run: poetry install
+      - name: Check that documentation builds cleanly with MkDocs
+        run: poetry run mkdocs build -s
