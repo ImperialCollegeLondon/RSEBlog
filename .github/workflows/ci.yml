@@ -24,4 +24,4 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Check that documentation builds cleanly with MkDocs
-        run: poetry run mkdocs build -s
+        run: poetry run mkdocs build --strict
