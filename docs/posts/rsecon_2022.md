@@ -35,9 +35,9 @@ Some recent updates:
 
 A panel discussion led by [Bob Turner](https://rse.shef.ac.uk/contact/bob-turner/) focused on licensing code for better impact. This is always a lively topic of debate among RSEs, but in general the panel were broadly in agreement about most questions. We have distilled the gist into some one-sentence answers:
 
-- *Should RSEs advise a default open-source license and if so, which?* RSEs should decide together with the research team what is the most appropriate license based on the goal of the project, this should be decided before work starts.
-- *Should the organisations grant ownership of code we produce to license as we choose?* The university owning the code is fine as long as I can choose the license. (Top tip – write the license into the grant proposal so the university has already agreed to it)
-- *How can we make good decisions on whether code should remain closed source for commercial reasons?* As RSEs, we all 💙 open-source software, but sometimes sustaining a code is easier through a commercial route, rather than trying to build a community around the code.
+- **Should RSEs advise a default open-source license and if so, which?** RSEs should decide together with the research team what is the most appropriate license based on the goal of the project, this should be decided before work starts.
+- **Should the organisations grant ownership of code we produce to license as we choose?** The university owning the code is fine as long as I can choose the license. (Top tip – write the license into the grant proposal so the university has already agreed to it)
+- **How can we make good decisions on whether code should remain closed source for commercial reasons?** As RSEs, we all 💙 open-source software, but sometimes sustaining a code is easier through a commercial route, rather than trying to build a community around the code.
 
 ### Debugging GitHub actions locally
 
