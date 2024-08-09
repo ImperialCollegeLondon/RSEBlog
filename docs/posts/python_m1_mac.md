@@ -3,7 +3,7 @@ date: 2024-04-20
 authors:
   - AdrianDAlessandro
 categories:
-  - Software
+  - Technology
 tags:
   - Apple
   - ARM
