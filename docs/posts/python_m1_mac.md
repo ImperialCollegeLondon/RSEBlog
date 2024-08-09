@@ -1,7 +1,7 @@
 ---
 date: 2024-04-20
 authors:
-  - cc-a
+  - AdrianDAlessandro
 categories:
   - Software
 tags:
@@ -19,6 +19,8 @@ tags:
 ## Apple Silicon Python Setup
 
 I recently received a new MacBook Pro for work. Great! The only catch is that Apple discontinued their Intel-based line of MacBook Pros in 2021 and their new line of laptops use the Apple silicon M-series coprocessors. This might not seem like a problem at first, but the Apple silicon processors use ARM-architecture instead of Intel’s x86 architecture. For Python development, this is a potential problem because not all Python packages are installable for ARM architectures.
+
+<!-- more -->
 
 There is a possibly simple solution, in May 2022 Anaconda released a distribution supporting Apple silicon. However, a few years ago I chose to move away from using Anaconda to manage my Python virtual environments in favour of a more lightweight solution that I have more control over.
 
