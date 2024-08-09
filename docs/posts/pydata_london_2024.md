@@ -63,7 +63,7 @@ Crafting, calibrating and evaluating models for now-casting and forecasting as w
 
 For Bayesian enthusiasts, a talk as well as a hackathon by two of the core developers of [PyMC5](https://www.pymc.io/welcome.html), Chris Fonnesbeck and Thomas Wiecki, was useful and illustrated how [Bayesian computing](https://www.youtube.com/watch?v=99Rmi_CjqME&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=12) can be facilitated within the Python framework. There are plenty of well-documented Jupyter notebooks on their [website](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html) with [examples](https://www.pymc.io/projects/examples/en/latest/gallery.html) from regression, model selection, factor analysis and reliability statistics.
 
-![Figure obtained from PyMC documentation](images/pydata_london_2024/pymc_plot.png){: style="height:400px;width:auto"}
+![Figure obtained from PyMC documentation](images/pydata_london_2024/pymc_plot.png){: style="height:300px;width:auto"}
 <!-- markdownlint-disable-next-line MD036 -->
 *Source: Figure obtained from [PyMC documentation](https://www.pymc.io/projects/examples/en/latest/introductory/api_quickstart.html)*
 
