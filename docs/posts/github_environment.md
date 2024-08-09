@@ -13,7 +13,7 @@ tags:
 # Adopting a more rational use of Continuous Integration with GitHub Actions
 
 In the Imperial RSE Team we make extensive use of [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) (CI) with
-[GitHub Actions](https://docs.github.com/en/Actions). We use CI to ensure our projects build and are correct across a range of
+[GitHub Actions](https://docs.github.com/en/actions). We use CI to ensure our projects build and are correct across a range of
 scenarios (OS, python version, dependency version, etc.). Widely accepted wisdom is that
 it is best practice to catch issues early via frequent and thorough CI rather than to
 catch them later. This must however be set against the monetary and environment cost of
