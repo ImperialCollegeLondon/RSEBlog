@@ -28,3 +28,5 @@ plugins:
       categories:
         - categories
         - tags
+markdown_extensions: 
+  - attr_list
