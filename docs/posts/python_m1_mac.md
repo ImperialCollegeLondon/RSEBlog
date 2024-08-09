@@ -203,6 +203,7 @@ fi
 
 This will mean every time you open a new x86 terminal, the Homebrew shell environment will be configured, and the `PYENV_VERSION_SUFFIX` envirtonment variable will be set. This should mean seamless installation of anything with Homebrew and `pyenv`.
 
+<!-- markdownlint-disable-next-line MD026 -->
 ### Install an x86 version of Python!
 
 This is as simple as entering an x86 shell with the `x86` alias and installing the desired Python version. First, check what versions of Python you have installed, it should look something like this:
