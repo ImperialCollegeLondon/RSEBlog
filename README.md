@@ -6,6 +6,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 
 - Make sure you have [poetry](https://python-poetry.org/docs/#installation) installed.
 - Clone the repository locally (`git clone https://github.com/ImperialCollegeLondon/RSEBlog.git`).
+- Add dependencies `poetry install`
 - Create a `.md` file for your blog in the `docs/posts` folder and add the blog content to it.
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`).
