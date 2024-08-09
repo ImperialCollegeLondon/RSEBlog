@@ -6,6 +6,10 @@ repo_url: https://github.com/ImperialCollegeLondon/RSEBlog
 theme:
   name: material
   logo: assets/imperial_bw.svg
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
 
 extra_css:
   - stylesheets/extra.css
@@ -28,3 +32,13 @@ plugins:
       categories:
         - categories
         - tags
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
