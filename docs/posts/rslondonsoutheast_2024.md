@@ -13,7 +13,7 @@ authors:
   - cc-a
   - dc2917
 categories:
-  - EventS
+  - Events
 tags:
   - RSE
   - RSE Community
