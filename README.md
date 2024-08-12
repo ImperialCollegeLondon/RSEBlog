@@ -16,7 +16,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`):
 
-```{
+```zsh
 ---
 date: 2024-07-22
 authors:
@@ -32,10 +32,10 @@ tags:
   - tag_b
   - tag_c
 ---
-
-}```
+```
 
 Note: If authors are not already listed in `docs/.authors.yml`, please add them. Similarly, any mew `categories` should be listed under `categories_allowed` in `mkdocs.yml`.
+
 - Add any new authors to `docs/.authors.yml`.
 - After the introduction paragraph of the blog, include `<!-- more -->`. This will render a shorter version of the blog on the landing page with a `Continue reading...` link.
 - Preview the blog locally using `mkdocs serve`.
