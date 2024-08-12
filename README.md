@@ -33,7 +33,7 @@ tags:
   - tag_c
 ---
 
-# Blog title 
+# Blog title
 
 Introduction
 
