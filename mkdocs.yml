@@ -29,6 +29,6 @@ plugins:
         - categories
         - tags
   - caption:
-      additional_identifier: []  
+      additional_identifier: []
 markdown_extensions:
   - md_in_html
