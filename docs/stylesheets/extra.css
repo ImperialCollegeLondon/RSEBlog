@@ -1,3 +1,7 @@
 :root {
     --md-primary-fg-color:        #0000CD;
   }
+.md-content__inner img {
+  box-sizing: content-box;
+  width: 80%;
+}
