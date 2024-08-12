@@ -17,7 +17,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`) at the start of the blog:
 
-```zsh
+```markdown
 ---
 date: 2024-07-22
 authors:
