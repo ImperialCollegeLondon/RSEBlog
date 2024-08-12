@@ -35,7 +35,7 @@ tags:
 
 # Blog title 
 
-Introduction paragraph for the blog.
+Introduction
 
 ```
 
