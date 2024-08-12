@@ -9,6 +9,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 - Make sure you have [poetry](https://python-poetry.org/docs/#installation) installed.
 - Clone the repository locally (`git clone https://github.com/ImperialCollegeLondon/RSEBlog.git`).
 - Install dependencies `poetry install`
+- Install the pre-commit hooks `poetry run pre-commit install`
 
 ### Adding your blog
 
