@@ -48,10 +48,24 @@ Note: If authors are not already listed in `docs/.authors.yml`, please add them.
 
 ### Additional features
 
-The global settings of this repository allows you to include additional features to your blog posts like admonitions which are useful for including side content without interrupting the flow of your blog.
+The global settings of this repository (based on the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme) allows you to include additional features to your blog posts like admonitions, code blocks, etc.
+
+#### Admonitions
+
+Admonitions or call-outs are useful for including side content without interrupting the flow of your blog.
 
 - To include an admonition block, start with `!!!` followed by a single [type qualifier](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) keyword.
 - Add the block content on the next line, indented by four spaces.
 - The type qualifier (in titlecase) is the default title of the block. You can add a customised title after the type qualifier in quoted string.
 
-Refer the [Admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to know more about the different types of admonitions and possible customisations.
+Refer the [admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to know more about the different types of admonitions and possible customisations.
+
+#### Code blocks
+
+- To add code blocks, begin and end the block with lines containing three backticks.
+- To add syntax highlighting to those blocks, add the language shortcode directly after the opening block.
+- To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode.
+
+Refer the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
+
+#### Customise images
