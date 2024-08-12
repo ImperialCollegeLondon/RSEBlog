@@ -1,5 +1,5 @@
 ---
-date: 2021-11-22
+date: 2024-08-12
 authors:
   - SaranjeetKaur
   - AdrianDAlessandro
@@ -13,11 +13,11 @@ authors:
   - cc-a
   - dc2917
 categories:
-  - Technology
+  - Event
 tags:
-  - Django
-  - Python
-  - Technology
+  - RSE
+  - RSE Community
+  - RSLondon
 ---
 
 # The RSLondonSouthEast 2024 Workshop
@@ -27,6 +27,8 @@ tags:
 
 Celebrating its fifth year, [the RSLondonSouthEast workshop returned] to Imperial College London's South Kensington campus. [Imperial's RSE team] was well represented, with the event drawing RSEs and academics from across London and the South East of England. This year's conference was co-chaired by [Jeremy Cohen], from Imperial, and [Ilektra Christidi] from UCL.
 
+<!-- more -->
+
 [RSLondonSouthEast] (formerly RSLondon) is a [regional RSE Community], seeking to bring together those involved in developing and using research software. This includes anyone who writes code as part of their research, as well as those in formal Research Software Engineering roles. It aims to provide opportunities for networking and technical training through workshops, while also advocating for improved career models for RSEs. The workshop continues to provide a welcoming and valuable platform for anyone involved in research software.
 
 [the RSLondonSouthEast workshop returned]: https://rslondon.ac.uk/rslondonsoutheast2024
@@ -35,8 +37,6 @@ Celebrating its fifth year, [the RSLondonSouthEast workshop returned] to Imperia
 [Ilektra Christidi]: https://profiles.ucl.ac.uk/8151
 [RSLondonSouthEast]: https://rslondon.ac.uk
 [regional RSE Community]: https://society-rse.org/community/regional-groups/
-
-<!-- more -->
 
 ## Keynote Presentation
 
