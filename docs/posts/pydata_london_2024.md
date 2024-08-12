@@ -27,7 +27,6 @@ With Artificial Intelligence, in particular Large Language Models (LLMs) being a
 
 ![Source: Keynote by Tania Allard at PyData London 2024](images/pydata_london_2024/tania_keynote.png)
 
-
 A few talks and sessions at PyData touched on Open Source Software. Tania Allard presented a [keynote](https://www.youtube.com/watch?v=9AuuhrQDv0E&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=29) on “[The art of building and sustaining successful OSS tools and infrastructure](https://speakerdeck.com/trallard/2024-pydata-lndn)” discussing factors that contribute to an open-source project’s success and sustainability. She also touched upon how to empower developers, users, and maintainers in a sustainable way and not at the expense of the open-source ecosystem.
 
 Cheuk Ting Ho led an interesting unconference style discussion on “How to define open source AI”. The participants of the unconference were asked to walk through the open source initiative’s conversation [explaining the concept of data information](https://discuss.opensource.org/t/explaining-the-concept-of-data-information/401) and they were asked to put their opinions and questions on it. It was a healthy discussion on Data Information as defined in the draft [Open Source AI](https://opensource.org/blog/open-source-ai-definition-weekly-update-june-17) definition: “Sufficiently detailed information about the data used to train the system, so that a skilled person can recreate a substantially equivalent system using the same or similar data.”
@@ -35,7 +34,6 @@ Cheuk Ting Ho led an interesting unconference style discussion on “How to defi
 There was also another lightning talk presented on [open source science](https://www.opensource.science/), a NumFOCUS initiative connecting scientists and OSS developers.
 
 ![Source: Deb Nicholson’s talk at PyData London 2024](images/pydata_london_2024/deb_open_source_leadership.png)
-
 
 Deb Nicholson presented her thoughts on “[Open source leadership: what to give away and what to bring in](https://www.youtube.com/watch?v=qqZP7OBTL70&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=48)”. She provided guidance on steps that the open source leaders can take to establish a balance between the tasks that they do. For example, maintainers or dedicated resources can be responsible for the project’s admin work. Whereas tasks that require a casual timeline and are more enjoyable might be delegated to volunteers. Work that needs constant attention (say, it demands 30-40 hours of time commitment per week) or involves any security risks, should definitely be done by a dedicated staff. As open source projects evolve, they should look for strategies and action plans to reallocate their work in a sustainable way.
 
@@ -49,7 +47,6 @@ For streaming and aggregation, attendants were spoilt for choice for low-latency
 
 ![Source: [Dask documentation](https://docs.dask.org/en/stable/?wvideo=l9sgt2saht)](images/pydata_london_2024/dask_document.png)
 
-
 As for parallel processing and analysis, the [DASK](https://www.dask.org/) team showcased their data table processing library; similar to Pandas, that is able to offload processing to multiple nodes on, say, a HPC cluster. With significant performance improvements and a dataframe-like interface, combined with the real-time streaming options above, real-time data analysis is seemingly easier than ever.
 
 ## Revolutionising financial time-series forecasting
@@ -61,7 +58,6 @@ Crafting, calibrating and evaluating models for now-casting and forecasting as w
 For Bayesian enthusiasts, a talk as well as a hackathon by two of the core developers of [PyMC5](https://www.pymc.io/welcome.html), Chris Fonnesbeck and Thomas Wiecki, was useful and illustrated how [Bayesian computing](https://www.youtube.com/watch?v=99Rmi_CjqME&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=12) can be facilitated within the Python framework. There are plenty of well-documented Jupyter notebooks on their [website](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html) with [examples](https://www.pymc.io/projects/examples/en/latest/gallery.html) from regression, model selection, factor analysis and reliability statistics.
 
 ![Source: Figure obtained from [PyMC documentation](https://www.pymc.io/projects/examples/en/latest/introductory/api_quickstart.html)](images/pydata_london_2024/pymc_plot.png)
-
 
 Furthermore, there was a talk on [Synthetic Data in Financial Time Series](https://www.youtube.com/watch?v=VXbRP2a0ABg&list=PLGVZCDnMOq0rrhYTNedKKuJ9716fEaAdK&index=39), where [Generative Adversarial Networks (GANs)](https://en.wikipedia.org/wiki/Generative_adversarial_network) were applied to model the evolution of the time series of prices for two types of crude oil. Various commonly used open-access financial datasets were mentioned. This was followed by introducing a machine-learning architecture based on TensorFlow that spans generator, discriminator, encoder and recovery networks. The network was then trained on generating statistically accurate time-series which is useful when data availability, privacy or ethical considerations are a concern.
 
