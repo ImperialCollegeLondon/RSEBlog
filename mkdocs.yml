@@ -28,8 +28,7 @@ plugins:
       categories:
         - categories
         - tags
-  # - caption:
-  #     additional_identifier: []  
+
 markdown_extensions:
   - 'markdown_captions'
   - 'attr_list'
