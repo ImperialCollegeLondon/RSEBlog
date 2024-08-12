@@ -34,6 +34,7 @@ tags:
 ---
 
 }```
+
 Note: If authors are not already listed in `docs/.authors.yml`, please add them. Similarly, any mew `categories` should be listed under `categories_allowed` in `mkdocs.yml`.
 - Add any new authors to `docs/.authors.yml`.
 - After the introduction paragraph of the blog, include `<!-- more -->`. This will render a shorter version of the blog on the landing page with a `Continue reading...` link.
