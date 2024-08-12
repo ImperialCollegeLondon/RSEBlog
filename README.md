@@ -45,3 +45,13 @@ Note: If authors are not already listed in `docs/.authors.yml`, please add them.
 - After the introduction paragraph of the blog, include `<!-- more -->`. This will render a shorter version of the blog on the landing page with a `Continue reading` link.
 - Preview the blog locally using `mkdocs serve`.
 - Open a `Pull Request` and request for a review.
+
+### Additional features
+
+The global settings of this repository allows you to include additional features to your blog posts like admonitions which are useful for including side content without interrupting the flow of your blog.
+
+- To include an admonition block, start with `!!!` followed by a single [type qualifier](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) keyword.
+- Add the block content on the next line, indented by four spaces.
+- The type qualifier (in titlecase) is the default title of the block. You can add a customised title after the type qualifier in quoted string.
+
+Refer the [Admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to know more about the different types of admonitions and possible customisations.
