@@ -94,10 +94,7 @@ Questions were submitted to the panel using the web-based Slido tool, with quest
 [Advanced Research Computing Centre]: https://www.ucl.ac.uk/advanced-research-computing/
 [UKRI-EPSRC]: https://www.ukri.org/councils/epsrc/
 [Society of Research Software Engineering]: https://society-rse.org/
-<!-- markdown-link-check-disable -->
-<!-- turing.ac.uk has some sort of DDOS protection -->
 [Martin O'Reilly]: https://www.turing.ac.uk/people/researchers/martin-oreilly
-<!-- <!-- markdown-link-check-enable -->
 
 ## RSE Team Presentations
 
