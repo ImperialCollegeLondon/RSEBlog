@@ -53,7 +53,6 @@ Despite the RSE movement's successes, she emphasised that there was still work t
 
 ![Marion Weinzierl presenting her keynote at RSLondonSouthEast 2024](https://hackmd.io/_uploads/ryha0N5YA.jpg)
 
-
 ## Regional Research Software Communities
 
 This workshop is a great example of the value that can be provided by [regional RSE groups](https://society-rse.org/community/regional-groups/). It gave the attendees the opportunity to connect with RSEs from other universities in the region. Below we've highlighted some people we met.

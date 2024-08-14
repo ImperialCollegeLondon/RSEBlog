@@ -73,7 +73,6 @@ Particularly exciting to members of the RSE team, Andy Fundinger gave an [overvi
 
 ![John Sandall’s talk at PyData London 2024](images/pydata_london_2024/john_talk.png)
 
-
 There were some unique talks that discussed less standard topics in the ML and Data Science space, including a talk by John Sandall about [creating a folk music recommendation system](https://www.youtube.com/watch?v=kifvWDrld2s) using an online sheet music database. The presenter played the violin to demonstrate the types of folk songs the clustering method found in each category, and used LLMs to algorithmically name the clusters.
 
 There was another talk by Wojciech Matejuk with a focus on music, however this time the goal was to take a static MIDI file of a piece of classical piano music and [play it back expressively](https://www.youtube.com/watch?v=nUmLL61OYCc) using a model trained on professional piano players.
