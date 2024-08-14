@@ -1,7 +1,7 @@
 ---
 date: 2021-11-22
 authors:
-  - dalonsoa
+  - dandavies
 categories:
   - Technology
 tags:
@@ -12,7 +12,7 @@ tags:
 
 # Fine Tuning Django User Permissions
 
-*Dr Dan Davies from the Imperial RSE team has written a how-to guide based on his experiences with the Django web framework for python. Read the full blog post [here](https://dandavies99.github.io/posts/2021/11/django-permissions/).*
+*Read the full blog post [in Dan Davies's Blog](https://dandavies99.github.io/posts/2021/11/django-permissions/).*
 
 The RSE team is involved in an increasing number of software projects requiring a front-end web app. The main advantage to having a web app element for your research software is that users can interact with it via a web browser, without having to install anything to their local machine. There are of course downsides, including the need to deploy, host and maintain software somewhere suitable. However, there is a wide range of popular frameworks to make the whole process a lot smoother.
 
