@@ -55,6 +55,7 @@ plugins:
         enable: true
         caption_prefix: 'Source:'
 
+
 markdown_extensions:
   - admonition
   - pymdownx.details
