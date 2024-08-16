@@ -4,7 +4,6 @@ authors:
   - AdrianDAlessandro
   - alexdewar
   - cc-a
-  - dc2917
   - TinyMarsh
 categories:
   - Events
