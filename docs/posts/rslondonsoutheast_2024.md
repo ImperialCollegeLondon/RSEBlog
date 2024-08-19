@@ -22,8 +22,8 @@ tags:
 
 # The RSLondonSouthEast 2024 Workshop
 
-![](images/rslondonsoutheast_2024/ukri_logo.png){: style="height:50%;width:50%"{< mdl-disable "<!-- markdownlint-disable MD045 -->" >}
-![](images/rslondonsoutheast_2024/rse_logo.png){: style="height:10%;width:10%"{< mdl-disable "<!-- markdownlint-disable MD045 -->" >}
+![The UKRI-EPSRC Logo](images/rslondonsoutheast_2024/ukri_logo.png){: .no-caption style="width:79%" } ![The UKRSE Society Logo](images/rslondonsoutheast_2024/rse_logo.png){: .no-caption style="width:19%;"}
+{: style="display:block;margin:auto;width:60%"}
 
 Celebrating its fifth year, [the RSLondonSouthEast workshop] returned to Imperial College London's South Kensington campus. [Imperial's RSE team] was well represented, with the event drawing RSEs and academics from across London and the South East of England. This year's conference was co-chaired by [Jeremy Cohen], from Imperial, and [Ilektra Christidi] from UCL.
 
