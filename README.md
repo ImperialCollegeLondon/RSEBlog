@@ -60,6 +60,7 @@ Admonitions or call-outs are useful for including side content without interrupt
 
 ```` markdown
 !!! note "Placeholder for title"
+
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
