@@ -67,10 +67,11 @@ Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-mate
 - To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode. Here is an example of a Python code block that adds three numbers:
 
 ``` markdown
-
 ``` py title="add_numbers.py"
 def add(x, y, z):
   return
+```
+<!-- markdownlint-disable-next-line MD040 -->
 ```
 
 Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
