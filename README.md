@@ -66,6 +66,6 @@ Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-mate
 - To add syntax highlighting to those blocks, add the language shortcode directly after the opening block.
 - To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode.
 
-Refer the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
+Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
 
 #### Customise images
