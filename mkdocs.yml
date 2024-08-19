@@ -50,10 +50,7 @@ plugins:
       categories:
         - categories
         - tags
-  - caption:
-      figure:
-        enable: true
-        caption_prefix: 'Source:'
+  - caption
 
 
 markdown_extensions:
