@@ -108,7 +108,7 @@ Saranjeet Kaur Bhogal [presented] and [poster] on the [R Development Guide], whi
 
 In the last [talk][talk_diego] of the day, [Diego Alonso Álvarez], head of Imperial's RSE Team, presented data on the financial and environmental impact of excessive continuous integration usage. He offers easy low hanging solutions, and encourages us to be more selective on which GitHub action runners are used -- for example by removing redundant OS and software permutations. These ideas, as well as others discussed in a [previous post], were the result of a critical exercise performed by the whole RSE Team, and the different measures, such as reducing the number of jobs or package caching, have been rolled out to most of the GitHub repositories managed by the Team. [The associated poster] received the Audience’s Best Poster award!
 
-*Sign up to the [RSLondon mailing  list] and [Join the Society of RSE]*
+*Sign up to the [RSLondon mailing list] and [Join the Society of RSE]*
 
 [Imperial College RSE Team]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/research-software-engineering/about-the-team/
 [The HPC and RSE Experience Programme]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/about/jobs/hpc_rse_experience_programme/
@@ -124,5 +124,5 @@ In the last [talk][talk_diego] of the day, [Diego Alonso Álvarez], head of Impe
 [Diego Alonso Álvarez]: https://profiles.imperial.ac.uk/d.alonso-alvarez
 [previous post]: https://imperialcollegelondon.github.io/RSEBlog/2024/06/26/adopting-a-more-rational-use-of-continuous-integration-with-github-actions/
 [The associated poster]: https://zenodo.org/records/12754189
-[RSLondon mailing  list]: https://rslondon.ac.uk/mailing-list
+[RSLondon mailing list]: https://rslondon.ac.uk/mailing-list
 [Join the Society of RSE]: https://society-rse.org/join-us/
