@@ -8,7 +8,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 
 - Make sure you have [poetry](https://python-poetry.org/docs/#installation) installed.
 - Clone the repository locally (`git clone https://github.com/ImperialCollegeLondon/RSEBlog.git`).
-- Install dependencies `poetry install`
+- Install the dependencies `poetry install`
 - Install the pre-commit hooks `poetry run pre-commit install`
 
 ### Adding your blog
@@ -43,6 +43,7 @@ Introduction
 Note: If authors are not already listed in `docs/.authors.yml`, please add them. Similarly, any new `categories` should be listed under `categories_allowed` in `mkdocs.yml`. We should endeavour to keep categories very broad.
 
 - After the introduction paragraph of the blog, include `<!-- more -->`. This will render a shorter version of the blog on the landing page with a `Continue reading` link.
+- Equations and mathematical symbols can be rendered using Latex markup, either in a block enclosed by `$$` delimiters, or inline with `$` delimiters.
 - Preview the blog locally using `mkdocs serve`.
 - Open a `Pull Request` and request for a review.
 
