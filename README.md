@@ -17,7 +17,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`) at the start of the blog:
 
-```markdown
+``` markdown
 ---
 date: 2024-07-22
 authors:
@@ -64,7 +64,14 @@ Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-mate
 
 - To add code blocks, begin and end the block with lines containing three backticks.
 - To add syntax highlighting to those blocks, add the language shortcode directly after the opening block. Refer to the [list of available lexers](https://pygments.org/docs/lexers/) to find the shortcode for a given language.
-- To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode.
+- To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode. Here is an example of a Python code block that adds three numbers:
+
+``` markdown
+
+``` py title="add_numbers.py"
+def add(x, y, z):
+  return
+```
 
 Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
 
