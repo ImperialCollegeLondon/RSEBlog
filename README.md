@@ -84,3 +84,5 @@ def add(x, y, z):
 Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
 
 #### Customise images
+
+Refer to the [Attribute Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists) in the Material Theme docs and [MkDocs Caption](https://tobiasah.github.io/mkdocs-caption/) for customising images in your blog post.
