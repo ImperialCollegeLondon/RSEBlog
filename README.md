@@ -58,7 +58,7 @@ Admonitions or call-outs are useful for including side content without interrupt
 - Add the block content on the next line, indented by four spaces.
 - The type qualifier (in titlecase) is the default title of the block. You can add a customised title after the type qualifier in quoted string.
 
-Refer the [admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to know more about the different types of admonitions and possible customisations.
+Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) to learn more about the different types of admonitions and possible customisations.
 
 #### Code blocks
 
