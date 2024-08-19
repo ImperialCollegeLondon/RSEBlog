@@ -50,6 +50,9 @@ plugins:
       categories:
         - categories
         - tags
+  - caption
+
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -60,3 +63,4 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - attr_list
