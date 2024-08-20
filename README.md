@@ -72,7 +72,10 @@ Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-mate
 
 - To add code blocks, begin and end the block with lines containing three backticks.
 - To add syntax highlighting to those blocks, add the language shortcode directly after the opening block. Refer to the [list of available lexers](https://pygments.org/docs/lexers/) to find the shortcode for a given language.
-- To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode. Here is an example of a Python code block that adds three numbers:
+- To add a custom title to the code block use `title="<custom title>"` option directly after the language shortcode.
+
+Here is an example of a Python code block that adds three numbers:
+
 
 ```` markdown
 ``` py title="add_numbers.py"
