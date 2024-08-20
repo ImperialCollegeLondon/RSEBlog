@@ -43,7 +43,6 @@ Introduction
 Note: If authors are not already listed in `docs/.authors.yml`, please add them. Similarly, any new `categories` should be listed under `categories_allowed` in `mkdocs.yml`. We should endeavour to keep categories very broad.
 
 - After the introduction paragraph of the blog, include `<!-- more -->`. This will render a shorter version of the blog on the landing page with a `Continue reading` link.
-- Equations and mathematical symbols can be rendered using Latex markup, either in a block enclosed by `$$` delimiters, or inline with `$` delimiters.
 - Preview the blog locally using `mkdocs serve`.
 - Open a `Pull Request` and request for a review.
 
@@ -89,3 +88,10 @@ Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-mate
 #### Customising images
 
 Refer to the [Attribute Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists) in the Material Theme docs and [MkDocs Caption](https://tobiasah.github.io/mkdocs-caption/) for customising images in your blog post.
+
+#### Rendering mathematical expressions
+
+You can use LaTeX markup to render mathematical expressions, enabled via [Mathjax](https://www.mathjax.org) and [mdx_math](https://github.com/mitya57/python-markdown-math).
+
+- To write an inline expression, wrap the expression in `$` delimiters.
+- To write the expression as a block, delimit the expression with either `$$` or as a [code block](#code-blocks) with the `math` shortcode.
