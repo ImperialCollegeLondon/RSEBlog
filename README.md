@@ -8,7 +8,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 
 - Make sure you have [poetry](https://python-poetry.org/docs/#installation) installed.
 - Clone the repository locally (`git clone https://github.com/ImperialCollegeLondon/RSEBlog.git`).
-- Install dependencies `poetry install`
+- Install the dependencies `poetry install`
 - Install the pre-commit hooks `poetry run pre-commit install`
 
 ### Adding your blog
@@ -88,3 +88,10 @@ Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-mate
 #### Customising images
 
 Refer to the [Attribute Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists) in the Material Theme docs and [MkDocs Caption](https://tobiasah.github.io/mkdocs-caption/) for customising images in your blog post.
+
+#### Rendering mathematical expressions
+
+You can use LaTeX markup to render mathematical expressions, enabled via [Mathjax](https://www.mathjax.org) and [mdx_math](https://github.com/mitya57/python-markdown-math).
+
+- To write an inline expression, wrap the expression in `$` delimiters.
+- To write the expression as a block, delimit the expression with either `$$` or as a [code block](#code-blocks) with the `math` shortcode.

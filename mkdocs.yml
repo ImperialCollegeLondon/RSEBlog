@@ -32,6 +32,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+
 plugins:
   - search
   - tags:
@@ -55,6 +58,8 @@ plugins:
 
 markdown_extensions:
   - admonition
+  - mdx_math:
+      enable_dollar_delimiter: True
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight:
