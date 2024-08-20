@@ -1,7 +1,11 @@
 ---
 date: 2022-09-27
 authors:
-  - dalonsoa
+  - AdrianDAlessandro
+  - alexdewar
+  - cc-a
+  - dandavies
+  - TinyMarsh
 categories:
   - Events
 tags:
