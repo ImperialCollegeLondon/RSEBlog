@@ -76,7 +76,6 @@ Refer to the [admonitions documentation](https://squidfunk.github.io/mkdocs-mate
 
 Here is an example of a Python code block that adds three numbers:
 
-
 ```` markdown
 ``` py title="add_numbers.py"
 def add(x, y, z):
