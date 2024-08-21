@@ -53,8 +53,9 @@ plugins:
       categories:
         - categories
         - tags
-  - caption
-
+  - caption:
+      figure:
+        ignore_classes: ['no-caption']
 
 markdown_extensions:
   - admonition

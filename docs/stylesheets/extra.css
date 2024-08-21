@@ -3,5 +3,7 @@
   }
 .md-content__inner img {
   box-sizing: content-box;
-  max-width: 80%;
+}
+.md-typeset figure img {
+  max-width: 80%
 }

@@ -85,13 +85,46 @@ def add(x, y, z):
 
 Refer to the [code blocks documentation](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) for more customisations.
 
-#### Customising images
-
-Refer to the [Attribute Lists](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists) in the Material Theme docs and [MkDocs Caption](https://tobiasah.github.io/mkdocs-caption/) for customising images in your blog post.
-
 #### Rendering mathematical expressions
 
 You can use LaTeX markup to render mathematical expressions, enabled via [Mathjax](https://www.mathjax.org) and [mdx_math](https://github.com/mitya57/python-markdown-math).
 
 - To write an inline expression, wrap the expression in `$` delimiters.
 - To write the expression as a block, delimit the expression with either `$$` or as a [code block](#code-blocks) with the `math` shortcode.
+
+#### Customising images
+
+Images are converted to figures automatically using the [MkDocs Caption](https://tobiasah.github.io/mkdocs-caption/) extension. This extension enables putting captions on tables and lists as well as images, however the most basic behaviour uses the image's Alt Text field to populate the figure caption.
+
+For Example:
+
+``` markdown
+![figure caption](img.jpg)
+```
+
+Will be converted to:
+
+```html
+<p>
+<figure id=_figure-1>
+    <img alt="figure caption" src="img.jpg" />
+    <figcaption>Figure 1: figure caption</figcaption>
+</figure>
+</p>
+```
+
+Which will render as a centred image with the caption "Figure 1: figure caption" and maintain the alt text of the image as "figure caption". MkDocs Caption also provides other ways to define the Figure caption, which allows you to have different text for the figure and alt text.
+
+If you do not want the image to have a caption, you can label it as a `no-caption` class using an [Attribute List](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists). Reminder, [it is important to include Alt Text](https://www.imperial.ac.uk/staff/tools-and-reference/web-guide/training-and-events/materials/accessibility/images/) for accessibility reasons.
+
+``` markdown
+![figure caption](img.jpg) {: .no-caption }
+```
+
+You can then add to the attribute list to further specify the style. A useful one is for centering images:
+
+``` markdown
+![figure caption](img.jpg) {: .no-caption style="display:block;margin:auto;"}
+```
+
+More information on image style options can be found in the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#styling_with_css).
