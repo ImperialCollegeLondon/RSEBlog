@@ -113,7 +113,7 @@ Will be converted to:
 </p>
 ```
 
-Which will render as a centred image with the caption "Figure 1: figure caption".
+Which will render as a centred image with the caption "Figure 1: figure caption" and maintain the alt text of the image as "figure caption". MkDocs Caption also provides other ways to define the Figure caption, which allows you to have different text for the figure and alt text.
 
 If you do not want the image to have a caption, you can label it as a `no-caption` class using an [Attribute List](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists). Reminder, [it is important to include Alt Text](https://www.imperial.ac.uk/staff/tools-and-reference/web-guide/training-and-events/materials/accessibility/images/) for accessibility reasons.
 
