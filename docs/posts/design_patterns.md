@@ -56,7 +56,6 @@ For instance, use case diagrams are used for requirements gathering, class diagr
 UML also helps break down complex systems into manageable components that can be designed, analysed, and implemented independently.
 Another key strength of UML is its platform independence, allowing the same modeling language to be used across various platforms, ensuring consistency and flexibility in software design.
 
-
 ### Types of UML diagrams
 
 UML includes several types of diagrams, each serving different purposes:
@@ -68,7 +67,6 @@ UML includes several types of diagrams, each serving different purposes:
 - Interaction diagrams (part of behavioral diagrams, e.g., sequence diagrams, communication diagrams): Focus specifically on the flow of control and data among the elements in the system.
 
 Thus, UML helps developers engineer and translate their ideas into functional software, serving as a component of modern software engineering practice.
-
 
 ### UML within Jupyter notebooks
 
@@ -143,13 +141,13 @@ where:
 
 Without proof, the following expressions for the price of a European put and call option solve the Black-Scholes equation:
 
-#### European call option price
+### European call option price
 
 $$
 c = S_0 N(d_1) - K e^{-rT} N(d_2)
 $$
 
-#### European put option price
+### European put option price
 
 $$
 p = K e^{-rT} N(-d_2) - S_0 N(-d_1)
@@ -175,7 +173,6 @@ $$
 - \( N(\cdot) \) is the cumulative distribution function of the standard normal distribution.
 
 Let us now implement these pricing equations in a Python program using the `Strategy Pattern`.
-
 
 ## Implementation of the Strategy Pattern
 
