@@ -15,43 +15,43 @@ tags:
 # Applying the Strategy Pattern: UML diagrams and Python for European option pricing
 
 `Design Patterns` were first introduced in the seminal book [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
-, published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides—collectively known as the "Gang of Four." 
-This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly occurring problem in software design. 
+, published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides—collectively known as the "Gang of Four."
+This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly occurring problem in software design.
 These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
 
-Just as there are standard designs for car engines, like the four-stroke engine, design patterns serve a similar purpose in software. 
-Each pattern provides a tried-and-true solution to a specific problem. 
+Just as there are standard designs for car engines, like the four-stroke engine, design patterns serve a similar purpose in software.
+Each pattern provides a tried-and-true solution to a specific problem.
 Some of these patterns focus on object creation, others on structuring systems of objects, and still others on how objects should communicate.
 
-The book referenced above is approximately 30 years old, and much has changed in the computing world since its publication, including the evolution of programming languages and development methodologies. 
-The 'move fast and fail fast' mentality of start-ups, and the approach often seen in quantitative analysis within finance—where the focus is primarily on solving the immediate problem rather than on 
-the design of the program—are prime examples of this shift. Many Jupyter notebooks, written in isolation, exemplify this mindset, where data scientists are often stuck on the 
+The book referenced above is approximately 30 years old, and much has changed in the computing world since its publication, including the evolution of programming languages and development methodologies.
+The 'move fast and fail fast' mentality of start-ups, and the approach often seen in quantitative analysis within finance—where the focus is primarily on solving the immediate problem rather than on
+the design of the program—are prime examples of this shift. Many Jupyter notebooks, written in isolation, exemplify this mindset, where data scientists are often stuck on the
 'make it work' mantra, without progressing to 'make it right,' and ultimately, 'make it fast.'
 
-This is not meant as a criticism, as the 'make it work' step often involves significant reworking, rewriting, or even re-manufacturing of entire parts of the code. 
-Over-engineering at the prototyping or proof-of-concept stage can be counterproductive. However, as systems mature, this approach can lead to technical debt, 
+This is not meant as a criticism, as the 'make it work' step often involves significant reworking, rewriting, or even re-manufacturing of entire parts of the code.
+Over-engineering at the prototyping or proof-of-concept stage can be counterproductive. However, as systems mature, this approach can lead to technical debt,
 resulting in code that is difficult, if not impossible, to maintain.
 
-In the following, we first describe UML diagrams and how they are used to plan and visualise software architecture before coding itself. 
+In the following, we first describe UML diagrams and how they are used to plan and visualise software architecture before coding itself.
 This is then followed by the definition and implementation of the Strategy pattern. We conclude this article with a practical implementation of pricing European options, ending with a discussion.
 
 <!-- more -->
 
 ## Unified Modeling Language (UML)
 
-Before diving into Design Patterns, it is important to first consider how we can define objects and their properties at the conceptual level, much like an architect creates a 
-blueprint before actual construction begins. 
-In software architecture, a key tool for this purpose is the Unified Modeling Language (UML). 
-UML is a standardised modeling language widely used in software engineering to specify, visualise, construct, and document the components of software systems. 
+Before diving into Design Patterns, it is important to first consider how we can define objects and their properties at the conceptual level, much like an architect creates a
+blueprint before actual construction begins.
+In software architecture, a key tool for this purpose is the Unified Modeling Language (UML).
+UML is a standardised modeling language widely used in software engineering to specify, visualise, construct, and document the components of software systems.
 While it is not a programming language, UML serves as a helpful tool for helping software developers plan and design software architecture.
 
 ### How does UML help us in Software Engineering?
 
-UML includes a set of graphic notation techniques to create visual representations of Object-Oriented software systems. 
-UML simplifies communication, making it easier for both development teams and external stakeholders to understand the software design. 
+UML includes a set of graphic notation techniques to create visual representations of Object-Oriented software systems.
+UML simplifies communication, making it easier for both development teams and external stakeholders to understand the software design.
 This is particularly helpful in collaborative settings.
 
-Moreover, UML diagrams play an important role in the documentation process, offering various types of diagrams tailored to different aspects of the software. 
+Moreover, UML diagrams play an important role in the documentation process, offering various types of diagrams tailored to different aspects of the software.
 For instance, use case diagrams are used for requirements gathering, class diagrams depict static structure, and sequence diagrams detail interactions within the system.
 UML also helps break down complex systems into manageable components that can be designed, analysed, and implemented independently.
 Another key strength of UML is its platform independence, allowing the same modeling language to be used across various platforms, ensuring consistency and flexibility in software design.
@@ -72,7 +72,7 @@ Thus, UML helps developers engineer and translate their ideas into functional so
 
 ### UML within Jupyter notebooks
 
-From within Jupyter notebooks, one can design UML diagrams using a library called `iplantuml`, that we can install via pip upon invoking `pip install iplantuml`. 
+From within Jupyter notebooks, one can design UML diagrams using a library called `iplantuml`, that we can install via pip upon invoking `pip install iplantuml`.
 
 ```python
 try:
@@ -357,6 +357,6 @@ To illustrate the practical use of this design pattern, we provided a concrete e
 By applying the Strategy Pattern, we achieved a clear separation of concerns, resulting in loosely coupled and maintainable code.
 These are key characteristics of high-quality software engineering, ensuring that the code is easier to understand, extend, and modify.
 
-While this article focused on the Strategy design pattern and its practical application in Financial Data Science, specifically in pricing European options, 
-it did not aim to cover other design patterns. I encourage the reader to explore the original publication for a more comprehensive understanding or to experiment with 
+While this article focused on the Strategy design pattern and its practical application in Financial Data Science, specifically in pricing European options,
+it did not aim to cover other design patterns. I encourage the reader to explore the original publication for a more comprehensive understanding or to experiment with
 implementing the discussed problem in a programming language of your choice.
