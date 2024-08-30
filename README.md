@@ -14,6 +14,7 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 ### Adding your blog
 
 - Create a `.md` file for your blog in the `docs/posts` folder and add the blog content to it.
+- The file name should start with the publication date without spaces or dashes to facilitate finding the posts in the file structure, for example `20240722_post_name.md` for the example below.
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`) at the start of the blog:
 
