@@ -13,7 +13,9 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 
 ### Adding your blog
 
-- Create a `.md` file for your blog in the `docs/posts` folder and add the blog content to it.
+<!-- markdown-link-check-disable-next-line -->
+- Create a `.md` file for your blog in the `docs/posts` folder and add the blog content to it. You can use the [HackMD template for writing (collaborative) blogs](https://hackmd.io/@SaranjeetKaur/H17O8IzcC/edit). To edit the template, please sign in with, say, GitHub. This template is inspired from [Collaborations Workshop 2024](https://www.software.ac.uk/workshop/collaborations-workshop-2024-cw24)'s blog template. The template is a guide to writing the blog and may be modified as suitable. After the blog is done, please make sure to clean up any non-essential template contents except for the actual blog contents.
+- The file name should start with the publication date without spaces or dashes to facilitate finding the posts in the file structure, for example `20240722_post_name.md` for the example below.
 - Any images should be added to `docs/posts/images/<blog-name>`.
 - Add all the relevant metadata (for example, `date`, `authors`, `categories`, `tags`) at the start of the blog:
 
