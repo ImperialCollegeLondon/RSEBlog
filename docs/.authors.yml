@@ -26,7 +26,7 @@ authors:
   EmChem79:
     name: Emily K Lumley
     description: Research Engagement Lead
-    avatar:
+    avatar: https://www.imperial.ac.uk/media/images/portrait-2000x3000/Emily-Lumley2.jpg
   jamesturner246:
     name: James Turner
     description: Senior Research Software Engineer
@@ -34,7 +34,7 @@ authors:
   jcohen02:
     name: Jeremy Cohen
     description: Advanced Research Fellow, Director of RSEng Strategy
-    avatar:
+    avatar: https://profiles.imperial.ac.uk/jeremy.cohen/photo
   TinyMarsh:
     name: Ryan Smith
     description: Senior Research Software Engineer
