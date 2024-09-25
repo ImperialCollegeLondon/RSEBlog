@@ -2,6 +2,9 @@
     "ignorePatterns": [
       {
         "pattern": "^https?://www.turing.ac.uk/.*"
+      },
+      {
+        "pattern": "^https?://sqlitebrowser.org/.*"
       }
     ],
     "timeout": "180s",
