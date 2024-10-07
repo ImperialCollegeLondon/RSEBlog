@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.9,<4"
 mkdocs = "^1.6.0"
 mkdocs-material = "^9.5.27"
 pre-commit = "^3.7.1"
