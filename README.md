@@ -23,9 +23,9 @@ This repository contains blogs by the [central RSE team](https://www.imperial.ac
 ---
 date: 2024-07-22
 authors:
-  - github_username_author_a
-  - github_username_author_b
-  - github_username_author_c
+  - GitHub_username_author_a
+  - GitHub_username_author_b
+  - GitHub_username_author_c
 categories:
   - category_a
   - category_b
@@ -106,7 +106,7 @@ For Example:
 
 Will be converted to:
 
-```html
+```HTML
 <p>
 <figure id=_figure-1>
     <img alt="figure caption" src="img.jpg" />
@@ -123,7 +123,7 @@ If you do not want the image to have a caption, you can label it as a `no-captio
 ![figure caption](img.jpg) {: .no-caption }
 ```
 
-You can then add to the attribute list to further specify the style. A useful one is for centering images:
+You can then add to the attribute list to further specify the style. A useful one is for centring images:
 
 ``` markdown
 ![figure caption](img.jpg) {: .no-caption style="display:block;margin:auto;"}
