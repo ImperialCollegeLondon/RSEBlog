@@ -201,7 +201,7 @@ if [ $(uname -m) = "x86_64" ]; then
 fi
 ```
 
-This will mean every time you open a new x86 terminal, the Homebrew shell environment will be configured, and the `PYENV_VERSION_SUFFIX` envirtonment variable will be set. This should mean seamless installation of anything with Homebrew and `pyenv`.
+This will mean every time you open a new x86 terminal, the Homebrew shell environment will be configured, and the `PYENV_VERSION_SUFFIX` environment variable will be set. This should mean seamless installation of anything with Homebrew and `pyenv`.
 
 <!-- markdownlint-disable-next-line MD026 -->
 ### Install an x86 version of Python!
