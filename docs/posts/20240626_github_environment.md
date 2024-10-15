@@ -57,7 +57,7 @@ The above has wider implications for our development practices:
 We also identified several other key best practices that help reduce our footprint:
 
 - The default timeout for workflows on GitHub hosted runners is 6 hours. This is far larger than it needs to be and in the event of a hanging runner can be very expensive. All jobs should have reduced a timeout set (unfortunately this has to be done on a per-job basis), but especially those on non-Linux runners.
-- Use caching wherever possible. This can be particularly useful for [Python dependencies](https://github.com/actions/setup-python#caching-packages-dependencies) or build artifacts (via ccache).
+- Use caching wherever possible. This can be particularly useful for [Python dependencies](https://github.com/actions/setup-python#caching-packages-dependencies) or build artefacts (via ccache).
 - Consider carefully what OS’s, Python versions, etc. your project actually needs to support and only test against those. Also bear in mind that it may not be necessary to do a full “matrix” of tests e.g. all different OS’s with all different Python versions.
 - Enable manual execution of workflows (via the `workflow_dispatch` trigger) so you can run things as desired. This may be useful to e.g. get early warning of issues before attempting to create a release or to force checks to run against a draft PR.
 
