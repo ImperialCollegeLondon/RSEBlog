@@ -57,7 +57,7 @@ Despite the RSE movement's successes, she emphasised that there was still work t
 
 This workshop is a great example of the value that can be provided by [regional RSE groups](https://society-rse.org/community/regional-groups/). It gave the attendees the opportunity to connect with RSEs from other universities in the region. Below we've highlighted some people we met.
 
-[Sherman Lo] is an RSE at [Queen Mary University of London]. Sherman has an interest in computational statistics and machine larning and facilitates GPU programming using CUDA.
+[Sherman Lo] is an RSE at [Queen Mary University of London]. Sherman has an interest in computational statistics and machine learning and facilitates GPU programming using CUDA.
 
 [Mahmoud Abdelrazek] is a Senior Research Data Consultant at [Advanced Research Computing Centre] [University College of London]. He is interested in building flexible and scalable data pipelines.
 

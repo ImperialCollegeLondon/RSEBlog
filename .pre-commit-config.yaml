@@ -10,7 +10,3 @@ repos:
     hooks:
       - id: markdownlint
         args: ["--disable", "MD013", "MD041", "--"]
-  - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
-    hooks:
-      - id: codespell

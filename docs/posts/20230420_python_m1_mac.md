@@ -38,7 +38,7 @@ The best way to install `pyenv` is through [Homebrew](https://brew.sh). This is 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-This defaults to install it in `/opt/homebrew`. If you are prompted to install Xcode Commandline tools, say yes. You can now install many tools using the `brew` command from Homebrew.
+This defaults to install it in `/opt/homebrew`. If you are prompted to install Xcode command line tools, say yes. You can now install many tools using the `brew` command from Homebrew.
 
 Setup the [recommended build environment](https://github.com/pyenv/pyenv/wiki#suggested-build-environment) for `pyenv`:
 
@@ -201,7 +201,7 @@ if [ $(uname -m) = "x86_64" ]; then
 fi
 ```
 
-This will mean every time you open a new x86 terminal, the Homebrew shell environment will be configured, and the `PYENV_VERSION_SUFFIX` envirtonment variable will be set. This should mean seamless installation of anything with Homebrew and `pyenv`.
+This will mean every time you open a new x86 terminal, the Homebrew shell environment will be configured, and the `PYENV_VERSION_SUFFIX` environment variable will be set. This should mean seamless installation of anything with Homebrew and `pyenv`.
 
 <!-- markdownlint-disable-next-line MD026 -->
 ### Install an x86 version of Python!
