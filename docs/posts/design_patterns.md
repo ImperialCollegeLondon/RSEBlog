@@ -33,7 +33,9 @@ Over-engineering at the prototyping or proof-of-concept stage can be counterprod
 resulting in code that is difficult, if not impossible, to maintain.
 
 In the following, we first describe UML diagrams and how they are used to plan and visualise software architecture before coding itself.
-This is then followed by the definition and implementation of the Strategy pattern. We conclude this article with a practical implementation of pricing European options, ending with a discussion.
+This is then followed by the definition and implementation of the Strategy pattern.
+We conclude this article with a practical implementation of pricing European options and
+introduce a description of the financial contracts as we progress. A discussion then concludes this post.
 
 <!-- more -->
 
@@ -125,7 +127,23 @@ We can now use this our blueprint and engineer software that implements the abst
 As an example we pick pricing a European call and put option using the `Black-Scholes-Merton` equation, which is
 a common task in pricing a vanilla derivative.
 
-The Black-Scholes partial differential equation is given by:
+Right there, a few terms popped up that may need further elaboration. An `option` is a financial contract that
+gives its holder the right, but not the obligation to buy or sell a financial object such as a stock, a commodity, a currency,
+or any other `underlying` for a defined, pre-agreed price. An option enabling to buy something at a later date
+is named a `call option`, whereas an option enabling to sell something at a later date is called a `put option`
+
+The entity buying the option is called the holder of the option. As no buy can be facilitated without a sell, and vice versa,
+we need an entity, say an institution, or any other counterparty issuing the option. This is called the
+writer of the option.
+
+Finally, one can distinguish when the option can be exercised against a counterparty. If this is the case only at the date
+of expiry, such an option is called `European option`. There are many other variation, say when an option can be exercised
+at any time upon purchase or in case of other particularities, but let us not bother with these cases in this tutorial.
+
+Until the 1970ies, there did not exist a published rigorous mathematical framework to determine the fair price of
+a European option. In honour of the Economists who are first attributed to find such a framework, their pricing equation is
+called the `Black-Scholes (Merton)` equation. It is a stochastic differential equation. In particular, the
+Black-Scholes equation is given by:
 
 $$
 \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + r S \frac{\partial V}{\partial S} - r V = 0
