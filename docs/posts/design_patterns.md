@@ -1,5 +1,5 @@
 ---
-date: 2024-08-30
+date: 2024-10-31
 author:
   - HarmonicReflux
 categories:
@@ -12,30 +12,43 @@ tags:
   - Software Engineering principles
 ---
 
-# Applying the Strategy Pattern: UML diagrams and Python for European option pricing
+# An example of a software design pattern for financial software using UML diagrams
 
-`Design Patterns` were first introduced in the seminal book [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
-, published in 1994 by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides—collectively known as the "Gang of Four."
-This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly occurring problem in software design.
-These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
+`Design Patterns` were first introduced in the seminal book [Design Patterns: Elements of Reusable Object-Oriented Software]
+(https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), published in 1994 by #
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides—collectively known as the "Gang of Four."
+This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly 
+occurring problem in software design. These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
 
 Just as there are standard designs for car engines, like the four-stroke engine, design patterns serve a similar purpose in software.
 Each pattern provides a tried-and-true solution to a specific problem.
 Some of these patterns focus on object creation, others on structuring systems of objects, and still others on how objects should communicate.
 
-The book referenced above is approximately 30 years old, and much has changed in the computing world since its publication, including the evolution of programming languages and development methodologies.
-The 'move fast and fail fast' mentality of start-ups, and the approach often seen in quantitative analysis within finance—where the focus is primarily on solving the immediate problem rather than on
-the design of the program—are prime examples of this shift. Many Jupyter notebooks, written in isolation, exemplify this mindset, where data scientists are often stuck on the
-'make it work' mantra, without progressing to 'make it right,' and ultimately, 'make it fast.'
+The book referenced above is approximately 30 years old, and much has changed in the computing world since its publication, 
+including the evolution of programming languages and development methodologies.
+The 'move fast and fail fast' mentality of start-ups, and the approach often seen in quantitative analysis within finance—where the focus 
+is primarily on solving the immediate problem rather than on
+the design of the program—are prime examples of this shift. Many Jupyter notebooks, written in isolation, exemplify this mindset, where data scientists are 
+often stuck on the 'make it work' mantra, without progressing to 'make it right,' and ultimately, 'make it fast.'
 
 This is not meant as a criticism, as the 'make it work' step often involves significant reworking, rewriting, or even re-manufacturing of entire parts of the code.
-Over-engineering at the prototyping or proof-of-concept stage can be counterproductive. However, as systems mature, this approach can lead to technical debt,
-resulting in code that is difficult, if not impossible, to maintain.
+However, as systems mature, this approach can lead to technical debt, resulting in code that is confusingly difficult to maintain.
 
-In the following, we first describe UML diagrams and how they are used to plan and visualise software architecture before coding itself.
-This is then followed by the definition and implementation of the Strategy pattern.
-We conclude this article with a practical implementation of pricing European options and
-introduce a description of the financial contracts as we progress. A discussion then concludes this post.
+This blog post illustrates how the concept of a `Design Pattern` from the early 90ies can be translated to modern day Python. Given the 23 patterns introduced 
+in the referenced books four `Creational Patterns`, seven `Structural Patterns`, and 11 `Behavioural Patterns` we limit our efforts to one specific pattern, 
+namely the `Strategy Pattern` which belongs to the class of Behavioural Patterns. 
+
+What are the ingredients do we need to be aware of to get started then? 
+ - i) As the patterns themselves are abstract in nature, we introduce the reader to their architecture via UML diagrams. UML stands for `Unified Modeling Language` and 
+visualises the way and via what links systems interact with each other. This makes it
+particularly useful to visualise software. You might say - we have barely started and yet are off to a detour? Not really - at least not without ulterior motive. 
+Having fundamental knowledge about UMl diagrams will make it easier to facilitate the transition from the anatomy of the Design Pattern to the actual code, as the 
+UML diagram serves as the blueprint we use to translate the pattern to code.
+ - ii) The definition of the Design Pattern we wish to make use of
+ - iii) Some background of the application we apply the Design Pattern to. The author chose a common topic in finance, namely financial derivatives pricing. The derivative we
+are interested here are European put and call options. Do not worry yet. We will introduce and explain 
+the necessary vocabulary as well as the equations we implement as we go along. 
+
 
 <!-- more -->
 
@@ -50,8 +63,9 @@ While it is not a programming language, UML serves as a helpful tool for helping
 ### How does UML help us in Software Engineering?
 
 UML includes a set of graphic notation techniques to create visual representations of Object-Oriented software systems.
-UML simplifies communication, making it easier for both development teams and external stakeholders to understand the software design.
-This is particularly helpful in collaborative settings.
+UML simplifies communication, making it easier for both development teams and external stakeholders to understand the software design and incentivises 
+forward planning of a structured API, rather than retroactively having to standardise 
+a badly designed API in the future. This is particularly helpful in a collaborative setting.
 
 Moreover, UML diagrams play an important role in the documentation process, offering various types of diagrams tailored to different aspects of the software.
 For instance, use case diagrams are used for requirements gathering, class diagrams depict static structure, and sequence diagrams detail interactions within the system.
@@ -375,3 +389,10 @@ These are key characteristics of high-quality software engineering, ensuring tha
 While this article focused on the Strategy design pattern and its practical application in Financial Data Science, specifically in pricing European options,
 it did not aim to cover other design patterns. I encourage the reader to explore the original publication for a more comprehensive understanding or to experiment with
 implementing the discussed problem in a programming language of your choice.
+
+## Additional material
+In addition to the original Gang of Four book, the author of this article can recommend the YouTube channel of computer scientist `Douglas Schmidt` 
+that features recorded lectures. In particular the 
+[YouTube playlist about Design Patterns in C++]
+(https://www.youtube.com/watch?v=o1SrQ3cJFfg&list=PLZ9NgFYEMxp6p4oC9bP3PZdZ-FAPDeavB&index=2)
+will be useful for an audience interested in software engineering with a compiled programming language.
