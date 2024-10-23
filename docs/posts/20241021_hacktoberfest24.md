@@ -2,6 +2,8 @@
 date: 2024-10-21
 authors:
   - dalonsoa
+  - alexdewar
+  - SaranjeetKaur
 categories:
   - Events
 tags:
@@ -15,11 +17,11 @@ tags:
 
 [Hacktoberfest](https://hacktoberfest.com/) is a month-long annual event that encourages people to contribute to open source throughout October. The motivation of Hacktoberfest is to celebrate all things open source, especially the people that make open source so special.
 
-This year the central RSE team at Imperial, planned two in-person events during Hacktoberfest, on the 1st and the 23rd of October. The events were open to anybody interested in participating in open source software, either coding or with non-code contributions. Everybody was welcome to join the events and bring their own code along for a discussion with the central RSE team members. This included [low code and non-code contributions](https://hacktoberfest.com/participation/#low-or-non-code) - a big chunk of what surrounds good open source software has nothing to do with code!
+This year the central RSE team at Imperial planned two in-person events during Hacktoberfest on the 1st and the 23rd of October. The events were open to anybody interested in participating in open source software, either coding or with non-code contributions. Everybody was welcome to join the events and bring their own code along for a discussion with the central RSE team members. This included [low code and non-code contributions](https://hacktoberfest.com/participation/#low-or-non-code) - a big chunk of what surrounds good open source software has nothing to do with code!
 
 ## First event: 1st of October 2024
 
-The first event took place in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and end up hacking intensely with our own thoughts. Before we could realized, it was already lunch time and, then the wrap up session.
+The first event took place in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and end up hacking intensely with our own thoughts. Before we realised, it was already lunch time and, then the wrap-up session.
 
 ![In person attendees _in the flow_.](images/hacktoberfest24/attendees_day1.jpg){: .no-caption style="display:block;margin:auto;width:69%" }
 
@@ -37,13 +39,13 @@ The following projects were pitched at the start of the event and chosen by the 
 
 The terrestrial water cycle is a highly interconnected system where the movement of water is affected by physical and human processes. Thus, environmental models may become inaccurate if they do not provide a complete picture of the water cycle, missing out on unexpected opportunities and omitting impacts that arise from complex interactions.
 
-[WSIMOD](https://imperialcollegelondon.github.io/wsi/) is a modelling framework written in Python to integrate these different processes. It provides a message passing interface to enable different subsystem models to communicate water flux and water quality information between each other, and self-contained representations of the key parts of the water cycle (rivers, reservoirs, urban and rural hydrological catchments, treatment plants, and pipe networks).
+[WSIMOD](https://imperialcollegelondon.github.io/wsi/) is a modelling framework written in Python to integrate these different processes. It provides a message passing interface to enable different subsystem models to communicate water flux and water quality information between one other, as well as self-contained representations of the key parts of the water cycle (rivers, reservoirs, urban and rural hydrological catchments, treatment plants, and pipe networks).
 
 The main work done for Hacktoberfest was related to [refactoring some bits of code](https://github.com/ImperialCollegeLondon/wsi/pull/106) to improve its modularity.
 
 ### SWMManywhere – Barnaby Dobson​
 
-[SWMManywhere](https://imperialcollegelondon.github.io/SWMManywhere/) is a tool to synthesise urban drainage network models (UDMs) using publicly available data such as street network, DEM, and building footprints, across the globe. It also provides tools for generating SWMM input files and performing simulations for the synthesised UDMs.
+[SWMManywhere](https://imperialcollegelondon.github.io/SWMManywhere/) is a tool to synthesise urban drainage network models (UDMs) using publicly available data such as street networks, DEMs, and building footprints, across the globe. It also provides tools for generating SWMM input files and performing simulations for the synthesised UDMs.
 
 Also only one issue was tackled during the event by our colleague Tom Bland, [setting up Codecov in the repo](https://github.com/ImperialCollegeLondon/SWMManywhere/pull/304), but it brought up a lot of trouble due to a bug in Codecov, apparently. The lessons learnt have been used for other projects, so it was time well spent!
 
@@ -66,7 +68,12 @@ There was a lot of activity in this project, which included:
 
 ### repositoryr – Saranjeet Kaur Bhogal
 
-​(TBC)
+​`repositoryr` is a step by step guide for creating an R package repository. This repository itself is structured as a R package that is installable from GitHub. It showcases how `devtools` can be used in RStudio for package development. It also provides steps to create a website for an R package using `pkgdown`.
+
+The activities completed in this project as a part of Hacktoberfest include:
+
+- [Describing the use of `devtools` in package development](https://github.com/ImperialCollegeLondon/repositoryr/pull/5)
+- [Adding steps to create a website for the package](https://github.com/ImperialCollegeLondon/repositoryr/pull/6)
 
 ## 23rd of October
 
