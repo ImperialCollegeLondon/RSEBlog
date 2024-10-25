@@ -13,9 +13,6 @@ pre-commit = "^3.7.1"
 mkdocs-caption = "^1.2.0"
 python-markdown-math = "^0.8"
 
-[tool.poetry.dev-dependencies]
-pre-commit = "^3.7.1"
-
 [tool.poetry.group.docs.dependencies]
 mkdocs-rss-plugin = "^1.15.0"
 
