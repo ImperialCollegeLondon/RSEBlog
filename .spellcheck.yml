@@ -1,25 +1,19 @@
 matrix:
-  - name: Markdown
-    aspell:
-      lang: en
-      d: en_GB
-    dictionary:
-      wordlists:
-        - .wordlist.txt
-      encoding: utf-8
-    pipeline:
-      # First, remove the sections that you want to ignore (e.g., code blocks, references)
-      - pyspelling.filters.pattern:
-          patterns:
-            - '```[a-zA-Z]+\n[\s\S]*?\n```'  # Ignore fenced code blocks
-            - '## References\n(?:- .*\n)*'   # Ignore the References section
-      # Then, process the cleaned text with the Markdown filter
-      - pyspelling.filters.markdown
-      - pyspelling.filters.html:
-          comments: false
-          ignores:
-            - code
-            - pre
-    sources:
-      - '**/*.md'
-    default_encoding: utf-8
+- name: Markdown
+  aspell:
+    lang: en
+    d: en_GB
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+      comments: false
+      ignores:
+      - code
+      - pre
+  sources:
+  - '**/*.md'
+  default_encoding: utf-8

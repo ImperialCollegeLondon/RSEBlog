@@ -466,9 +466,11 @@ observe whether you can spot any arbitrage opportunities, grated this will be an
 
 ## References
 
+<!-- spell-check-ignore -->
 - Gamma, E., Helm, R., Johnson, R., & Vlissides, J. Design patterns: Elements of reusable object-oriented software. Addison-Wesley, 1994.
 - Shreve, S. Stochastic Calculus for Finance II: Continuous-Time Models. Springer Finance, 2004.
 - Booch, G., Rumbaugh, J. and Jacobson, I. The Unified Modeling Language User Guide. 2nd ed. Addison-Wesley, 2005.
+<!-- end-spell-check-ignore -->
 
 ## Additional material
 
