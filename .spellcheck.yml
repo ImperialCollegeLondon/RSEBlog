@@ -9,6 +9,12 @@ matrix:
     encoding: utf-8
   pipeline:
   - pyspelling.filters.markdown:
+      code_languages:  # specify languages to ignore in code blocks
+        - python
+        - plantuml
+        - zsh
+      ignore_patterns:  # custom pattern to ignore References section
+        - '## References\n(?:- .*\n)*'
   - pyspelling.filters.html:
       comments: false
       ignores:

@@ -41,7 +41,7 @@ namely the `Strategy Pattern` which belongs to the class of Behavioural Patterns
 
 What are the ingredients do we need to be aware of to get started then?
 
-- i) As the patterns themselves are abstract in nature, we introduce the reader to their architecture via UML diagrams. UML stands for `Unified Modeling Language` and visualizes the way and links through which systems interact with each other. This makes it particularly useful to visualize software. You might say - we have barely started and yet are off to a detour? Not really - at least not without ulterior motive. Having fundamental knowledge about UML diagrams will make it easier to facilitate the transition from the anatomy of the Design Pattern to the actual code, as the UML diagram serves as the blueprint we use to translate the pattern to code.
+- i) As the patterns themselves are abstract in nature, we introduce the reader to their architecture via UML diagrams. UML stands for `Unified Modeling Language` and visualises the way and links through which systems interact with each other. This makes it particularly useful to visualise software. You might say - we have barely started and yet are off to a detour? Not really - at least not without ulterior motive. Having fundamental knowledge about UML diagrams will make it easier to facilitate the transition from the anatomy of the Design Pattern to the actual code, as the UML diagram serves as the blueprint we use to translate the pattern to code.
 - ii) The definition of the Design Pattern we wish to make use of.
 - iii) Some background of the application we apply the Design Pattern to. The author chose a common topic in finance, namely option pricing, specifically, European put and call options. Do not worry yet. We will introduce and explain the necessary vocabulary as well as the equations we implement as we go along.
 - iv) The actual implementation of pricing European options making use of the strategy pattern.
@@ -361,7 +361,7 @@ if __name__ == "__main__":
 In the currency of the contract, under the Black-Scholes model, the price of a European call and
 put options given the underlying stock are hence:
 
-```bash
+```zsh
 call price: 10.45 [monetary units].
 put price: 5.57 [monetary units].
 ```
@@ -431,7 +431,7 @@ We can translate this to Python like so:
 
 and obtain the following result:
 
-```bash
+```zsh
 call price: 10.45 [monetary units].
 put price: 5.57 [monetary units].
 present value of strike price: 95.12 [monetary units].
