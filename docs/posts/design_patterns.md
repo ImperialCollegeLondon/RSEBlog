@@ -56,7 +56,7 @@ In software engineering, it is often important to consider how to define
 objects and their properties as well as functions that interact with data, at a conceptual level.
 This is much like an architect creating a blueprint before the actual construction of the building begins.
 One of the tools available to us for this purpose is the `Unified Modeling Language (UML)`.
-More specifically, UML is a standardised modeling language to specify, visualise, construct,
+More specifically, UML is a standardised modelling language to specify, visualise, construct,
 and document the components of software systems.
 While it is not a programming language per se, it serves software developers
 and software architects plan and design their software.
@@ -74,7 +74,7 @@ of diagrams tailored to different aspects of the software.
 For instance, use case diagrams are used for requirements gathering, class diagrams depict
 static structure, and sequence diagrams detail interactions within the system.
 UML also helps break down complex systems into manageable components that can be designed, analysed, and implemented independently.
-Another key strength of UML is its platform independence, allowing the same modeling language
+Another key strength of UML is its platform independence, allowing the same modelling language
 to be used across various platforms, ensuring consistency and flexibility in software design.
 
 ### Types of UML diagrams
