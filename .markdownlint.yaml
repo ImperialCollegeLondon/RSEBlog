@@ -1,0 +1,3 @@
+# For list of rules, see: https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
+MD013: false
+MD041: false

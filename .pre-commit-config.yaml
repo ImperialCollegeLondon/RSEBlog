@@ -9,4 +9,3 @@ repos:
     rev: v0.42.0
     hooks:
       - id: markdownlint-fix
-        args: ["--disable", "MD013", "MD041", "--"]
