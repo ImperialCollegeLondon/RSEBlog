@@ -4,6 +4,7 @@ authors:
   - dalonsoa
   - alexdewar
   - SaranjeetKaur
+  - AdrianDAlessandro
 categories:
   - Events
 tags:
@@ -18,6 +19,8 @@ tags:
 [Hacktoberfest](https://hacktoberfest.com/) is a month-long annual event that encourages people to contribute to open source throughout October. The motivation of Hacktoberfest is to celebrate all things open source, especially the people that make open source so special.
 
 This year the central RSE team at Imperial planned two in-person events during Hacktoberfest on the 1st and the 23rd of October. The events were open to anybody interested in participating in open source software, either coding or with non-code contributions. Everybody was welcome to join the events and bring their own code along for a discussion with the central RSE team members. This included [low code and non-code contributions](https://hacktoberfest.com/participation/#low-or-non-code) - a big chunk of what surrounds good open source software has nothing to do with code!
+
+<!-- more -->
 
 ## First event: 1st of October 2024
 
@@ -121,7 +124,9 @@ The following projects were pitched at the start of the event and chosen by the 
 
 ### RSE Competencies Toolkit – Adrian D'Alessandro​
 
-​(TBC)
+[The RSE Competencies Toolkit](https://rsetoolkit.github.io/rse-competencies-toolkit/) is a community resource to support RSEs (Research Software Engineers) in tracking and managing their professional development. It is in the very early days of development for the interactive web app. This hack day was used to kick start the development of the tool.
+
+The activities are captured in [this umbrella issue on the Django project setup](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/issues/6).
 
 ### repositoryr – Saranjeet Kaur Bhogal
 
