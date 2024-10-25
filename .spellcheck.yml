@@ -8,15 +8,16 @@ matrix:
       - .wordlist.txt
     encoding: utf-8
   pipeline:
-  - pyspelling.filters.markdown:
-      ignore_patterns:  # custom patterns to ignore References section and code blocks
-        - '```[a-zA-Z]+\n[\s\S]*?\n```'  # ignore code blocks wrapped in triple backticks
-        - '## References\n(?:- .*\n)*'  # ignore the "References" section
+  - pyspelling.filters.markdown
   - pyspelling.filters.html:
       comments: false
       ignores:
-      - code
-      - pre
+        - code
+        - pre
   sources:
     - '**/*.md'
   default_encoding: utf-8
+  # Global ignore_patterns to handle specific sections such as References or Code blocks
+  ignore_patterns:
+    - '```[a-zA-Z]+\n[\s\S]*?\n```'  # Ignore all code blocks marked by triple backticks
+    - '## References\n(?:- .*\n)*'  # Ignore References section
