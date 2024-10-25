@@ -5,21 +5,18 @@ matrix:
     d: en_GB
   dictionary:
     wordlists:
-    - .wordlist.txt
+      - .wordlist.txt
     encoding: utf-8
   pipeline:
   - pyspelling.filters.markdown:
-      code_languages:  # specify languages to ignore in code blocks
-        - python
-        - plantuml
-        - zsh
-      ignore_patterns:  # custom pattern to ignore References section
-        - '## References\n(?:- .*\n)*'
+      ignore_patterns:  # custom patterns to ignore References section and code blocks
+        - '```[a-zA-Z]+\n[\s\S]*?\n```'  # ignore code blocks wrapped in triple backticks
+        - '## References\n(?:- .*\n)*'  # ignore the "References" section
   - pyspelling.filters.html:
       comments: false
       ignores:
       - code
       - pre
   sources:
-  - '**/*.md'
+    - '**/*.md'
   default_encoding: utf-8
