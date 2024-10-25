@@ -8,15 +8,16 @@ tags:
   - Design Patterns / Gang of Four
   - Object Oriented Programming (OOP) / Functional Programming
   - Python
-  - Financial Data Science
+  - Option pricing
   - Software Engineering principles
 ---
 
-# An example of a software design pattern for financial software using UML diagrams
+# An example of a software design pattern for European option pricing using UML diagrams
 
-`Design Patterns` were first introduced in the seminal book [Design Patterns: Elements of Reusable Object-Oriented Software]
-(https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), published in 1994 by #
-Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides—collectively known as the "Gang of Four."
+`Design Patterns` were first introduced in the seminal book
+[Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
+by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides which are
+collectively known as the "Gang of Four" *[Gamma et al. (1994)]*.
 This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly
 occurring problem in software design. These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
 
@@ -39,47 +40,49 @@ in the referenced books four `Creational Patterns`, seven `Structural Patterns`,
 namely the `Strategy Pattern` which belongs to the class of Behavioural Patterns.
 
 What are the ingredients do we need to be aware of to get started then?
- - i) As the patterns themselves are abstract in nature, we introduce the reader to their architecture via UML diagrams. UML stands for `Unified Modeling Language` and
-visualises the way and via what links systems interact with each other. This makes it
-particularly useful to visualise software. You might say - we have barely started and yet are off to a detour? Not really - at least not without ulterior motive.
-Having fundamental knowledge about UMl diagrams will make it easier to facilitate the transition from the anatomy of the Design Pattern to the actual code, as the
-UML diagram serves as the blueprint we use to translate the pattern to code.
- - ii) The definition of the Design Pattern we wish to make use of
- - iii) Some background of the application we apply the Design Pattern to. The author chose a common topic in finance, namely financial derivatives pricing. The derivative we
-are interested here are European put and call options. Do not worry yet. We will introduce and explain
-the necessary vocabulary as well as the equations we implement as we go along.
 
+- i) As the patterns themselves are abstract in nature, we introduce the reader to their architecture via UML diagrams. UML stands for `Unified Modeling Language` and visualizes the way and links through which systems interact with each other. This makes it particularly useful to visualize software. You might say - we have barely started and yet are off to a detour? Not really - at least not without ulterior motive. Having fundamental knowledge about UML diagrams will make it easier to facilitate the transition from the anatomy of the Design Pattern to the actual code, as the UML diagram serves as the blueprint we use to translate the pattern to code.
+- ii) The definition of the Design Pattern we wish to make use of.
+- iii) Some background of the application we apply the Design Pattern to. The author chose a common topic in finance, namely option pricing, specifically, European put and call options. Do not worry yet. We will introduce and explain the necessary vocabulary as well as the equations we implement as we go along.
+- iv) The actual implementation of pricing European options making use of the strategy pattern.
+
+Let us now follow that plan and get going.
 
 <!-- more -->
 
 ## Unified Modeling Language (UML)
 
-Before diving into Design Patterns, it is important to first consider how we can define objects and their properties at the conceptual level, much like an architect creates a
-blueprint before actual construction begins.
-In software architecture, a key tool for this purpose is the Unified Modeling Language (UML).
-UML is a standardised modeling language widely used in software engineering to specify, visualise, construct, and document the components of software systems.
-While it is not a programming language, UML serves as a helpful tool for helping software developers plan and design software architecture.
+In software engineering, it is often important to consider how to define
+objects and their properties as well as functions that interact with data, at a conceptual level.
+This is much like an architect creating a blueprint before the actual construction of the building begins.
+One of the tools available to us for this purpose is the `Unified Modeling Language (UML)`.
+More specifically, UML is a standardised modeling language to specify, visualise, construct,
+and document the components of software systems.
+While it is not a programming language per se, it serves software developers
+and software architects plan and design their software.
+As part of ingredient (i), we briefly outline the nuts and bolts of UML here, but for the interested reader, it is referred
+to *[Booch at al. (2005)]* for an elaborate discussion.
 
-### How does UML help us in Software Engineering?
+UML includes a set of graphic notation techniques to create visual representations of software systems
+and is meant to simplify communication, making it easier for both, development teams and external stakeholders
+to understand the software design. Moreover, it incentivises forward planning of a structured API,
+rather than having to retroactively standardise a poorly designed API in the future.
+This is particularly helpful in a collaborative setting.
 
-UML includes a set of graphic notation techniques to create visual representations of Object-Oriented software systems.
-UML simplifies communication, making it easier for both development teams and external stakeholders to understand the software design and incentivises
-forward planning of a structured API, rather than retroactively having to standardise
-a badly designed API in the future. This is particularly helpful in a collaborative setting.
-
-Moreover, UML diagrams play an important role in the documentation process, offering various types of diagrams tailored to different aspects of the software.
-For instance, use case diagrams are used for requirements gathering, class diagrams depict static structure, and sequence diagrams detail interactions within the system.
+Moreover, UML diagrams play an important role in the documentation process, offering various types
+of diagrams tailored to different aspects of the software.
+For instance, use case diagrams are used for requirements gathering, class diagrams depict
+static structure, and sequence diagrams detail interactions within the system.
 UML also helps break down complex systems into manageable components that can be designed, analysed, and implemented independently.
-Another key strength of UML is its platform independence, allowing the same modeling language to be used across various platforms, ensuring consistency and flexibility in software design.
+Another key strength of UML is its platform independence, allowing the same modeling language
+to be used across various platforms, ensuring consistency and flexibility in software design.
 
 ### Types of UML diagrams
 
 UML includes several types of diagrams, each serving different purposes:
 
 - Structural diagrams (e.g., class diagrams, object diagrams): Focus on the static aspects of the system.
-
 - Behavioural diagrams (e.g., use case diagrams, activity diagrams): Focus on dynamic aspects.
-
 - Interaction diagrams (part of behavioral diagrams, e.g., sequence diagrams, communication diagrams): Focus specifically on the flow of control and data among the elements in the system.
 
 Thus, UML helps developers engineer and translate their ideas into functional software, serving as a component of modern software engineering practice.
@@ -96,40 +99,44 @@ except ImportError:
     import iplantuml
 ```
 
-## The `Strategy` Design Pattern
+Let us now proceed to ingredient ii - the definition of the Design Pattern we wish to make use of later.
 
-The `Strategy Pattern` is used to define a family of algorithms, encapsulate each one, and make them interchangeable.
-This pattern allows the algorithm to vary independently of the clients that use it.
+## The `Strategy` design pattern
 
-The concept of the Strategy Pattern can be outlined as follows.
+The `Strategy pattern` is used to define a family of algorithms, encapsulate each one, and make
+them interchangeable. This pattern allows an algorithm to vary independently of the
+clients that use it.
 
-- Context: This is the class that uses a Strategy. The Context is configured with a ConcreteStrategy object, which it uses to perform a specific algorithm.
-- Strategy interface: This defines a common interface for all supported algorithms. The context uses this interface to call the algorithm defined by a ConcreteStrategy.
-- ConcreteStrategy: These are the classes that implement the Strategy interface, each providing a specific implementation of the algorithm.
+The concept of the Strategy Pattern can be outlined as follows:
 
-We can code up the UML diagram of the Strategy Pattern as follows.
+- Context: This is the class that uses a Strategy. The Context is configured with a `ConcreteStrategy` object, which it uses to perform a specific algorithm.
+- Strategy interface: This defines a common interface for all supported algorithms. The context uses this interface to call the algorithm defined by a `ConcreteStrategy`.
+- `ConcreteStrategy`: These are the classes that implement the Strategy interface, each providing a specific implementation of the algorithm.
+
+We can code up the UML diagram of the Strategy pattern as follows.
 
 ```plantuml
 %%plantuml
 @startuml
 class Context {
+    +context_data: float
+    +execute_strategy(strategy: Callable) : float
 }
+
+note right of Context : Represents data and the method to execute a strategy
 
 interface Strategy {
-    +execute()
+    +__call__(data) : float
 }
 
-class ConcreteStrategy1 {
-    +execute()
-}
+note right of Strategy : Callable functions used as strategies
 
-class ConcreteStrategy2 {
-    +execute()
-}
+strategy1 : float __call__(data)
+strategy2 : float __call__(data)
 
-Strategy <|.. ConcreteStrategy1
-Strategy <|.. ConcreteStrategy2
-Context "1" *-- "*" Strategy
+Context --> Strategy
+Context --> strategy1 : uses
+Context --> strategy2 : uses
 @enduml
 ```
 
@@ -137,27 +144,51 @@ Context "1" *-- "*" Strategy
 <!-- markdownlint-disable-next-line MD036 -->
 *The rendered result should look similar to the above figure.*
 
-We can now use this our blueprint and engineer software that implements the abstract pattern.
-As an example we pick pricing a European call and put option using the `Black-Scholes-Merton` equation, which is
-a common task in pricing a vanilla derivative.
+We can identify the following relations in the UML diagram
+
+- Context: Represented by a rectangular box with the class name at the top, containing attributes and methods.
+This class is the main entity that holds data and executes different strategies dynamically.
+- `strategy1` and `strategy2`: Each represents a concrete function that implements a specific strategy.
+These functions act as strategies and are shown in boxes to represent that they provide the
+actual implementations.
+- Interface (Strategy): Represented by a rectangular box labeled with interface at the top.
+This symbol signifies that Strategy defines a conceptual contract (or "interface") in terms of
+method signature rather than implementation.
+Here, it is treated as an abstract `Callable` that other functions (`strategy1` and `strategy2`)
+must conform to.
+
+Note, while *[Gamma et al. (1994)]* use an Object-Oriented approach to implement the strategies, but we find it more
+straight-forward and easier-to-read-code to take a functional approach here.
+
+We can now use our blueprint and engineer a computer program that implements the abstract pattern.
+As an example we pick pricing a European call and put option using the `Black-Scholes-Merton` equation
+which is a common task in pricing vanilla derivatives. `Vanilla` hereby is a term that stands for a standard
+contract with no special features or complex conditions. As an aside, it is mentioned
+that the `Black-Scholes-Merton` is often referred to simply as `Black-Scholes` equation. The
+terms are used synonymously and refer to the same stochastic differential equation as we soon shall see.
 
 Right there, a few terms popped up that may need further elaboration. An `option` is a financial contract that
 gives its holder the right, but not the obligation to buy or sell a financial object such as a stock, a commodity, a currency,
 or any other `underlying` for a defined, pre-agreed price. An option enabling to buy something at a later date
-is named a `call option`, whereas an option enabling to sell something at a later date is called a `put option`
+is named a `call option`, whereas an option enabling to sell something at a later date at a pre-agreed
+price is called a `put option`.
 
-The entity buying the option is called the holder of the option. As no buy can be facilitated without a sell, and vice versa,
-we need an entity, say an institution, or any other counterparty issuing the option. This is called the
-writer of the option.
+The entity buying the option is called the holder of the option. As no buy can be facilitated
+without a sell, and vice versa, we need an entity, say an institution, or any other
+counterparty issuing the option. This is called the writer of the option.
 
-Finally, one can distinguish when the option can be exercised against a counterparty. If this is the case only at the date
-of expiry, such an option is called `European option`. There are many other variation, say when an option can be exercised
-at any time upon purchase or in case of other particularities, but let us not bother with these cases in this tutorial.
+Finally, one can distinguish when the option can be exercised against a counterparty.
+If this is the case only at the date of expiry, such an option is called `European option`.
+There are many other variations, say when an option can be exercised
+at any time upon purchase or in case of other pre-agreed particularities, but let us not bother with
+these cases in this article.
 
+What then makes the `Black-Scholes` equation so important you may ask?
 Until the 1970ies, there did not exist a published rigorous mathematical framework to determine the fair price of
-a European option. In honour of the Economists who are first attributed to find such a framework, their pricing equation is
-called the `Black-Scholes (Merton)` equation. It is a stochastic differential equation. In particular, the
-Black-Scholes equation is given by:
+a European option and prices were determined purely by supply and demand in the options market.
+In honour of the Mathematician and Economist who were first attributed to find such a mathematical framework,
+their pricing equation is called the `Black-Scholes` equation.
+It is a stochastic differential equation and given by:
 
 $$
 \frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + r S \frac{\partial V}{\partial S} - r V = 0
@@ -165,13 +196,17 @@ $$
 
 where:
 
-- \( V \) is the price of the derivative (option price)
-- \( t \) is the time
-- \( S \) is the price of the underlying asset
-- \( \sigma \) is the volatility of the underlying asset
-- \( r \) is the risk-free interest rate with continuous compounding (c.c.)
+- \( V \) is the price of a general European option contract (of type put or call).
+- \( t \) is time.
+- \( S \) is the price of the underlying asset for example a stock in case of a stock option.
+- \( \sigma \) is the volatility of the underlying asset. It describes the magnitude the price of the asset fluctuates.
+- \( r \) is the risk-free interest rate with continuous compounding (c.c.).
 
-Without proof, the following expressions for the price of a European put and call option solve the Black-Scholes equation:
+For those interested in diving into the detailed mathematics, of option pricing in general and
+`Brownian Motion` in particular, there exists a great text by *[Shreve (2004)]*.
+Brownian Motion is an approximate model of the evolution of stock prices.
+Without proof, the following expressions for the price of a European put and call option
+solve the Black-Scholes equation:
 
 ### European call option price
 
@@ -195,6 +230,8 @@ $$
 d_2 = d_1 - \sigma \sqrt{T}
 $$
 
+Thereby:
+
 - \( c \) is the price of the call option.
 - \( p \) is the price of the put option.
 - \( S_0 \) is the current price of the underlying asset.
@@ -204,11 +241,13 @@ $$
 - \( \sigma \) is the volatility of the underlying asset.
 - \( N(\cdot) \) is the cumulative distribution function of the standard normal distribution.
 
-Let us now implement these pricing equations in a Python program using the `Strategy Pattern`.
+Let us now progress to implement these pricing equations in a Python program using
+the `Strategy pattern`.
 
-## Implementation of the Strategy Pattern
+## Implementation of the Strategy pattern for European option pricing
 
-We make use of the definition of the Strategy Design Pattern above and adapt it to the problem at hand. We first modify the UML diagram to lay out the architecture and then follow-up
+We make use of the definition of the Strategy design pattern above and adapt it to the problem at hand.
+We first modify the UML diagram to lay out the architecture and then follow-up
 with a code implementation.
 
 ### UML diagram
@@ -216,35 +255,28 @@ with a code implementation.
 ```plantuml
 %%plantuml
 @startuml
-class Main {
-}
-
-interface OptionPriceStrategy {
-    +compute_price(option: BlackScholesOption) : float
-}
-
-class EuropeanCallStrategy {
-    +compute_price(option: BlackScholesOption) : float
-}
-
-class EuropeanPutStrategy {
-    +compute_price(option: BlackScholesOption) : float
-}
-
 class BlackScholesOption {
-    -stock_price: float
-    -strike_price: float
-    -time_to_maturity: float
-    -risk_free_rate: float
-    -volatility: float
-    +_compute_d1_d2() : Tuple[float, float]
+    +float stock_price
+    +float strike_price
+    +float time_to_maturity
+    +float risk_free_rate
+    +float volatility
+    +compute_d1_d2() : Tuple[float, float]
     +compute_option_price(strategy: OptionPriceStrategy) : float
 }
 
-OptionPriceStrategy <|.. EuropeanCallStrategy
-OptionPriceStrategy <|.. EuropeanPutStrategy
-BlackScholesOption "1" *-- "*" OptionPriceStrategy
-Main "1" *-- "1" BlackScholesOption
+interface OptionPriceStrategy {
+    +__call__(option: BlackScholesOption) : float
+}
+
+BlackScholesOption --> OptionPriceStrategy
+
+european_call_strategy : float __call__(option: BlackScholesOption)
+european_put_strategy : float __call__(option: BlackScholesOption)
+
+BlackScholesOption --> european_call_strategy : uses
+BlackScholesOption --> european_put_strategy : uses
+
 @enduml
 ```
 
@@ -252,78 +284,41 @@ Main "1" *-- "1" BlackScholesOption
 <!-- markdownlint-disable-next-line MD036 -->
 *The rendered result should look similar to the above figure.*
 
-Let us go through the `UML diagram` of the `Strategy pattern` in this context in more detail.
+As you can see, we adapt the abstract definition of the strategy pattern earlier to the problem at hand
+and fill out the parts that are needed to price our option according to the Black-Scholes formula.
 
-In UML diagrams, the `1` and `*` symbols denote multiplicity, which indicates the number of instances in a relationship.
-1: This means "exactly one." It indicates that there is a one-to-one relationship.
-*: This means "many." It indicates that there is a one-to-many relationship.
-
-- Inheritance:
- `OptionPriceStrategy <|.. EuropeanCallStrategy`
- `OptionPriceStrategy <|.. EuropeanPutStrategy`
-
-  - These lines indicate that `EuropeanCallStrategy` and `EuropeanPutStrategy` both implement the `OptionPriceStrategy` interface. This relationship is depicted using a solid line with a hollow triangle pointing to the interface. It means that both strategies must provide an implementation for the compute_price method defined in the OptionPriceStrategy interface.
-
-- Composition:
-`BlackScholesOption "1" *-- "*" OptionPriceStrategy`
-This indicates a composition relationship between `BlackScholesOption` and `OptionPriceStrategy`. The `1` near `BlackScholesOption` means that each instance of `BlackScholesOption` can use one or more instances of `OptionPriceStrategy`.
-The `*` near `OptionPriceStrategy` means that multiple strategies can be associated with a single `BlackScholesOption` instance.
-The filled diamond represents a strong lifecycle dependency, meaning the `OptionPriceStrategy` instances are typically created and destroyed along with the `BlackScholesOption` instance.
-
-- Association:
-`Main "1" *-- "1" BlackScholesOption` indicates an association relationship between `Main` and `BlackScholesOption`. The `1` near both `Main` and `BlackScholesOption` signifies a one-to-one relationship.
-Each instance of Main is associated with exactly one instance of `BlackScholesOption`. The filled diamond indicates a composition relationship where
-`Main` strongly owns or controls the lifecycle of the `BlackScholesOption`.
-
-- Code context:
-`OptionPriceStrategy` interface defines a contract for computing option prices.
-It has one method, `compute_price`, which takes an instance of `BlackScholesOption` and returns a float.
-
-- `EuropeanCallStrategy` and `EuropeanPutStrategy Classes` implement the `OptionPriceStrategy` interface.
-Each provides a specific implementation of the `compute_price` method for `European call and put` options, respectively.
-
-- `BlackScholesOption class` contains attributes for the option parameters (e.g., stock price, strike price, time to maturity, risk-free rate, volatility).
-It has a (private) method `_compute_d1_d2` to calculate the `d1` and `d2` values used in the Black-Scholes formula.
-The `_compute_option_price` method takes an `OptionPriceStrategy` instance and uses it to compute the option price.
-
-- `Main Class`: Responsible for creating instances of `BlackScholesOption` and the strategy classes (`EuropeanCallStrategy and EuropeanPutStrategy`).
-It then uses these to compute and print the option prices
+As we now have a clear plan of how our program should look like, we can start coding it up.
+Planning software like this may be very different from just coding spontaneously with less preparation,
+however we now know exactly what parts the software needs to consist of and how they interact.
 
 ### Python code
 
-Translating the UML diagram to Python code can look like so:
+Translating the UML diagram to Python code looks as follows:
 
 ```python
-from abc import ABC, abstractmethod
 from dataclasses import dataclass
 import numpy as np
 from scipy.stats import norm
-from typing import Tuple
+from typing import Callable, Tuple
 
-# define the Strategy interface
-class OptionPriceStrategy(ABC):
-    @abstractmethod
-    def compute_price(self, option: 'BlackScholesOption') -> float:
-        pass
 
-# implement the European call option pricing strategy
-class EuropeanCallStrategy(OptionPriceStrategy):
-    def compute_price(self, option: 'BlackScholesOption') -> float:
-        d1, d2 = option.compute_d1_d2()
-        price = (option.stock_price * norm.cdf(d1) -
-                 option.strike_price * np.exp(-option.risk_free_rate * option.time_to_maturity) * norm.cdf(d2))
-        return price
+OptionPriceStrategy = Callable[['BlackScholesOption'], float]  # define the OptionPriceStrategy type as a Callable that accepts a BlackScholesOption and returns a float
 
-# implement the European put option pricing strategy
-class EuropeanPutStrategy(OptionPriceStrategy):
-    def compute_price(self, option: 'BlackScholesOption') -> float:
-        d1, d2 = option.compute_d1_d2()
-        price = (option.strike_price * np.exp(-option.risk_free_rate * option.time_to_maturity) * norm.cdf(-d2) -
-                 option.stock_price * norm.cdf(-d1))
-        return price
 
-# define the context class, representing the Black-Scholes option
-@dataclass
+def european_call_strategy(option: 'BlackScholesOption') -> float:  # implement the European call option pricing strategy as a function
+    d1, d2 = option.compute_d1_d2()
+    price = (option.stock_price * norm.cdf(d1) -
+             option.strike_price * np.exp(-option.risk_free_rate * option.time_to_maturity) * norm.cdf(d2))
+    return price
+
+def european_put_strategy(option: 'BlackScholesOption') -> float:  # implement the European put option pricing strategy as a function
+    d1, d2 = option.compute_d1_d2()
+    price = (option.strike_price * np.exp(-option.risk_free_rate * option.time_to_maturity) * norm.cdf(-d2) -
+             option.stock_price * norm.cdf(-d1))
+    return price
+
+
+@dataclass  # define the Black-Scholes option class using dataclass
 class BlackScholesOption:
     stock_price: float
     strike_price: float
@@ -331,25 +326,21 @@ class BlackScholesOption:
     risk_free_rate: float
     volatility: float
 
-    # method to compute d1 and d2, which are intermediate calculations for option pricing
-    def compute_d1_d2(self) -> Tuple[float, float]:
+
+    def compute_d1_d2(self) -> Tuple[float, float]:  # method to compute d1 and d2 for Black-Scholes formula
         d1 = (np.log(self.stock_price / self.strike_price) +
               (self.risk_free_rate + 0.5 * self.volatility ** 2) * self.time_to_maturity) / (self.volatility * np.sqrt(self.time_to_maturity))
         d2 = d1 - self.volatility * np.sqrt(self.time_to_maturity)
         return d1, d2
 
-    # method to compute the option price using the provided strategy
-    def compute_option_price(self, strategy: OptionPriceStrategy) -> float:
-        return strategy.compute_price(self)
 
-# main function to demonstrate the usage of the Strategy Pattern
+    def compute_option_price(self, strategy: OptionPriceStrategy) -> float:  # method to compute the option price using a given pricing strategy
+        return strategy(self)
+
+
 def main() -> None:
-    # create instances of the pricing strategies
-    call_strategy: OptionPriceStrategy = EuropeanCallStrategy()
-    put_strategy: OptionPriceStrategy = EuropeanPutStrategy()
 
-    # create a Black-Scholes option with given parameters
-    option: BlackScholesOption = BlackScholesOption(
+    option = BlackScholesOption(  # create a Black-Scholes option with given parameters
         stock_price=100,
         strike_price=100,
         time_to_maturity=1,
@@ -357,42 +348,131 @@ def main() -> None:
         volatility=0.2
     )
 
-    # compute and print the call option price using the call strategy
-    call_price: float = option.compute_option_price(call_strategy)
-    print(f"Call price: {call_price:.2f} [monetary units].")
+    call_price: float = option.compute_option_price(european_call_strategy)  # compute and print the call option price using the call strategy
+    print(f"call price: {call_price:.2f} [monetary units].")
 
-    # compute and print the put option price using the put strategy
-    put_price: float = option.compute_option_price(put_strategy)
-    print(f"Put price: {put_price:.2f} [monetary units].")
+    put_price: float = option.compute_option_price(european_put_strategy)  # compute and print the put option price using the put strategy
+    print(f"put price: {put_price:.2f} [monetary units].")
 
 if __name__ == "__main__":
     main()
 ```
 
-In the currency of the contract, under the Black-Scholes model, the price of a European call and put options given the underlying stock are hence:
+In the currency of the contract, under the Black-Scholes model, the price of a European call and
+put options given the underlying stock are hence:
 
-- Call price: 10.45 [monetary units].
-- Put price: 5.57 [monetary units].
+```bash
+call price: 10.45 [monetary units].
+put price: 5.57 [monetary units].
+```
 
-Note the separation of concerns:  `EuropeanCallStrategy()` knows nothing about `EuropeanPutStrategy()` and vice versa.
-It is hence straight-forward to maintain and extend one part of Strategy without touching the other part.
+Analysing the code, of particular relevance is the separation of concerns:  `european_call_strategy()` knows nothing about `european_put_strategy()` and vice versa.
+It is hence straight-forward to maintain and extend one part of the strategy without touching the other part.
+This is a useful property if multiple team members work on the same code base simultaneously.
+These could, for example be mathematicians that extend the set of strategies, say using a numeric approach,
+or other software engineers that take the output of a strategy as input for further analysis.
+Moreover, and perhaps more relevant in practice is that merge conflicts are avoided and code reviews
+are easier to facilitate. This concludes the programming part of the tutorial.
+
+However, let us also turn to the question of how one can verify whether the computed
+option prices are fair. One possibility is to utilise the `put-call parity`
+for which we already have all parameters in the dataclass `BlackScholesOption()`. A quick overview
+over the concept is provided next.
+
+## Yet more financial theory: Are the options priced fair?
+
+As we know the duration of the option, we can discount its strike price to
+obtain its present value (PV). We can then construct two portfolios:
+One portfolio consisting of the price of the call option plus its discounted strike price,
+and secondly a portfolio consisting of the price of the put option plus
+the price of the underlying asset.
+
+If the options were priced fairly these two portfolios evaluate to the same price.
+If not, there is an arbitrage opportunity. Arbitrage means to execute a risk-less trade with
+positive payoff realising and instant profit, here, by
+buying the undervalued portfolio and selling the overvalued portfolio realising a profit
+that evaluates to the difference of both. Note, for this to work both, put and call options
+have to feature the same strike price.
+
+In a formula, the `put-call parity` translates to:
+
+\[ c + K e^{-r T} = p + S \]
+
+Where:
+
+- \( c \) is the price of the call option.
+- \( p \) is the price of the put option.
+- \( S \) is the current price of the underlying asset.
+- \( K \) is the strike price of the option.
+- \( r \) is the risk-free interest rate.
+- \( T \) is the time to maturity.
+- \( K e^{-r T} \) is the present value of the strike price, discounted by the risk-free rate over the time to maturity.
+
+We can translate this to Python like so:
+
+```python
+    call_price = option.compute_option_price(european_call_strategy)  # compute and print the call option price using the call strategy
+    put_price = option.compute_option_price(european_put_strategy)  # compute and print the put option price using the put strategy
+
+    # verify if the put-call parity holds:
+    present_value_strike = option.strike_price * np.exp(-option.risk_free_rate * option.time_to_maturity)  # present value of strike price
+
+    # implement the left and right side of the put-call parity equation
+    left_side = call_price + present_value_strike
+    right_side = put_price + option.stock_price
+
+    print(f"call price: {call_price:.2f} [monetary units].")
+    print(f"put price: {put_price:.2f} [monetary units].")
+    print(f"present value of strike price: {present_value_strike:.2f} [monetary units].")
+    print(f"left side (C + PV(K)): {left_side:.2f} [monetary units].")
+    print(f"right side (P + S): {right_side:.2f} [monetary units].")
+    print(f"put-call parity holds: {np.isclose(left_side, right_side)}")
+```
+
+and obtain the following result:
+
+```bash
+call price: 10.45 [monetary units].
+put price: 5.57 [monetary units].
+present value of strike price: 95.12 [monetary units].
+left side (C + PV(K)): 105.57 [monetary units].
+right side (P + S): 105.57 [monetary units].
+put-call parity holds: True
+```
+
+As our calculations align with the put-call parity, we can confidently say that the option prices generated by our software are accurate, reflecting the efficiency of the market they trade in. Given the analytic example, this is not surprising and the interested reader is invited to could track option prices on an exchange and watch for any fleeting arbitrage opportunities that may arise. This exercise is similar to spotting cash lying in the street and observing how quickly it is being picked up. To the author's experience, while London's streets may be littered with plenty that does not belong, spare cash is rarely part of the scenery.
 
 ## Conclusion
 
-In this article, we introduced design patterns and demonstrated how to implement the `Strategy Pattern` using the Object-Oriented paradigm in Python.
-We utilised the `@abstractmethod` decorator to define interfaces for different strategies.
-To illustrate the practical use of this design pattern, we provided a concrete example from finance, namely pricing European put and call options.
+In this article, we introduced design patterns and demonstrated how to implement the `Strategy pattern` using the
+functional programming paradigm that Python supports.
+To illustrate the practical use of this design pattern, we provided a concrete example from
+finance, namely pricing European put and call options.
+We created a dataclass that stores the data we need our strategies to take as input.
 
-By applying the Strategy Pattern, we achieved a clear separation of concerns, resulting in loosely coupled and maintainable code.
-These are key characteristics of high-quality software engineering, ensuring that the code is easier to understand, extend, and modify.
+By applying the Strategy pattern, we achieved a clear separation of concerns, resulting in
+loosely coupled and maintainable code. These are key characteristics of high-quality software
+engineering, ensuring that the code is understandable, extendable, and maintainable.
 
-While this article focused on the Strategy design pattern and its practical application in Financial Data Science, specifically in pricing European options,
-it did not aim to cover other design patterns. I encourage the reader to explore the original publication for a more comprehensive understanding or to experiment with
-implementing the discussed problem in a programming language of your choice.
+Also, in an addendum, we made use of the computed output and utilised the put-call parity
+to confirm the options are priced fair.
+
+The reader is encouraged to explore the original publication on design patterns for
+to see what other patterns exist and what problems they solve.
+As the design patterns themselves are generally valid, feel free to implement them
+programming language of your choice. Finally, if you are interested in a real-world data
+science application, you could plug into an options exchange and
+observe whether you can spot any arbitrage opportunities, grated this will be an ambitious project.
+
+## References
+
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. Design patterns: Elements of reusable object-oriented software. Addison-Wesley, 1994.
+- Shreve, S. Stochastic Calculus for Finance II: Continuous-Time Models. Springer Finance, 2004.
+- Booch, G., Rumbaugh, J. and Jacobson, I. The Unified Modeling Language User Guide. 2nd ed. Addison-Wesley, 2005.
 
 ## Additional material
-In addition to the original Gang of Four book, the author of this article can recommend the YouTube channel of computer scientist `Douglas Schmidt`
+
+The author of this article can recommend the YouTube channel of computer scientist `Douglas Schmidt`
 that features recorded lectures. In particular the
-[YouTube playlist about Design Patterns in C++]
-(https://www.youtube.com/watch?v=o1SrQ3cJFfg&list=PLZ9NgFYEMxp6p4oC9bP3PZdZ-FAPDeavB&index=2)
-will be useful for an audience interested in software engineering with a compiled programming language.
+[YouTube playlist about Design Patterns in C++](https://www.youtube.com/watch?v=o1SrQ3cJFfg&list=PLZ9NgFYEMxp6p4oC9bP3PZdZ-FAPDeavB&index=2)
+will be useful for an audience interested in software engineering with said programming language.
