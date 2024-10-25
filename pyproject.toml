@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "rseblog"
+name = "RSE Blog"
 version = "0.1.0"
 description = "Blog for Imperial's Central RSE Team"
 authors = ["Your Name <you@example.com>"]
