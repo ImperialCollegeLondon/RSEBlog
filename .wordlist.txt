@@ -195,11 +195,8 @@ UML
 Vlissides
 al
 et
-ies
-Modeling
 Booch
 incentivises
-behavioral
 plantuml
 startuml
 enduml
@@ -224,8 +221,6 @@ scipy
 cdf
 PV
 Springer
-Booch
-Modeling
 Rumbaugh
 nd
 se
