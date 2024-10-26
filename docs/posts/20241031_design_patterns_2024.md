@@ -16,7 +16,7 @@ tags:
 
 `Design Patterns` were first introduced in the seminal book
 [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
-by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides which are collectively known as the "Gang of Four" [Gamma al. (1994)].
+by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides which are collectively known as the "Gang of Four" [Gamma et al. (1994)].
 This book forms the foundation of Object-Oriented design theory and practice. A `Design Pattern` is a general, reusable solution to a commonly
 occurring problem in software design. These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
 
