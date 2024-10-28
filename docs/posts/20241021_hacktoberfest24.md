@@ -134,5 +134,6 @@ The activities are captured in [this umbrella issue on the Django project setup]
 ### repositoryr – Saranjeet Kaur Bhogal
 
 ​- Included steps to [update the `DESCRIPTION` file](https://github.com/ImperialCollegeLondon/repositoryr/pull/11)
+
 - Steps to [set up `.R` files and unit testing files](https://github.com/ImperialCollegeLondon/repositoryr/pull/12)
 - Added a section on [how to build the README](https://github.com/ImperialCollegeLondon/repositoryr/pull/13)
