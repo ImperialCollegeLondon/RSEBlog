@@ -24,7 +24,7 @@ This year the central RSE team at Imperial planned two in-person events during H
 
 ## First event: 1st of October 2024
 
-The first event took place in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and end up hacking intensely with our own thoughts. Before we realised, it was already lunch time and, then the wrap-up session.
+The first event took place in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and ended up hacking intensely with our own thoughts. Before we realised, it was already lunch time and then the wrap-up session.
 
 ![In person attendees _in the flow_.](images/hacktoberfest24/attendees_day1.jpg){: .no-caption style="display:block;margin:auto;width:69%" }
 
@@ -51,7 +51,9 @@ The main work done for Hacktoberfest was related to [refactoring some bits of co
 
 [SWMManywhere](https://imperialcollegelondon.github.io/SWMManywhere/) is a tool to synthesise urban drainage network models (UDMs) using publicly available data such as street networks, DEMs, and building footprints, across the globe. It also provides tools for generating SWMM input files and performing simulations for the synthesised UDMs.
 
-Also only one issue was tackled during the event by our colleague Tom Bland, [setting up Codecov in the repo](https://github.com/ImperialCollegeLondon/SWMManywhere/pull/304), but it brought up a lot of trouble due to a bug in Codecov, apparently. The lessons learnt have been used for other projects, so it was time well spent!
+One issue was tackled during the event by our colleague Tom Bland, [setting up Codecov in the repo](https://github.com/ImperialCollegeLondon/SWMManywhere/pull/304), but it brought up a lot of trouble due to a bug in Codecov, apparently. The lessons learnt have been used for other projects, so it was still time well spent!
+
+Another job was tackled by our colleague James Turner, where the map data downloader was enhanced to [only download a box-bounded subset of buildings data](https://github.com/ImperialCollegeLondon/SWMManywhere/pull/334), rather than all data, significantly reducing the final download size. This involved interfacing with the [Overture Maps Foundation](https://overturemaps.org/)'s public API to filter and download the map data.
 
 ### PyCSVY – Diego Alonso Alvarez​
 
@@ -72,7 +74,7 @@ There was a lot of activity in this project, which included:
 
 ### repositoryr – Saranjeet Kaur Bhogal
 
-​`repositoryr` is a step by step guide for creating an R package repository. This repository itself is structured as a R package that is installable from GitHub. It showcases how `devtools` can be used in RStudio for package development. It also provides steps to create a website for an R package using `pkgdown`.
+​[repositoryr](https://imperialcollegelondon.github.io/repositoryr/) is a step by step guide for creating an R package repository. The corresponding [repository](https://github.com/ImperialCollegeLondon/repositoryr) itself is structured as an R package that is installable from GitHub. It showcases how `devtools` can be used in RStudio for package development. It also provides steps to create a website for an R package using `pkgdown`.
 
 The activities completed in this project as a part of Hacktoberfest include:
 
@@ -131,4 +133,6 @@ The activities are captured in [this umbrella issue on the Django project setup]
 
 ### repositoryr – Saranjeet Kaur Bhogal
 
-​(TBC)
+​- Included steps to [update the `DESCRIPTION` file](https://github.com/ImperialCollegeLondon/repositoryr/pull/11)
+- Steps to [set up `.R` files and unit testing files](https://github.com/ImperialCollegeLondon/repositoryr/pull/12)
+- Added a section on [how to build the README](https://github.com/ImperialCollegeLondon/repositoryr/pull/13)
