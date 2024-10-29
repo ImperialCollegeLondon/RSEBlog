@@ -104,7 +104,7 @@ by Olivier Gueant from 2017. The aim of the efforts conducted during Hacktoberfe
 and to find potential contributors, as well  as making an attempt to understand the code base and starting to translate its core parts to Python, which, due to the 
 complexity of the both the repository and relevant literature is still a work in progress. 
 
-During the second day of Hacktoberfest, the Benjamin worked on building a github repository publishing a project he worked on in his own time. It 
+During the second day of Hacktoberfest, the Benjamin worked on building a GitHub repository publishing a project he worked on in his own time. It 
 is named [CryptoTrade](https://github.com/HarmonicReflux/CryptoTrade) and, to some extent, can be seen as the little brother 
 of *CrystalBot*. It is written in `C++` and the result of a [Coursera course on Object Oriented Programming in C++](https://www.coursera.org/specializations/object-oriented-programming-s12n) 
 created by [Matthew Yee-King](https://www.gold.ac.uk/computing/people/m-yee-king/) from Goldsmiths University London.
