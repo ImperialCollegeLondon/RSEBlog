@@ -226,3 +226,7 @@ se
 Gemma
 ies
 Modeling
+iplantuml
+ConcreteStrategy
+labeled
+isclose
