@@ -16,7 +16,7 @@ tags:
 
 *Design Patterns* were first introduced in the seminal book
 [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
-by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides which are collectively known as the "Gang of Four" [[Gamma et al. (1994)]](#gamma1994).
+by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, who are collectively known as the "Gang of Four" [[Gamma et al. (1994)]](#gamma1994).
 This book forms the foundation of Object-Oriented design theory and practice. A *Design Pattern* is a general, reusable solution to a commonly
 occurring problem in software design. These patterns are based on the philosophy of finding standard solutions to common problems in software engineering challenges.
 
@@ -37,7 +37,7 @@ This is not meant as a criticism, as the "make it work" step often involves sign
 However, as systems mature, this approach can lead to technical debt, resulting in code that is confusingly difficult to maintain.
 
 This blog post illustrates how the concept of a *Design Pattern* from the early '90s can be translated to modern-day Python. Given the 23 patterns introduced
-in the referenced books split up into four *Creational Patterns*, seven *Structural Patterns*, and 11 *Behavioural Patterns*, we limit our efforts to one specific pattern,
+in the referenced book are split up into four *Creational Patterns*, seven *Structural Patterns*, and 11 *Behavioural Patterns*, we limit our efforts to one specific pattern,
 namely the *Strategy Pattern* which belongs to the class of Behavioural Patterns.
 
 What are the ingredients do we need to be aware of to get started then?
@@ -59,11 +59,11 @@ More specifically, UML is a standardised modelling language to specify, visualis
 and document the components of software systems.
 While it is not a programming language per se, it serves software developers
 and software architects plan and design their software.
-As part of ingredient one, we briefly outline the nuts and bolts of UML here, but for the interested reader, it is referred
+As part of ingredient one, we briefly outline the nuts and bolts of UML here, but for the interested reader, refer
 to [[Booch et al. (2005)]](#booch2005) for an elaborate discussion.
 
 UML includes a set of graphic notation techniques to create visual representations of software systems
-and is meant to simplify communication, making it easier for both, development teams and external stakeholders
+and is meant to simplify communication, making it easier for both development teams and external stakeholders
 to understand the software design. Moreover, it incentivises forward planning of a structured API,
 rather than having to retroactively standardise a poorly designed API in the future.
 This is particularly helpful in a collaborative setting.
@@ -145,10 +145,10 @@ We can identify the following relations in the UML diagram:
 
 - Context: Represented by a rectangular box with the class name at the top, containing attributes and methods. This class is the main entity that holds data and executes different strategies dynamically.
 - *strategy1* and *strategy2*: Each represents a concrete function that implements a specific strategy. These functions act as strategies and are shown in boxes to represent that they provide the actual implementations.
-- Interface (Strategy): Represented by a rectangular box labeled with interface at the top. This symbol signifies that Strategy defines a conceptual contract (or "interface") in terms of method signature rather than implementation.
+- Interface (Strategy): Represented by a rectangular box labelled with interface at the top. This symbol signifies that Strategy defines a conceptual contract (or "interface") in terms of method signature rather than implementation.
 Here, it is treated as an abstract *Callable* that other functions (*strategy1* and *strategy2*) must conform to.
 
-Note, while [[Gamma et al. (1994)]](#gamma1994) use an Object-Oriented approach to implement the strategies, but we find it more straightforward and easier-to-read-code to take a functional approach here.
+Note, while [[Gamma et al. (1994)]](#gamma1994) use an Object-Oriented approach to implement the strategies, we find it more straightforward and easier-to-read-code to take a functional approach here.
 
 We can now use our blueprint and engineer a computer program that implements the abstract pattern. We will, however, not be satisfied by coding up the pattern itself and upon success, print out a message called displaying "pattern created".
 Instead, we opt to illustrate its relevance in practice. This leads us to ingredient three: Some detail on financial terms used in academia and practice, that help us to describe the problem we chose to solve.
@@ -178,9 +178,9 @@ at any time upon purchase or in case of other pre-agreed particularities, but le
 these cases in this article.
 
 What then makes the *Black-Scholes* equation so important you may ask?
-Until the 1970ies, there did not exist a published rigorous mathematical framework to determine the fair price of
+Until the 1970s, there did not exist a published rigorous mathematical framework to determine the fair price of
 a European option and prices were determined purely by supply and demand in the options market.
-In honour of the Mathematician and Economist who were first attributed to find such a mathematical framework,
+In honour of the mathematician and economist who were first attributed to find such a mathematical framework,
 their pricing equation is called the *Black-Scholes* equation.
 It is a stochastic differential equation and given by:
 
@@ -274,9 +274,9 @@ BlackScholesOption --> european_put_strategy : uses
 
 ![Application of the Strategy Pattern for the pricing European call and put options. The rendered result should look similar to this figure.](images/design_patterns/option_pricing_using_strategy_pattern.png)
 
-As you can see, the concrete strategies that the *Strategy Pattern* demands us to implement are the pricing equations for both, the European put and European call option.
+As you can see, the concrete strategies that the *Strategy Pattern* demands us to implement are the pricing equations for both the European put and European call option.
 The dataclass `BlackScholesOption()` only delivers a promise to implement these pricing equations, however the concrete strategies are the ones that deliver them. We now have a clear plan of how our program
-should look like, we can start coding it up. Planning software like this may be very different from just coding spontaneously with less preparation, however we now know exactly what parts the software
+should look, we can start coding it up. Planning software like this may be very different from just coding spontaneously with less preparation, however we now know exactly what parts the software
 needs to consist of and how they interact.
 
 ### Python code
@@ -356,10 +356,10 @@ put price: 5.57 [monetary units].
 Analysing the code, of particular relevance is the separation of concerns:  `european_call_strategy()` knows nothing about `european_put_strategy()` and vice versa.
 It is thus straight-forward to maintain and extend one part of the *concrete strategy* without affecting the other. This is a useful property if multiple team members simultaneously work on the same code base.
 These could, for example, be mathematicians that extend the set of concrete strategies, say using a numeric approach, or other software engineers and traders who take the output of a strategy as input for
-further analysis or concrete actions in the options market. Moreover, and perhaps more relevant in immediate practice is that merge conflicts are avoided and code reviews are easier to facilitate.
+further analysis or concrete actions in the options market. Moreover, and perhaps more relevant in immediate practice, is that merge conflicts are avoided and code reviews are easier to facilitate.
 With these encouraging results, the programming part of the tutorial is concluded.
 
-However, if you are willing to real still a little more, we can turn to the question of how one can assess whether the computed option prices are fair.
+However, if you are willing to read still a little more, we can turn to the question of how one can assess whether the computed option prices are fair.
 One possibility is to utilise the *put-call parity* for which we already have all parameters in the dataclass `BlackScholesOption()`. A quick overview of the concept is provided next.
 
 ## Yet more financial theory: Are the European options priced fairly?
@@ -420,7 +420,7 @@ right side (P + S): 105.57 [monetary units].
 put-call parity holds: True
 ```
 
-As both, the left and right side of the equation of the put-call parity are equal, we can confidently say that the option prices computed by our software are accurate, reflecting the efficiency of the
+As both the left and right sides of the equation of the put-call parity are equal, we can confidently say that the option prices computed by our software are accurate, reflecting the efficiency of the
 market they trade in. Given the analytic example, this is not surprising and the interested reader is invited to track option prices on a live exchange and watch for any fleeting arbitrage opportunities
 that may arise. This exercise is similar to spotting cash lying in the street and observing how quickly it is being picked up.
 To the author's experience, while London's streets may be littered with plenty that does not belong, spare cash is rarely part of the scenery.
@@ -432,8 +432,8 @@ To illustrate the practical use of this design pattern, we provided a concrete e
 We created a dataclass that stores the data we need our *concrete strategies* to take as input.
 
 By applying the *Strategy Pattern*, we achieved a clear separation of concerns, resulting in loosely coupled and maintainable code. These are key characteristics of high-quality software
-engineering, ensuring that the code is understandable, extendable, and maintainable. Also, in an addendum, we made use of the computed output prices and utilised the *put-call parity* to confirm the
-options are priced fair.
+engineering, ensuring that the code is understandable, extensible, and maintainable. Also, in an addendum, we made use of the computed output prices and utilised the *put-call parity* to confirm the
+options are priced fairly.
 
 The reader is encouraged to explore the original publication on *Design Patterns* for to see what other patterns exist and what problems they solve.
 As the design patterns themselves are generally valid, feel free to implement them in a programming language of your choice. Finally, if you are interested in a real-world data
