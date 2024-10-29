@@ -200,7 +200,6 @@ incentivises
 plantuml
 startuml
 enduml
-labeled
 synonymously
 counterparty
 frac
