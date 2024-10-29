@@ -54,7 +54,7 @@ The main work done for Hacktoberfest was related to [refactoring some bits of co
 
 ### SWMManywhere – Barnaby Dobson​
 
-[SWMManywhere](https://imperialcollegelondon.github.io/SWMManywhere/) is a tool to synthesise urban drainage network models (UDMs) using publicly available data such as street networks, DEMs, and building footprints, across the globe. It also provides tools for generating SWMM input files and performing simulations for the synthesised UDMs.
+[SWMManywhere](https://imperialcollegelondon.github.io/SWMManywhere/) is a tool to synthesise urban drainage network models (UDMs) using publicly available data such as street networks, digital elevation models (DEMs), and building footprints, across the globe. It also provides tools for generating SWMM input files and performing simulations for the synthesised UDMs.
 
 One issue was tackled during the event by our colleague Tom Bland, [setting up Codecov in the repo](https://github.com/ImperialCollegeLondon/SWMManywhere/pull/304), but it brought up a lot of trouble due to a bug in Codecov, apparently. The lessons learnt have been used for other projects, so it was still time well spent!
 
@@ -74,7 +74,7 @@ There was a lot of activity in this project, which included:
 
 - [Adding support for polars Dataframes](https://github.com/ImperialCollegeLondon/pycsvy/pull/94)
 - Give the [first steps to support CSV Dialects](https://github.com/ImperialCollegeLondon/pycsvy/pull/93)
-- [Modernizing the linters and code formatters](https://github.com/ImperialCollegeLondon/pycsvy/pull/95), using `ruff`
+- [Modernising the linters and code formatters](https://github.com/ImperialCollegeLondon/pycsvy/pull/95), using `ruff`
 - Improving the [continuous integration workflows](https://github.com/ImperialCollegeLondon/pycsvy/pull/95) and [the use of Dependabot](https://github.com/ImperialCollegeLondon/pycsvy/pull/89)
 - [Setting UTF-8 as default encoding when reading and writing](https://github.com/ImperialCollegeLondon/pycsvy/pull/124)
 - [A Validator's registry](https://github.com/ImperialCollegeLondon/pycsvy/pull/123) was also added, setting the basis for data validation in the future.
