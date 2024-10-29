@@ -230,3 +230,4 @@ iplantuml
 ConcreteStrategy
 labeled
 isclose
+Creational
