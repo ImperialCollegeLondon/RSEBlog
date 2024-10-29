@@ -5,6 +5,7 @@ authors:
   - alexdewar
   - SaranjeetKaur
   - AdrianDAlessandro
+  - dc2917
 categories:
   - Events
 tags:
@@ -22,11 +23,13 @@ This year the central RSE team at Imperial planned two in-person events during H
 
 <!-- more -->
 
-## First event: 1st of October 2024
-
-The first event took place in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and ended up hacking intensely with our own thoughts. Before we realised, it was already lunch time and then the wrap-up session.
+The first event took place on the 1st of October 2024 in the Chemistry Building, in the South Kensington Campus. Most of the attendees were there in person, but a few also joined online. We tried together to work in groups when dealing with the same piece of software, but we were so much in the flow, that we forgot and ended up hacking intensely with our own thoughts. Before we realised, it was already lunch time and then the wrap-up session.
 
 ![In person attendees _in the flow_.](images/hacktoberfest24/attendees_day1.jpg){: .no-caption style="display:block;margin:auto;width:69%" }
+
+The second event, on the 23rd of October, took place at the Seminar and Learning Centre (SALC-10), with several participants in person related to on-going projects of the RSE Team. On this occasion, we had pizza for lunch, because what a better companion to codding than pizza?
+
+## Projects
 
 The following projects were pitched at the start of the event and chosen by the attendees to work on:
 
@@ -73,6 +76,10 @@ There was a lot of activity in this project, which included:
 - Give the [first steps to support CSV Dialects](https://github.com/ImperialCollegeLondon/pycsvy/pull/93)
 - [Modernizing the linters and code formatters](https://github.com/ImperialCollegeLondon/pycsvy/pull/95), using `ruff`
 - Improving the [continuous integration workflows](https://github.com/ImperialCollegeLondon/pycsvy/pull/95) and [the use of Dependabot](https://github.com/ImperialCollegeLondon/pycsvy/pull/89)
+- [Setting UTF-8 as default encoding when reading and writing](https://github.com/ImperialCollegeLondon/pycsvy/pull/124)
+- [A Validator's registry](https://github.com/ImperialCollegeLondon/pycsvy/pull/123) was also added, setting the basis for data validation in the future.
+
+Further work was started during Hacktoberfest and will hopefully see the light soon!
 
 ### repositoryr – Saranjeet Kaur Bhogal
 
@@ -82,50 +89,9 @@ The activities completed in this project as a part of Hacktoberfest include:
 
 - [Describing the use of `devtools` in package development](https://github.com/ImperialCollegeLondon/repositoryr/pull/5)
 - [Adding steps to create a website for the package](https://github.com/ImperialCollegeLondon/repositoryr/pull/6)
-
-## 23rd of October
-
-(summary)
-
-(photo day 2)
-
-The following projects were pitched at the start of the event and chosen by the attendees to work on, some of them, repeating from the previous event:
-
-### Crystalbot – Benjamin Scharpf​
-
-​(TBC)
-
-### Clockify TUI – Alex Dewar​
-
-​(TBC)
-
-### WSIMOD – Barnaby Dobson​
-
-​(TBC)
-
-### SWMManywhere – Barnaby Dobson​
-
-​(TBC)
-
-### PyCSVY – Diego Alonso Alvarez​
-
-​(TBC)
-
-### E2M – Yilin Jing​
-
-​(TBC)
-
-### Bubble analyser – Yiyang Guan​
-
-​(TBC)
-
-### Auto-CORPus – Joram Posma​
-
-​(TBC)
-
-### Image-draper – Ryan Smith​
-
-​(TBC)
+​- Included steps to [update the `DESCRIPTION` file](https://github.com/ImperialCollegeLondon/repositoryr/pull/11)
+- Steps to [set up `.R` files and unit testing files](https://github.com/ImperialCollegeLondon/repositoryr/pull/12)
+- Added a section on [how to build the README](https://github.com/ImperialCollegeLondon/repositoryr/pull/13)
 
 ### RSE Competencies Toolkit – Adrian D'Alessandro​
 
@@ -133,9 +99,6 @@ The following projects were pitched at the start of the event and chosen by the 
 
 The activities are captured in [this umbrella issue on the Django project setup](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/issues/6).
 
-### repositoryr – Saranjeet Kaur Bhogal
+## Summary
 
-​- Included steps to [update the `DESCRIPTION` file](https://github.com/ImperialCollegeLondon/repositoryr/pull/11)
-
-- Steps to [set up `.R` files and unit testing files](https://github.com/ImperialCollegeLondon/repositoryr/pull/12)
-- Added a section on [how to build the README](https://github.com/ImperialCollegeLondon/repositoryr/pull/13)
+The events were a nice opportunity to dive into other projects beyond our daily routine, learn how things are done in other places, as well as tools and techniques. Attendance was not brilliant and it would have been nice to be a bigger crowd but, nevertheless, it was a good experience. Now, the challenge for everyone is to keep going and finish up what they started!
