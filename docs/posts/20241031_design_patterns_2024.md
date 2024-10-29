@@ -57,8 +57,8 @@ This is much like an architect creating a blueprint before the actual constructi
 One of the tools available to us for this purpose is the *Unified Modelling Language (UML)*.
 More specifically, UML is a standardised modelling language to specify, visualise, construct,
 and document the components of software systems.
-While it is not a programming language per se, it serves software developers
-and software architects plan and design their software.
+While it is not a programming language per se, it helps software developers
+and architects plan and design their software.
 As part of ingredient one, we briefly outline the nuts and bolts of UML here, but for the interested reader, refer
 to [[Booch et al. (2005)]](#booch2005) for an elaborate discussion.
 
