@@ -5,6 +5,9 @@
       },
       {
         "pattern": "^https?://sqlitebrowser.org/.*"
+      },
+      {
+        "pattern": "^https?://clockify.me/.*"
       }
     ],
     "timeout": "180s",
