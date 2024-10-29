@@ -112,7 +112,7 @@ The concept of the Strategy Pattern can be outlined as follows:
 - Strategy interface: This defines a common interface for all supported algorithms. The context uses this interface to call the algorithm defined by a *ConcreteStrategy*.
 - *ConcreteStrategy*: These are the classes that implement the Strategy interface, each providing a specific implementation of the algorithm.
 
-We can code up the UML diagram of the Strategy pattern in a Jupyter notebook using *plantuml* as follows.
+We can code up the UML diagram of the Strategy pattern in a code block of a Jupyter notebook using *plantuml* as follows.
 
 ```plantuml
 %%plantuml
