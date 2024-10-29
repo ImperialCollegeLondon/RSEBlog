@@ -1,0 +1,4 @@
+# For list of rules, see: https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
+
+# Line length
+MD013: false
