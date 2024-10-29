@@ -34,9 +34,11 @@ The following projects were pitched at the start of the event and chosen by the 
 
 ​(TBC)
 
-### Clockify TUI – Alexander Dewar​
+### Clockify TUI – Alex Dewar​
 
-​(TBC)
+[Clockify](https://clockify.me/) is a free time tracker and timesheet app, which can be accessed via the web or graphical apps for various platforms. We use it within the RSE team to track the time spent on different projects. [Clockify TUI](https://github.com/alexdewar/clockify-tui/) is a project which aims to provide a simple interactive terminal app to provide basic functionality such as starting/stopping the timer and viewing the most recent time entries. It will do this with the help of [a Python package](https://pypi.org/project/clockify-api-client/) which provides an interface to the [Clockify REST API](https://docs.clockify.me/). The terminal UI will be build using the cross-platform [`blessed`](https://pypi.org/project/blessed/) library.
+
+As the project is still in very early development, the goals for Hacktoberfest were to produce a minimal working prototype, i.e. something which can send/retrieve basic data to the Clockify API and display it within the interactive terminal UI.
 ​
 
 ### WSIMOD – Barnaby Dobson​
@@ -93,7 +95,7 @@ The following projects were pitched at the start of the event and chosen by the 
 
 ​(TBC)
 
-### Clockify TUI – Alexander Dewar​
+### Clockify TUI – Alex Dewar​
 
 ​(TBC)
 
