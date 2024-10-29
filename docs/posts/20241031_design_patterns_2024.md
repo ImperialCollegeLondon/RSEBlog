@@ -1,15 +1,16 @@
 ---
 date: 2024-10-31
-author:
+authors:
   - HarmonicReflux
 categories:
   - Technology
 tags:
-  - Design Patterns / Gang of Four
-  - Object Oriented Programming (OOP) / Functional Programming
+  - Design Patterns
+  - Object Oriented Programming (OOP)
+  - Functional Programming
   - Python
   - Option pricing
-  - Software Engineering principles
+  - Software Engineering
 ---
 
 # An example of a software design pattern for European option pricing using UML diagrams
