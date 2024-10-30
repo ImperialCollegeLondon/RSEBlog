@@ -98,8 +98,7 @@ The activities are captured in [this umbrella issue on the Django project setup]
 
 ### CrystalBot and CryptoTrade - Benjamin J Scharpf
 
-[CrystalBot](https://github.com/HarmonicReflux/crystalbot) is a formerly active Crypto trading app written in `TypeScript`.
-The original code is in `TypeScript` and based off a mathematics paper named [Optimal market making](https://github.com/HarmonicReflux/crystalbot/tree/main/literature), published
+[CrystalBot](https://github.com/HarmonicReflux/crystalbot) is a formerly active Crypto trading app written in `TypeScript` and based off a mathematics paper named [Optimal market making](https://github.com/HarmonicReflux/crystalbot/tree/main/literature), published
 by Olivier Gueant from 2017. The aim of the efforts conducted during Hacktoberfest 2024 was to introduce the participating audience to the project
 and to find potential contributors, as well  as making an attempt to understand the code base and starting to translate its core parts to Python, which, due to the
 complexity of the both the repository and relevant literature is still a work in progress.
