@@ -96,7 +96,7 @@ The activities completed in this project as a part of Hacktoberfest include:
 
 The activities are captured in [this umbrella issue on the Django project setup](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/issues/6).
 
-### CrystalBot, CryptoTrade and a LinkedIn post on making use of `pyenv` with `pipx` - Benjamin J Scharpf
+### CrystalBot and CryptoTrade - Benjamin J Scharpf
 
 [CrystalBot](https://github.com/HarmonicReflux/crystalbot) is a formerly active Crypto trading app written in `TypeScript`.
 The original code is in `TypeScript` and based off a mathematics paper named [Optimal market making](https://github.com/HarmonicReflux/crystalbot/tree/main/literature), published
