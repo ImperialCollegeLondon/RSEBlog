@@ -119,7 +119,7 @@ Often, during intense coding sessions such as Hacktoberfest, developers discover
 Such an example may be [making `pipx` use a Python version specified by `pyenv`](https://www.linkedin.com/feed/update/urn:li:activity:7255105410720837632/)
 The "how-to-tutorial" is demonstrated using the Linux `Z Shell`, but the same commands are effective in the perhaps still more commonly used `bash` shell.
 While the documentation of the issue and its solution did not take consume much of Hacktoberfest, at the time of writing, the post has about 2100 impressions.
-While these are not plenty compared to popular posts on social media, they are still a multiple of an audience the author could ever reach in class at university.
+While these are not that many compared to popular posts on social media, they are still orders of magnitude higher than the audience the author could ever reach in class at university.
 
 ## Summary
 
