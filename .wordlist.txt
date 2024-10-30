@@ -263,3 +263,12 @@ ConcreteStrategy
 labeled
 isclose
 Creational
+Coursera
+github
+Yee
+GitHub
+Crypto
+CrystalBot
+CryptoTrade
+Gueant
+LinkedIn

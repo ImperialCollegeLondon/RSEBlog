@@ -6,6 +6,7 @@ authors:
   - SaranjeetKaur
   - AdrianDAlessandro
   - dc2917
+  - HarmonicReflux
 categories:
   - Events
 tags:
@@ -94,6 +95,31 @@ The activities completed in this project as a part of Hacktoberfest include:
 [The RSE Competencies Toolkit](https://rsetoolkit.github.io/rse-competencies-toolkit/) is a community resource to support RSEs (Research Software Engineers) in tracking and managing their professional development. It is in the very early days of development for the interactive web app. This hack day was used to kick start the development of the tool.
 
 The activities are captured in [this umbrella issue on the Django project setup](https://github.com/AdrianDAlessandro/rse-competencies-toolkit-webapp/issues/6).
+
+### CrystalBot and CryptoTrade - Benjamin J Scharpf
+
+[CrystalBot](https://github.com/HarmonicReflux/crystalbot) is a formerly active Crypto trading app written in `TypeScript` and based off a mathematics paper named [Optimal market making](https://github.com/HarmonicReflux/crystalbot/tree/main/literature), published
+by Olivier Gueant from 2017. The aim of the efforts conducted during Hacktoberfest 2024 was to introduce the participating audience to the project
+and to find potential contributors, as well  as making an attempt to understand the code base and translating it to Python or C++.
+
+During the second day of Hacktoberfest, Benjamin worked on building a GitHub repository publishing a project he took on
+in his own time. It is named [CryptoTrade](https://github.com/HarmonicReflux/CryptoTrade) and, to some extent, can be seen as the little brother
+of _CrystalBot_, but written in `C++`. The most relevant
+parts of the repository are the implementation of a [CSV reader in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/CSVReader.cpp)
+as well as a simple [Matching Engine in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/OrderBook.cpp).
+Especially matching engines are a highly specialised field, often non-disclosed, and software engineers interested in improving the current state
+are invited to take a look at popular resources like
+[An introduction to matching engines](https://databento.com/blog/introduction-matching-engines#:~:text=A%20matching%20engine%20is%20usually,and%20load%20balancers%20between%20them.)
+, [Matching Engine Explained](https://finchtrade.com/blog/matching-engine-explained-the-backbone-of-modern-trading#1), and a more thorough article about
+[an open-source low-latency high-throughput matching engine](https://arxiv.org/pdf/2102.10925).
+
+### Mini-tutorial on using `pipx` and `pyenv` - Benjamin J Scharpf
+
+Often, during intense coding sessions such as Hacktoberfest, developers discover issues whose solutions are worth being documented and shared.
+Such an example may be [making `pipx` use a Python version specified by `pyenv`](https://www.linkedin.com/feed/update/urn:li:activity:7255105410720837632/)
+The "how-to-tutorial" is demonstrated using the Linux `Z Shell`, but the same commands are effective in the perhaps still more commonly used `bash` shell.
+While the documentation of the issue and its solution did not take consume much of Hacktoberfest, at the time of writing, the post has about 2100 impressions.
+While these are not that many compared to popular posts on social media, they are still orders of magnitude higher than the audience the author could ever reach in class at university.
 
 ## Summary
 
