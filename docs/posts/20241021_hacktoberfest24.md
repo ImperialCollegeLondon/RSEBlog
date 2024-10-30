@@ -102,7 +102,8 @@ The activities are captured in [this umbrella issue on the Django project setup]
 by Olivier Gueant from 2017. The aim of the efforts conducted during Hacktoberfest 2024 was to introduce the participating audience to the project
 and to find potential contributors, as well  as making an attempt to understand the code base and translating it to Python or C++.
 
-During the second day of Hacktoberfest, the Benjamin worked on building a GitHub repository publishing a project he worked on in his own time. It is named [CryptoTrade](https://github.com/HarmonicReflux/CryptoTrade) and, to some extent, can be seen as the little brother
+During the second day of Hacktoberfest, Benjamin worked on building a GitHub repository publishing a project he took on 
+in his own time. It is named [CryptoTrade](https://github.com/HarmonicReflux/CryptoTrade) and, to some extent, can be seen as the little brother
 of _CrystalBot_, but written in `C++`. The most relevant
 parts of the repository are the implementation of a [CSV reader in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/CSVReader.cpp)
 as well as a simple [Matching Engine in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/OrderBook.cpp).
