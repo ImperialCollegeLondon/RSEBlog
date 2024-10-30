@@ -115,6 +115,8 @@ are invited to take a look at popular resources like
 , [Matching Engine Explained](https://finchtrade.com/blog/matching-engine-explained-the-backbone-of-modern-trading#1), and a more thorough article about
 [an open-source low-latency high-throughput matching engine](https://arxiv.org/pdf/2102.10925).
 
+### Mini-tutorial on using `pipx` and `pyenv` - Benjamin J Scharpf
+
 Often, during intense coding sessions such as Hacktoberfest, developers discover issues whose solutions are worth being documented and shared.
 Such an example may be [making `pipx` use a Python version specified by `pyenv`](https://www.linkedin.com/feed/update/urn:li:activity:7255105410720837632/)
 The "how-to-tutorial" is demonstrated using the Linux `Z Shell`, but the same commands are effective in the perhaps still more commonly used `bash` shell.
