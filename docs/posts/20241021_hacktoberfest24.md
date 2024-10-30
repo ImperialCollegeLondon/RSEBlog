@@ -103,10 +103,7 @@ by Olivier Gueant from 2017. The aim of the efforts conducted during Hacktoberfe
 and to find potential contributors, as well  as making an attempt to understand the code base and translating it to Python or C++.
 
 During the second day of Hacktoberfest, the Benjamin worked on building a GitHub repository publishing a project he worked on in his own time. It is named [CryptoTrade](https://github.com/HarmonicReflux/CryptoTrade) and, to some extent, can be seen as the little brother
-of _CrystalBot_. It is written in `C++` and the result of a [Coursera course on Object Oriented Programming in C++](https://www.coursera.org/specializations/object-oriented-programming-s12n)
-created by [Matthew Yee-King](https://www.gold.ac.uk/computing/people/m-yee-king/) from Goldsmiths University London.
-
-While it might be rewarding to get [course certificate](https://www.coursera.org/account/accomplishments/specialization/FMA5TD0N4K7E), the more relevant
+of _CrystalBot_, but written in `C++` and the result of a The most relevant
 parts of the repository are the implementation of a [CSV reader in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/CSVReader.cpp)
 as well as a simple [Matching Engine in C++](https://github.com/HarmonicReflux/CryptoTrade/blob/main/src/OrderBook.cpp).
 Especially matching engines are a highly specialised field, often non-disclosed, and software engineers interested in improving the current state
