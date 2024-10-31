@@ -220,7 +220,6 @@ iplantuml
 isclose
 jamesturner
 jcohen
-labeled
 linters
 ln
 lockdown
