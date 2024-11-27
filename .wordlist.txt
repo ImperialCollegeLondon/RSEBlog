@@ -41,6 +41,7 @@ Dependabot
 Dev
 Dobson
 Druskat
+ECRI
 EDIA
 EPSRC
 ETL
@@ -102,6 +103,7 @@ OSS
 OptionPriceStrategy
 PDFs
 PDM
+PRs
 PV
 PYENV
 Pandoc
@@ -147,6 +149,7 @@ TBC
 TUI
 Tierney
 TinyMarsh
+ToDo
 Typst
 UCL
 UDMs
@@ -171,6 +174,7 @@ Yee
 Yu
 Zenodo
 Zsh
+actioned
 ai
 al
 alexdewar
@@ -207,6 +211,7 @@ fi
 focussed
 formatters
 frac
+frictionless
 funder
 github
 hackathon
@@ -226,6 +231,7 @@ lockdown
 macOS
 math
 mdx
+minimalistic
 mirai
 modularity
 nd
