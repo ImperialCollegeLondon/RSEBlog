@@ -114,7 +114,7 @@ In the last [talk][talk_diego] of the day, [Diego Alonso Álvarez], head of Impe
 [Imperial College Research Computing Service]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/
 [Graduate School]: https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/meet-the-team/
 [talk]: https://zenodo.org/records/13167550
-[ReCoDE]: https://imperialcollegelondon.github.io/ReCoDE-home/exemplars/
+[ReCoDE]: https://imperialcollegelondon.github.io/ReCoDE-home/filter/
 [see here]: https://imperialcollegelondon.github.io/ReCoDE-DecodingMarketSignals/
 [presented]: https://rslondon.ac.uk/rslondonsoutheast2024/abstracts/#ft4
 [poster]: https://zenodo.org/records/12731887
