@@ -286,9 +286,9 @@ Translating the UML diagram to Python code then looks as follows:
 
 ```python
 from dataclasses import dataclass
-import numpy as np
 from scipy.stats import norm
 from typing import Callable, Tuple
+import numpy as np
 
 
 OptionPriceStrategy = Callable[['BlackScholesOption'], float]  # define the OptionPriceStrategy type as a Callable that accepts a BlackScholesOption and returns a float
