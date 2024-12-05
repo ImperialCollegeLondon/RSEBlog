@@ -17,7 +17,7 @@ tags:
 
 ![Map challenge overview](images/30day_map_challenge/30dmc_2024.png)
 
-Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from around the world come together to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organized by Topi Tjukanov, this prestigious event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map daily, guided by a unique daily theme.
+Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from around the world come together to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organized by Topi Tjukanov, this event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map daily, guided by a unique daily theme.
 
 The 30-Day Map Challenge is an inclusive and open-ended initiative that fosters creativity and experimentation in mapmaking. Each day in November presents a different theme, ranging from “Points” and “Lines” to “Fantasy” and “Historical.” Participants are encouraged to interpret these prompts flexibly, utilizing any data, tools, or artistic styles that resonate with them.
 
