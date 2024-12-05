@@ -17,7 +17,7 @@ tags:
 
 ![Map challenge overview](images/30day_map_challenge/30dmc_2024.png)
 
-Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from all over the world gather to participate in the 30-Day Map Challenge. Organized by Topi Tjukanov, this prestigious event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map every day, guided by a unique daily theme.
+Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from all over the world gather to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organized by Topi Tjukanov, this prestigious event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map every day, guided by a unique daily theme.
 
 The 30-Day Map Challenge is an inclusive and open-ended initiative that encourages creativity and experimentation in mapmaking. Each day in November presents a different theme, ranging from “Points” and “Lines” to “Fantasy” and “Historical.” Participants are encouraged to interpret these prompts flexibly, using any data, tools, or artistic styles that resonate with them.
 <!-- more -->
@@ -25,13 +25,13 @@ Participation is voluntary, and there’s no competition involved. Instead, this
 
 This was my first year participating in the challenge. I was inspired to take on the challenge because of a recent project the RSE team worked on. They created an interactive map to display result data over a map of England. The app used Django, so I had limited options for mapping abilities. Since I wanted to directly query the Django database, I chose the library [django-plotly-dash](https://github.com/GibbsConsulting/django-plotly-dash).
 
-For this post, I’ll focus on five of the maps I created during the challenge:
+For this post, I’ll focus on four maps I created during the challenge:
 
 ## 1. Choropleth
 
 ![Day 16 Choropleth. Nature reserves across the UK](images/30day_map_challenge/Choropleth.png)
 
-This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. I decided to use this map type. For this challenge, I delved into some information about vehicle access per household gathered through the 2021 UK census and thought it would be a nice visualization to see where the most concentrated population of vehicles would be throughout the UK.
+This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I delved into some information about vehicle access per household gathered through the 2021 UK census and thought it would be a nice visualization to see where the most concentrated population of vehicles would be throughout the UK.
 
 *What is a Choropleth?*
 
@@ -53,6 +53,6 @@ To create this map, I used a GEOJSON file, a geospatial data interchange format 
 
 The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 
-## 4. Data: HDX (Humanitarian Data Exchange) Day 8
+## 4. New tool: QGIS
 
-## 5. New tool QGIS Day 13
+![Day 13 New Tool. Qgis ](images/30day_map_challenge/Qgis.png)
