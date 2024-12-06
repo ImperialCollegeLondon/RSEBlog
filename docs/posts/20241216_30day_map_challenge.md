@@ -13,7 +13,7 @@ tags:
 ---
 
 
-# **Mapping with Python: The 30-Day Map Challenge**
+# **The 30-Day Map Challenge**
 
 ![Map challenge overview](images/30day_map_challenge/30dmc_2024.png)
 
@@ -26,19 +26,19 @@ Participation is voluntary, and there’s no competition involved. Instead, this
 
 This was my first year participating in the 30-day map challenge. I was inspired to take on the challenge being part of a recent project the RSE team worked on. We created an interactive map that displayed location data gathered from mobile devices to display trends over a map of England. The app used Django, which limited my options for mapping abilities. Since I wanted to directly query the Django database, I chose the library [django-plotly-dash](https://github.com/GibbsConsulting/django-plotly-dash).
 
-For the maps showcased below, you can find the code, files, and data used to create the maps in my personal repository [Sahil590/30daymapchallenge](https://github.com/Sahil590/30daymapchallenge).
-
 In this post, I’ll focus on four maps I created during the challenge:
 
-## 1. Choropleth
+## Maps
 
-![Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehichles accessable acros the UK](images/30day_map_challenge/Choropleth.png)
+### 1. Choropleth
+
+![Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible acros the UK](images/30day_map_challenge/Choropleth.png)
 
 This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualization to see where the most concentrated population of vehicles would be across the UK.
 
 This map provides Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 
-## 2. Points
+### 2. Points
 
 ![30DayMapChallenge classic: A map with points. Start the challenge with points. Show individual locations—anything from cities to trees or more abstract concepts. Simple, but a key part of the challenge. 📍 Nature reserves across the UK](images/30day_map_challenge/Points_map.png){:style="display:block;margin:auto;width:50%" }
 
@@ -46,7 +46,7 @@ I created this map using [Plotly](https://plotly.com/examples/) a free and open-
 
 As mentioned in the caption this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-## 3. Lines
+### 3. Lines
 
 ![Day 2 A map with focus on lines. Roads, rivers, routes, or borders — this day was all about mapping connections and divisions. Another traditional way to keep things moving. 📏. Undersea internet cables ](images/30day_map_challenge/Lines.png)
 
@@ -56,7 +56,7 @@ To create this map, I used a GEOJSON file, a geospatial data interchange format 
 
 The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 
-## 4. New tool: QGIS
+### 4. New tool: QGIS
 
 ![Day 13 Use a tool you’ve never tried before. The challenge has always been about trying new things. Use a tool, software, or drawing technique you’ve never worked with before. 🧪🔧 QGIS ](images/30day_map_challenge/Qgis.png)
 
@@ -69,3 +69,13 @@ For my initial map, I opted for simplicity and focused on visualizing the East A
 When creating this map, I discovered that it was much easier to create a highly detailed and visually appealing map compared to the python tools I am used to using.
 
 My initial impression of QGIS was that it was a tool with immense potential, but it also felt overwhelming due to the sheer number of options available. The interface was cluttered with menus, toolbars, and panels, but once I began exploring, everything became intuitive.
+
+## Closing thoughts
+
+Taking part in the 30-Day Map Challenge this year has been an eye-opening experience for me. Each theme pushed me to think outside the box and experiment with new tools and techniques. It was a chance to combine creativity with data, and I learned so much along the way.
+
+Some the aspects of the challeng were more frustrating than challenging is how open ended the instrcutions are there is not alot specified such as what data is to be used i found myself spending most of the time finding data to display on my map rather than actually creating the map.
+
+What I loved most about this challenge was how approachable it felt. Whether I was using familiar tools like Plotly or stepping out of my comfort zone with QGIS, every map I created taught me something new about geospatial visualization. It was incredible to see how simple datasets could tell compelling stories when mapped out thoughtfully.
+
+If you want to see more of my maps or try recreating them yourself, you can check out my [GitHub repository](https://github.com/Sahil590/30daymapchallenge).
