@@ -52,7 +52,7 @@ As mentioned in the caption this was a simple but effective map that primarily i
 
 The internet is a global network of interconnected cables that span continents, connecting people and devices worldwide. I wanted to visualize this network on a map.
 
-To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later.
+To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map.
 
 The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 
