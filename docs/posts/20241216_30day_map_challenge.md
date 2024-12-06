@@ -20,6 +20,7 @@ tags:
 Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from around the world come together to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organized by Topi Tjukanov, this event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map daily, guided by a unique daily theme.
 
 The 30-Day Map Challenge is an inclusive and open-ended initiative that fosters creativity and experimentation in mapmaking. Each day in November presents a different theme, ranging from “Points” and “Lines” to “Fantasy” and “Historical.” Participants are encouraged to interpret these prompts flexibly, utilizing any data, tools, or artistic styles that resonate with them.
+<!-- more -->
 
 Participation is voluntary, and there’s no competition involved. Instead, this challenge is a celebration of cartographic creativity. Participants share their creations on social media platforms using the hashtag #30DayMapChallenge, creating a vibrant global gallery of diverse and imaginative maps.
 
@@ -41,13 +42,9 @@ This map provides Census 2021 estimates that classify households in England and 
 
 ![30DayMapChallenge classic: A map with points. Start the challenge with points. Show individual locations—anything from cities to trees or more abstract concepts. Simple, but a key part of the challenge. 📍 Nature reserves across the UK](images/30day_map_challenge/Points_map.png){:style="display:block;margin:auto;width:50%" }
 
-I created this map using [Plotly](https://plotly.com/examples/), a tool I’m familiar with.
+I created this map using [Plotly](https://plotly.com/examples/) a free, open-source, browser-based graphing library that can be used in Dash applications, which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more!
 
-Start your 30-day map challenge with points! Use a map to show individual locations, ranging from cities to trees and even more abstract concepts. This simple yet crucial element of the challenge will help you visualize your progress. 📍 Nature reserves across the UK: [Image](images/30day_map_challenge/Points_map.png)style="Display: block; margin: auto; width: 50%;
-
-This was a classic challenge to kick off the month, as explained, it’s straightforward and focuses on a single location.
-
-The data displayed on the map is every nature reserve and park located in the UK. The data was sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
+As mentioned in the caption this was a simple but effective map that primarily is focuses on points and each point represents a local nature reserve across the uk. The data was sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
 ## 3. Lines
 
