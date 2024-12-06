@@ -27,7 +27,7 @@ This was my first year participating in the 30-day map challenge. I was inspired
 
 What I loved most about this challenge was how approachable it felt. Whether I was using familiar tools like Plotly or stepping out of my comfort zone with QGIS, every map I created taught me something new about geospatial visualization. It was incredible to see how simple datasets could tell compelling stories when mapped out thoughtfully.
 
-For the first 3 maps bellow I decided to make thme a Dash app as it displays the map in a web interface, allowing users to interactively explore the data. Users can hover over regions to see detailed information about car or van availability in each area.
+For the first 3 maps below, I decided to make them a Dash app as it displays the map in a web interface, allowing users to interactively explore the data. Users can hover over regions to see detailed information about car or van availability in each area.
 
 If you want to see more of my maps or try recreating them yourself, you can check out my [GitHub repository](https://github.com/Sahil590/30daymapchallenge).
 In this post, I’ll focus on four maps I created during the challenge:
@@ -36,24 +36,24 @@ In this post, I’ll focus on four maps I created during the challenge:
 
 ### 1. Choropleth
 
-![Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible acros the UK](images/30day_map_challenge/Choropleth.png)
+![Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible across the UK](images/30day_map_challenge/Choropleth.png)
 
 This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualization to see where the most concentrated population of vehicles would be across the UK.
 
-I created this map using [Plotly](https://plotly.com/examples/) a free and open-source browser-based graphing library that can be used in Dash applications, which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more!.
+I created this map using [Plotly](https://plotly.com/examples/) a free and open-source browser-based graphing library that can be used in Dash applications, which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more.
 
 The application reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented—even those without data—we create a comprehensive dataset that assigns a default observation value to regions lacking specific data. This merged dataset is then used to generate the choropleth map with Plotly Express, mapping the aggregated observations to geographical regions using color gradients.
 
-As you can see in Figure 2 there are alot of white spaces in the map this is a result of lack of data and also that one of the issues i was facing when trying to find data to dislpay on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
+As you can see in Figure 2 there are a lot of white spaces in the map this is a result of lack of data and also that one of the issues I was facing when trying to find data to display on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Chropleth.py)
 
 ### 2. Points
 
-![Day 1Start the challenge with points. Show individual locations—anything from cities to trees or more abstract concepts. Simple, but a key part of the challenge. 📍 Nature reserves across the UK](images/30day_map_challenge/Points_map.png){:style="display:block;margin:auto;width:50%" }
+![Day 1 Start the challenge with points. Show individual locations—anything from cities to trees or more abstract concepts. Simple, but a key part of the challenge. 📍 Nature reserves across the UK](images/30day_map_challenge/Points_map.png){:style="display:block;margin:auto;width:50%" }
 
-As mentioned in the caption this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
+As mentioned in the caption, this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-This app reads location data from a DataFrame df, which contains the latitude, longitude, and names of the reserves. The go.Scattermapbox graph object plots these points on a Mapbox map with green markers. The map is centered based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution.The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.pyv)
+This app reads location data from a DataFrame df, which contains the latitude, longitude, and names of the reserves. The go.Scattermapbox graph object plots these points on a Mapbox map with green markers. The map is centered based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.pyv)
 
 ### 3. Lines
 
@@ -61,7 +61,7 @@ This app reads location data from a DataFrame df, which contains the latitude, l
 
 The Internet is a global network of interconnected cables that span continents, connecting people and devices worldwide. I wanted to visualize this network on a map.
 
-To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. Its a very simple but effective way of protraying this type of data.
+To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. It’s a very simple but effective way of portraying this type of data.
 
 The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Lines_Day2.py)
@@ -73,17 +73,17 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 This day revolves around trying out a new tool — something entirely unfamiliar to me. For this challenge, I decided to use [QGIS](https://qgis.org/), a free and open-source software specifically designed for geospatial data creation, editing, analysis, visualization, and publication.
 
 QGIS is incredibly powerful. It can handle various tasks, from thematic maps to geospatial analysis and interactive visualizations. Despite its capabilities, I had never used it before. So, I saw this as an ideal opportunity to learn something new and challenge myself.
-QGIS is a low code solution to creating maps but it does have the capability to use python that allows you to automate tasks, manipulate map layers and elements, and create complex spatial analysis workflows. I decided to go for the no code solution since it was my firist time using QGIS.
+QGIS is a low-code solution to creating maps, but it does have the capability to use Python that allows you to automate tasks, manipulate map layers and elements, and create complex spatial analysis workflows. I decided to go for the no-code solution since it was my first time using QGIS.
 
-For my initial map, I opted for simplicity and focused on visualizing the East African Region. I found a detailed dataset from [Natural Earth Hub](https://www.naturalearthdata.com/) that was recommended in my tutorial for QGIS. Once I found the data I needed, setting up the map became the next challenge. Since I had no prior experience, it took some time to get up to speed and produce a map that I was satisfied with, as shown in figure 5.
+For my initial map, I opted for simplicity and focused on visualizing the East African Region. I found a detailed dataset from [Natural Earth Hub](https://www.naturalearthdata.com/) that was recommended in my tutorial for QGIS. Once I found the data I needed, setting up the map became the next challenge. Since I had no prior experience, it took some time to get up to speed and produce a map that I was satisfied with, as shown in Figure 5.
 
-When creating this map, I discovered that it was much easier to create a highly detailed and visually appealing map compared to the python tools I am used to using.
+When creating this map, I discovered that it was much easier to create a highly detailed and visually appealing map compared to the Python tools I am used to using.
 
 My initial impression of QGIS was that it was a tool with immense potential, but it also felt overwhelming due to the sheer number of options available. The interface was cluttered with menus, toolbars, and panels, but once I began exploring, everything became intuitive.
-If you would like to edit the map I have included the file in repository that can be opened in qgis it is [here](https://github.com/Sahil590/30daymapchallenge/blob/main/30daychallenge.qgz) all you need is [download](https://qgis.org/download/) QGIS and open the file and it should render and be able to be edited on your own device it support linux, windows and macos.
+If you would like to edit the map, I have included the file in the repository that can be opened in QGIS. It is [here](https://github.com/Sahil590/30daymapchallenge/blob/main/30daychallenge.qgz). All you need is to [download](https://qgis.org/download/) QGIS and open the file. It should render and be able to be edited on your own device. It supports Linux, Windows, and macOS.
 
 ## Closing thoughts
 
 Taking part in the 30-Day Map Challenge this year has been an eye-opening experience for me. Each theme pushed me to think outside the box and experiment with new tools and techniques. It was a chance to combine creativity with data, and I learned so much along the way.
 
-Some the aspects of the challeng were more frustrating than challenging is how open ended the instrcutions are there is not alot specified such as what data is to be used i found myself spending most of the time finding data to display on my map rather than actually creating the map.
+Some of the aspects of the challenge were more frustrating than challenging. It is how open-ended the instructions are. There is not a lot specified, such as what data is to be used. I found myself spending most of the time finding data to display on my map rather than actually creating the map.
