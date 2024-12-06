@@ -35,7 +35,7 @@ In this post, I’ll focus on four maps I created during the challenge:
 
 This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualization to see where the most concentrated population of vehicles would be across the UK.
 
-The map displays every nature reserve and park in the UK. The data was sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
+This map provides Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 
 ## 2. Points
 
