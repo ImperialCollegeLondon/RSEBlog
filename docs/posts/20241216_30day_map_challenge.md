@@ -51,13 +51,13 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 
 As mentioned in the caption, this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-This app reads location data from a csv file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centered based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.pyv)
+This app reads location data from a csv file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centred based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.py)
 
 ### 3. Lines
 
 ![Day 2 A map with focus on lines. Roads, rivers, routes, or borders — this day was all about mapping connections and divisions. Another traditional way to keep things moving. 📏. Undersea internet cables ](images/30day_map_challenge/Lines.png)
 
-The Internet is a global network of interconnected cables that span continents, connecting people and devices worldwide. I wanted to visualize this network on a map.
+The Internet is a global network of interconnected cables that span continents, connecting people and devices worldwide. I wanted to visualise this network on a map.
 
 To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. It’s a very simple but effective way of portraying this type of data.
 
@@ -68,12 +68,12 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 
 ![Day 13 Use a tool you’ve never tried before. The challenge has always been about trying new things. Use a tool, software, or drawing technique you’ve never worked with before. 🧪🔧 QGIS ](images/30day_map_challenge/Qgis.png)
 
-This day revolves around trying out a new tool — something entirely unfamiliar to me. For this challenge, I decided to use [QGIS](https://qgis.org/), a free and open-source software specifically designed for geospatial data creation, editing, analysis, visualization, and publication.
+This day revolves around trying out a new tool — something entirely unfamiliar to me. For this challenge, I decided to use [QGIS](https://qgis.org/), a free and open-source software specifically designed for geospatial data creation, editing, analysis, visualisation, and publication.
 
-QGIS is incredibly powerful. It can handle various tasks, from thematic maps to geospatial analysis and interactive visualizations. Despite its capabilities, I had never used it before. So, I saw this as an ideal opportunity to learn something new and challenge myself.
+QGIS is incredibly powerful. It can handle various tasks, from thematic maps to geospatial analysis and interactive visualisations. Despite its capabilities, I had never used it before. So, I saw this as an ideal opportunity to learn something new and challenge myself.
 QGIS is a low-code solution to creating maps, but it does have the capability to use Python that allows you to automate tasks, manipulate map layers and elements, and create complex spatial analysis workflows. I decided to go for the no-code solution since it was my first time using QGIS.
 
-For my initial map, I opted for simplicity and focused on visualizing the East African Region. I found a detailed dataset from [Natural Earth Hub](https://www.naturalearthdata.com/) that was recommended in my tutorial for QGIS. Once I found the data I needed, setting up the map became the next challenge. Since I had no prior experience, it took some time to get up to speed and produce a map that I was satisfied with, as shown in Figure 5.
+For my initial map, I opted for simplicity and focused on visualising the East African Region. I found a detailed dataset from [Natural Earth Hub](https://www.naturalearthdata.com/) that was recommended in my tutorial for QGIS. Once I found the data I needed, setting up the map became the next challenge. Since I had no prior experience, it took some time to get up to speed and produce a map that I was satisfied with, as shown in Figure 5.
 
 When creating this map, I discovered that it was much easier to create a highly detailed and visually appealing map compared to the Python tools I am used to using.
 
