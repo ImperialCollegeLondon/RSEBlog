@@ -5,10 +5,9 @@ authors:
 categories:
   - Technology
 tags:
-  - Django
-  - Python
-  - Technology
   - 30DayMapChallenge
+  - Technology
+  - Python
   - Mapping
 ---
 
