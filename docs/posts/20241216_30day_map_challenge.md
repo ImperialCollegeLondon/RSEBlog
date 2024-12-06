@@ -27,7 +27,7 @@ This was my first year participating in the 30-day map challenge. I was inspired
 
 What I loved most about this challenge was how approachable it felt. Whether I was using familiar tools like Plotly or stepping out of my comfort zone with QGIS, every map I created taught me something new about geospatial visualisation. It was incredible to see how simple datasets could tell compelling stories when mapped out thoughtfully.
 
-For the first 3 maps below, I decided to make them a Dash app as it displays the map in a web interface, allowing users to interactively explore the data. Users can hover over regions to see detailed information about car or van availability in each area.
+For the first 3 maps below, I created this map using [Plotly](https://plotly.com/examples/) a free and open-source browser-based graphing library that can be used in Dash applications. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more. I decided to make them a Dash app which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards, allowing users to interactively explore the data. Usually users can hover over regions to see detailed information about car or van availability in each area.
 
 If you want to see more of my maps or try recreating them yourself, you can check out my [GitHub repository](https://github.com/Sahil590/30daymapchallenge).
 In this post, I’ll focus on four maps I created during the challenge:
@@ -40,9 +40,7 @@ In this post, I’ll focus on four maps I created during the challenge:
 
 This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualisation to see where the most concentrated population of vehicles would be across the UK.
 
-I created this map using [Plotly](https://plotly.com/examples/) a free and open-source browser-based graphing library that can be used in Dash applications, which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more.
-
-The application reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented—even those without data—we create a comprehensive dataset that assigns a default observation value to regions lacking specific data. This merged dataset is then used to generate the choropleth map with Plotly Express, mapping the aggregated observations to geographical regions using colour gradients.
+The app reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented—even those without data—we create a comprehensive dataset that assigns a default observation value to regions lacking specific data. This merged dataset is then used to generate the choropleth map with the object `px.choropleth_map`, mapping the aggregated observations to geographical regions using colour gradients.
 
 As you can see in Figure 2 there are a lot of white spaces in the map this is a result of lack of data and also that one of the issues I was facing when trying to find data to display on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Chropleth.py)
@@ -53,7 +51,7 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 
 As mentioned in the caption, this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-This app reads location data from a DataFrame df, which contains the latitude, longitude, and names of the reserves. The go.Scattermapbox graph object plots these points on a Mapbox map with green markers. The map is centered based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.pyv)
+This app reads location data from a csv file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centered based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.pyv)
 
 ### 3. Lines
 
