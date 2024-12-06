@@ -16,16 +16,16 @@ tags:
 
 ![Map challenge overview](images/30day_map_challenge/30dmc_2024.png)
 
-Every year, cartography enthusiasts, geographers, data visualizers, and mapmakers from around the world come together to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organized by Topi Tjukanov, this event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map daily, guided by a unique daily theme.
+Every year, cartography enthusiasts, geographers, data visualisers, and mapmakers from around the world come together to participate in the [30-Day Map Challenge](https://30daymapchallenge.com/). Organised by Topi Tjukanov, this event celebrates the art and science of mapmaking. Whether you’re an experienced GIS professional or just starting out, this challenge invites you to create and share a map daily, guided by a unique daily theme.
 
-The 30-Day Map Challenge is an inclusive and open-ended initiative that fosters creativity and experimentation in mapmaking. Each day in November presents a different theme, ranging from “Points” and “Lines” to “Fantasy” and “Historical.” Participants are encouraged to interpret these prompts flexibly, utilizing any data, tools, or artistic styles that resonate with them.
+The 30-Day Map Challenge is an inclusive and open-ended initiative that fosters creativity and experimentation in mapmaking. Each day in November presents a different theme, ranging from “Points” and “Lines” to “Fantasy” and “Historical.” Participants are encouraged to interpret these prompts flexibly, utilising any data, tools, or artistic styles that resonate with them.
 <!-- more -->
 
 Participation is voluntary, and there’s no competition involved. Instead, this challenge is a celebration of cartographic creativity. Participants share their creations on social media platforms using the hashtag #30DayMapChallenge, creating a vibrant global gallery of diverse and imaginative maps.
 
 This was my first year participating in the 30-day map challenge. I was inspired to take on the challenge being part of a recent project the RSE team worked on. We created an interactive map that displayed location data gathered from mobile devices to display trends over a map of England. The app used Django, which limited my options for mapping abilities. Since I wanted to directly query the Django database, I chose the library [django-plotly-dash](https://github.com/GibbsConsulting/django-plotly-dash).
 
-What I loved most about this challenge was how approachable it felt. Whether I was using familiar tools like Plotly or stepping out of my comfort zone with QGIS, every map I created taught me something new about geospatial visualization. It was incredible to see how simple datasets could tell compelling stories when mapped out thoughtfully.
+What I loved most about this challenge was how approachable it felt. Whether I was using familiar tools like Plotly or stepping out of my comfort zone with QGIS, every map I created taught me something new about geospatial visualisation. It was incredible to see how simple datasets could tell compelling stories when mapped out thoughtfully.
 
 For the first 3 maps below, I decided to make them a Dash app as it displays the map in a web interface, allowing users to interactively explore the data. Users can hover over regions to see detailed information about car or van availability in each area.
 
@@ -36,13 +36,13 @@ In this post, I’ll focus on four maps I created during the challenge:
 
 ### 1. Choropleth
 
-![Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible across the UK](images/30day_map_challenge/Choropleth.png)
+![Classic choropleth map. Use colour to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible across the UK](images/30day_map_challenge/Choropleth.png)
 
-This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualization to see where the most concentrated population of vehicles would be across the UK.
+This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualisation to see where the most concentrated population of vehicles would be across the UK.
 
 I created this map using [Plotly](https://plotly.com/examples/) a free and open-source browser-based graphing library that can be used in Dash applications, which is a Python framework that allows developers to build interactive web apps, especially analytical interfaces like dashboards. I am very familiar with this tool, as I have used it in many projects to portray data in maps, charts, and much more.
 
-The application reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented—even those without data—we create a comprehensive dataset that assigns a default observation value to regions lacking specific data. This merged dataset is then used to generate the choropleth map with Plotly Express, mapping the aggregated observations to geographical regions using color gradients.
+The application reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented—even those without data—we create a comprehensive dataset that assigns a default observation value to regions lacking specific data. This merged dataset is then used to generate the choropleth map with Plotly Express, mapping the aggregated observations to geographical regions using colour gradients.
 
 As you can see in Figure 2 there are a lot of white spaces in the map this is a result of lack of data and also that one of the issues I was facing when trying to find data to display on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Chropleth.py)
