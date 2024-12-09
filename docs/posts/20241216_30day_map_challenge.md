@@ -31,6 +31,7 @@ I created the first 3 maps below using [Plotly](https://plotly.com/examples/), a
 
 If you want to see more of my maps or try recreating them yourself, you can check out my [GitHub repository](https://github.com/Sahil590/30daymapchallenge).
 In this post, I’ll focus on the four maps that I created during this challenge:
+
 ## Maps
 
 ### 1. Choropleth
