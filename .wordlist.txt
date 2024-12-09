@@ -57,7 +57,7 @@ Frick
 Fundinger
 Fürlich
 GANs
-GEOJSON
+GeoJSON
 GIS
 GPUs
 GUIs
@@ -293,3 +293,4 @@ webpages
 wellbeing
 zsh
 Álvarez
+Mapbox

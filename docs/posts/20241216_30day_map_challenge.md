@@ -51,7 +51,7 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 
 As mentioned in the caption, this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-This app reads location data from a CSV file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centred based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.py)
+This app reads location data from a csv file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centred based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.py)
 
 ### 3. Lines
 
@@ -59,7 +59,7 @@ This app reads location data from a CSV file, which contains the latitude, longi
 
 The Internet is a global network of interconnected cables that span continents, connecting people and devices worldwide. I wanted to visualise this network on a map.
 
-To create this map, I used a GEOJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. It’s a very simple but effective way of portraying this type of data.
+To create this map, I used a GeoJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. It’s a very simple but effective way of portraying this type of data.
 
 The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Lines_Day2.py)
