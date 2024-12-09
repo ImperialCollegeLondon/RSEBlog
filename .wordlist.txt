@@ -57,7 +57,6 @@ Frick
 Fundinger
 Fürlich
 GANs
-GeoJSON
 GIS
 GPUs
 GUIs
@@ -65,6 +64,7 @@ Gabasova
 Gao
 GeNN
 Gemma
+GeoJSON
 Gi
 GitHub
 GraphQL
@@ -96,6 +96,7 @@ MLOps
 MacBook
 Mahmoud
 Manani
+Mapbox
 Matejuk
 Mathjax
 Mirai
@@ -293,4 +294,3 @@ webpages
 wellbeing
 zsh
 Álvarez
-Mapbox
