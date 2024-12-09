@@ -51,7 +51,7 @@ The code that produced this map can be found [here](https://github.com/Sahil590/
 
 As mentioned in the caption, this was a simple but effective map that primarily focuses on points, where each point represents a local nature reserve across the UK. The data were sourced from [data.gov](https://www.data.gov.uk/dataset/acdf4a9e-a115-41fb-bbe9-603c819aa7f7/local-nature-reserves-england).
 
-This app reads location data from a csv file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centred based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.py)
+This app reads location data from a CSV file, which contains the latitude, longitude, and names of the reserves. The `go.Scattermapbox` graph object plots these points on a Mapbox map with green markers. The map is centred based on the average latitude and longitude of all points, providing an optimal initial view of the reserves' distribution. The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Points_Day1.py)
 
 ### 3. Lines
 
