@@ -38,7 +38,7 @@ In this post, I’ll focus on the four maps that I created during this challenge
 
 ![Classic choropleth map. Use colour to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨. Number of vehicles accessible across the UK](images/30day_map_challenge/Choropleth.png)
 
-This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household gathered through the 2021 UK census. I thought it would be a nice visualisation to see where the most concentrated population of vehicles would be across the UK.
+This map type got me started on my journey, so it’s only fitting that this is the first map to showcase. For this challenge, I explored some information about vehicle access per household, gathered through the 2021 UK census. I thought it would be a nice visualisation to see where the most concentrated population of vehicles would be across the UK.
 
 The app reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented - even those without data. I created a comprehensive dataset that assigns a default observation value to regions lacking specific data. This dataset is then used to generate the choropleth map with the object `px.choropleth_map`, mapping the aggregated observations to geographical regions using colour gradients.
 
