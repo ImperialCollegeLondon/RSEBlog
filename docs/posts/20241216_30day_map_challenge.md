@@ -61,7 +61,7 @@ The Internet is a global network of interconnected cables that span continents, 
 
 To create this map, I used a GeoJSON file, a geospatial data interchange format based on JavaScript Object Notation (JSON). These files contain data that helps plot lines, points, and polygons on maps. In this case, I used it to plot lines but will also use it to plot polygons later. This was made with the same tools mentioned in the points map. This was a simple map to produce as it only needed a single file to be plotted. It’s a very simple but effective way of portraying this type of data.
 
-The data displayed on the map was sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
+The data displayed on the map were sourced from the [ArcGIS hub](https://hub.arcgis.com/maps/c12642b516bc4ee5bc9e89870ab14089/about).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Lines_Day2.py)
 
 ### 4. New tool: QGIS
