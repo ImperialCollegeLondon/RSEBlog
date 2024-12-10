@@ -42,7 +42,7 @@ This map type got me started on my journey, so it’s only fitting that this is 
 
 The app reads vehicle data from a CSV file, aggregates it by local authority, and merges it with geographical data from a GeoJSON file containing county boundaries. By ensuring all regions are represented - even those without data. I created a comprehensive dataset that assigns a default observation value to regions lacking specific data. This dataset is then used to generate the choropleth map with the object `px.choropleth_map`, mapping the aggregated observations to geographical regions using colour gradients.
 
-As you can see in Figure 2 there are a lot of white spaces in the map this is a result of lack of data and also that one of the issues I was facing when trying to find data to display on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data was sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
+As you can see in Figure 2 there is a lot of white space in the map. This is a result of lack of data and also that one of the issues I was facing when trying to find data to display on this map I ended up using the Census 2021 estimates that classify households in England and Wales by car or van availability and by household. The data were sourced from [ons.gov.uk](https://www.ons.gov.uk/datasets/RM008/editions/2021/versions/3).
 The code that produced this map can be found [here](https://github.com/Sahil590/30daymapchallenge/blob/main/Chropleth.py)
 
 ### 2. Points
