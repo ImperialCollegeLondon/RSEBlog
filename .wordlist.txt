@@ -6,6 +6,7 @@ Allard
 Alonso
 AlphaFold
 Andrie
+ArcGIS
 Arianna
 Backtesting
 Bhogal
@@ -21,6 +22,7 @@ CSVY
 CUDA
 Carpentries
 Cheuk
+Choropleth
 Christidi
 Ciula
 Clockify
@@ -37,6 +39,7 @@ DASK
 DEMs
 Dasgupta
 DataFrames
+DayMapChallenge
 Dependabot
 Dev
 Dobson
@@ -54,12 +57,14 @@ Frick
 Fundinger
 Fürlich
 GANs
+GIS
 GPUs
 GUIs
 Gabasova
 Gao
 GeNN
 Gemma
+GeoJSON
 Gi
 GitHub
 GraphQL
@@ -77,6 +82,7 @@ Horsfall
 Ilektra
 Intersectional
 JOSS
+JSON
 JTBD
 Jupyter
 Kaur
@@ -90,6 +96,7 @@ MLOps
 MacBook
 Mahmoud
 Manani
+Mapbox
 Matejuk
 Mathjax
 Mirai
@@ -107,10 +114,12 @@ PRs
 PV
 PYENV
 Pandoc
+Plotly
 Py
 PyCSVY
 PyData
 PyMC
+QGIS
 Quazi
 RDF
 README
@@ -149,6 +158,7 @@ TBC
 TUI
 Tierney
 TinyMarsh
+Tjukanov
 ToDo
 Typst
 UCL
@@ -185,6 +195,7 @@ ccache
 cdf
 cdot
 cff
+choropleth
 citable
 coprocessors
 counterparty
@@ -200,6 +211,7 @@ dataframes
 datasets
 de
 dev
+django
 downloader
 e.g.
 eScience
@@ -213,6 +225,7 @@ formatters
 frac
 frictionless
 funder
+geospatial
 github
 hackathon
 humaniverse
@@ -229,6 +242,7 @@ linters
 ln
 lockdown
 macOS
+mapmaking
 math
 mdx
 minimalistic
@@ -237,10 +251,12 @@ modularity
 nd
 np
 numpy
+ons
 parameterisation
 pdfs
 performant
 plantuml
+plotly
 polars
 pre
 preprocessing
@@ -267,6 +283,7 @@ timesheet
 timezones
 titlecase
 tsmbland
+uk
 uname
 unconference
 usr
