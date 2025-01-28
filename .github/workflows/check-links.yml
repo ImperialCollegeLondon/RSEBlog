@@ -6,10 +6,12 @@ on:
 
 jobs:
   check-links:
-    runs-on: ubuntu-latest
+    name: Linkspector
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      - name: Run linkspector
+        uses: umbrelladocs/action-linkspector@v1
         with:
-          use-quiet-mode: "yes"
-          use-verbose-mode: "yes"
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
