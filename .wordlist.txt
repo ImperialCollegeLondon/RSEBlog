@@ -17,6 +17,7 @@ Booch
 Bytewax
 CFF
 CPUs
+CRAN
 CSP
 CSV
 CSVY
