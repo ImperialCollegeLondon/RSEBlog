@@ -256,6 +256,7 @@ nd
 np
 numpy
 ons
+param
 parameterisation
 pdfs
 performant
