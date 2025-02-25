@@ -8,6 +8,7 @@ AlphaFold
 Andrie
 ArcGIS
 Arianna
+Atzert
 Backtesting
 Bhogal
 BlackScholesOption
@@ -16,6 +17,7 @@ Booch
 Bytewax
 CFF
 CPUs
+CRAN
 CSP
 CSV
 CSVY
@@ -55,6 +57,7 @@ Feregrino's
 Fonnesbeck
 Frick
 Fundinger
+Fusen
 Fürlich
 GANs
 GIS
@@ -225,6 +228,7 @@ formatters
 frac
 frictionless
 funder
+fusen
 geospatial
 github
 hackathon
@@ -252,6 +256,7 @@ nd
 np
 numpy
 ons
+param
 parameterisation
 pdfs
 performant
