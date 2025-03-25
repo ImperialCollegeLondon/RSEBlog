@@ -39,11 +39,13 @@ Crystalbot
 D'Alessandro
 DASK
 DEMs
+DOI
 Dasgupta
 DataFrames
 DayMapChallenge
 Dependabot
 Dev
+Digital
 Dobson
 Druskat
 ECRI
@@ -54,6 +56,7 @@ EmChem
 Emlyn
 Evelina
 Feregrino's
+Figshare
 Fonnesbeck
 Frick
 Fundinger
@@ -118,6 +121,7 @@ PV
 PYENV
 Pandoc
 Plotly
+Powershell
 Py
 PyCSVY
 PyData
