@@ -78,7 +78,7 @@ define what other (typically) Python tools, specifically, your software depends 
     be more than actually needed by your software if you do not use virtual environments
     or were not careful when installing the dependencies.
 
-The second is a README.md file. In simple terms this is just a small text filiving details
+The second is a README.md file. In simple terms this is just a small text providing details
 on the operative system, Python version, installation instructions - i.e. how to install
 the dependencies - and usage instructions.
 
