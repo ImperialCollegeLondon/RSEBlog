@@ -2,7 +2,7 @@
 date: 2025-03-25
 authors:
   - dalonsoa
-catories:
+categories:
   - Technology
 tags:
   - Python
@@ -14,7 +14,7 @@ tags:
 A lot of modern research requires custom software to be written, either to do some
 calculations, analyse experimental data or something else. Creating good quality, sustainable
 software is always desirable, but ticking all the boxes that are often described as
-necessary to acomplish this can be a daunting tasks for people - researchers - who have
+necessary to accomplish this can be a daunting tasks for people - researchers - who have
 often other priorities in mind.
 
 Reproducibility is, however, not an optional feature of a piece of research - including
@@ -174,7 +174,7 @@ details here.
 
 !!! Note
     If you want to be a bit more thorough, you should archive the relevant versions of
-    your code in archives like Zenodo or Figshare, which will give you a Digitial
+    your code in archives like Zenodo or Figshare, which will give you a Digital
     Object Identifier (DOI) which will uniquely identify the version and will keep your
     code "forever". In the end, software history in GitHub can be altered and past versions
     deleted, so this sort of archiving is a more permanent solution supporting reproducibility.

@@ -11,6 +11,7 @@ Arianna
 Atzert
 Backtesting
 Bhogal
+Bitbucket
 BlackScholesOption
 BoF
 Booch
@@ -73,6 +74,7 @@ Gemma
 GeoJSON
 Gi
 GitHub
+GitLab
 GraphQL
 Gueant
 H2O.ai
@@ -252,6 +254,7 @@ lockdown
 macOS
 mapmaking
 math
+md
 mdx
 minimalistic
 mirai
