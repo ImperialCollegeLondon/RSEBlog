@@ -60,7 +60,7 @@ communicate this information so others know what they need to have installed.
 
 Moreover, what version of Python are you using? Version 3.9 is very different than
 version 3.13. And in what operative system. It is not rare that some code works well in
-one platform, . Linux, but not in another one. Or works but produces different
+one platform, e.g. Linux, but not in another one. Or works but produces different
 results.
 
 To address these two issues, we need to add two extra files.
@@ -185,4 +185,4 @@ There is a lot that can be done to improve a piece of software and making it sus
 and reproducible, but getting started and picking the low hanging fruit is very
 accessible, takes very little time and can go a long way to support your research. You
 can always refine things later, adding more tooling and creating a more complex
-structure for your code. But this is a good place to bin.
+structure for your code. But this is a good place to begin.
