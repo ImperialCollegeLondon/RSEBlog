@@ -14,18 +14,18 @@ tags:
 A lot of modern research requires custom software to be written, either to do some
 calculations, analyse experimental data or something else. Creating good quality, sustainable
 software is always desirable, but ticking all the boxes that are often described as
-necessary to accomplish this can be a daunting tasks for people - researchers - who have
-often other priorities in mind.
+necessary to accomplish this can be a daunting task for people - researchers - who often
+have other priorities in mind.
 
 Reproducibility is, however, not an optional feature of a piece of research - including
-software or otherwise - and that is something that **researchers are fully responsible** to
-address. Luckily, out of the many requirements of good quality and sustainable software,
+software or otherwise - and that is something that **researchers are fully responsible** for
+addressing. Luckily, out of the many requirements of good quality and sustainable software,
 only a handful are necessary, or can go a long way, to support the reproducibility of
 the results.
 
-In this post we describe these, absolutely essential steps that are necessary for
-researchers to take in order to support the reproducibility of their software in the
-case of Python. It might not apply to all cases, and it is not fool proof as
+In this post we describe these absolutely essential steps that
+researchers should take in order to support the reproducibility of their software.
+The recommendations in this blog post are for software developed using Python. It might not apply to all cases, and it is not fool proof as
 reproducibility is a really complex business, but it is a good start and will narrow the
 chances of things going wrong when other people try to use the software.
 <!-- more -->
@@ -33,7 +33,7 @@ chances of things going wrong when other people try to use the software.
 ## Starting with a script or notebook
 
 Very often, the starting point of some Python code used in research is a plain script
-(e.g. `analisys.py`) or a Jupyter Notebook (e.g. `analisys.ipynb`). In there, a few
+(e.g. `analysis.py`) or a Jupyter Notebook (e.g. `analysis.ipynb`). In there, a few
 dependencies might be loaded, as well as some input data, some analysis is done and
 then, finally, a few plots or some processed data files are created. Your software
 directory could look like:
@@ -45,22 +45,22 @@ my_software/
 
 Providing this with your paper is **not enough** to make it reproducible.
 
-What versions of the dependencies are you using? In what operative system are you
+What versions of the dependencies are you using? In what operating system are you
 working on? What version of the input data? Moreover, what version of your code? There are plenty
 of things that can be different between your computer and where someone else might be
-running the tool, so let's try to narrow down a bit the uncertainty.
+running the tool, so let's try to narrow down the uncertainty a bit.
 
 ## Adding a README and dependencies
 
-The first step is no indicate what dependencies you are using **and** which versions of
+The first step is to indicate what dependencies you are using **and** which versions of
 them. This is key because different versions of the dependencies might produce different
 results or simply be incompatible. For example, your code might need `pandas`,
-`matplotlib` and `numpy`, but work with `numpy` versions older than version 2. You must
+`matplotlib` and `numpy`, but it only works with `numpy` versions older than version 2. You must
 communicate this information so others know what they need to have installed.
 
 Moreover, what version of Python are you using? Version 3.9 is very different than
-version 3.13. And in what operative system. It is not rare that some code works well in
-one platform, e.g. Linux, but not in another one. Or works but produces different
+version 3.13. And in what operating system? It is not uncommon that some code works well in
+one platform, e.g. Linux, but not in another one, or works but produces different
 results.
 
 To address these two issues, we need to add two extra files.
@@ -78,8 +78,8 @@ define what other (typically) Python tools, specifically, your software depends 
     be more than actually needed by your software if you do not use virtual environments
     or were not careful when installing the dependencies.
 
-The second is a README.md file. In simple terms this is just a small text providing details
-on the operative system, Python version, installation instructions - i.e. how to install
+The second is a `README.md` file. In simple terms this is just a small text providing details
+on the operating system, Python version, installation instructions - i.e. how to install
 the dependencies - and usage instructions.
 
 As an example, your software directory now could look like:
@@ -119,8 +119,8 @@ Then, to run the software run in the same terminal:
 `python analysis.py path/to/input/data/folder`
 ```
 
-There is plenty of other things that can be included, like how to create a virtual
-environment, the format of the input data or instructions for other operative systems
+There are plenty of other things that can be included, like how to create a virtual
+environment, the format of the input data or instructions for other operating systems
 but, at least, you are providing details on how to run the tool in a system like the
 one you used.
 
@@ -136,7 +136,7 @@ common tool to do that is `git`, which is a command line tool but that also has 
 graphical user interfaces for those less keen on the terminal.
 
 It is besides the point of this mini-post to explain how to do version control, so we
-will just refer to [our Introductory course on Git and GitHub](https://imperialcollelondon.github.io/introductory_grad_school_git_course/).
+will just refer to [our Introductory course on Git and GitHub](https://imperialcollegelondon.github.io/introductory_grad_school_git_course/).
 For the purposes of reproducibility, understanding the processes and tools described in
 this course is more than enough.
 
@@ -147,7 +147,7 @@ not need to worry about it. You will not need to modify the files there manually
 only via `git` commands, like `git commit`.
 
 With version control enabled for your software directory, we can start talking about
-reproducibility. It is not infallible - it never will - but it is good enough for most
+reproducibility. It is not infallible - it never will be - but it is good enough for most
 purposes with minimal effort.
 
 ## Publish in an online repository
@@ -164,11 +164,11 @@ collaborators or with the whole World in the case of public repositories. These
 repositories contain your software and all its version controlled history, which means
 you can easily indicate to other people what specific version of the software they need
 to use in order to reproduce your results. Normally, they have features to easily tag
-specially relevant snapshots of your code - e.g. creating releases - to make easier to
+specially relevant snapshots of your code - e.g. creating releases - to make it easier to
 find the right versions with human readable names (e.g. `v1.0`, rather than `j245er...`,
 which is a commit hash).
 
-The same [introductory course](https://imperialcollelondon.github.io/introductory_grad_school_git_course/)
+The same [introductory course](https://imperialcollegelondon.github.io/introductory_grad_school_git_course/)
 mentioned above includes instructions on how to use GitHub, so we will not provide more
 details here.
 
