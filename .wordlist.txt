@@ -11,6 +11,7 @@ Arianna
 Atzert
 Backtesting
 Bhogal
+Bitbucket
 BlackScholesOption
 BoF
 Booch
@@ -39,11 +40,13 @@ Crystalbot
 D'Alessandro
 DASK
 DEMs
+DOI
 Dasgupta
 DataFrames
 DayMapChallenge
 Dependabot
 Dev
+Digital
 Dobson
 Druskat
 ECRI
@@ -54,6 +57,7 @@ EmChem
 Emlyn
 Evelina
 Feregrino's
+Figshare
 Fonnesbeck
 Frick
 Fundinger
@@ -70,6 +74,7 @@ Gemma
 GeoJSON
 Gi
 GitHub
+GitLab
 GraphQL
 Gueant
 H2O.ai
@@ -118,6 +123,7 @@ PV
 PYENV
 Pandoc
 Plotly
+Powershell
 Py
 PyCSVY
 PyData
@@ -248,6 +254,7 @@ lockdown
 macOS
 mapmaking
 math
+md
 mdx
 minimalistic
 mirai
