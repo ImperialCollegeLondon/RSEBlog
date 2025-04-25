@@ -77,15 +77,16 @@ open-source software development, and we encourage you to credit your collaborat
 whenever possible.
 
 As mentioned above, GitHub provides default commit messages when committing suggested
-changes as part of a pull request review. However, the suggestion may not meet the
-quality assurance (QA) checks in your continuous integration pipeline, or code
-conventions that have been established as part of the project. After all, the editor
-provided in GitHub's code review interface has minimal functionality, and will not warn
-you if your suggestion goes past the project's preferred line length, for example.
-Committing such a change directly will result in failed QA checks, and therefore require
-further commits to fix. To avoid this, you can make the suggested change locally,
-perform any QA checks and commit the change, adding the user who made the suggestion as
-a co-author.
+changes as part of a pull request review. However, you may decide to implement suggested
+changes locally rather than via the GitHub interface for a number of reasons. For
+example, the suggestion may not meet the quality assurance (QA) checks in your
+continuous integration pipeline, or follow code conventions that have been established
+as part of the project. The editor provided in GitHub's code review interface has
+minimal functionality, and will not warn you if your suggestion goes past the project's
+preferred line length, for example. Committing such a change directly would result in
+failed QA checks, and therefore require further commits to fix. To avoid this, you can
+make the suggested change locally, perform any QA checks and commit the change, adding
+the user who made the suggestion as a co-author.
 
 Similarly, suggestions may come in the form of pseudocode, or as an abbreviated or
 simplified code snippet to simply demonstrate some functionality. Such effort should
