@@ -101,6 +101,12 @@ terms of implementation. Their input should not go unacknowledged just because t
 didn't explicitly write the code. Adding them as a co-author on commits that incorporate
 their expertise is a great way to provide credit.
 
+Another great opportunity for co-authoring commits is when pair programming. In this
+scenario, two people will usually be working together at the same machine, or remotely
+editing the same file(s), so commits can only be made from a single `git` instance.
+Being an inherently collaborative practice, both members of the pair should have their
+contributions acknowledged, and co-authoring commits provides a way to do exactly that.
+
 ## How to declare co-authors
 
 `git` supports a commit message format of a summary line followed by an optional section
