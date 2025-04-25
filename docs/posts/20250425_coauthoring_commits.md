@@ -95,10 +95,10 @@ Of course, not all discussion takes place on GitHub, or even on-line, and a coll
 may have made a suggestion, provided insight, advice or help verbally, or by some other
 means. This is especially common as an RSE, where we may not have the specialist domain
 knowledge but do have the software expertise, while a member of the research group we
-are working with has the domain knowledge but not necessarily the best approach in terms
-of implementation. Their input should not go unacknowledged, just because they didn't
-explicitly write the code. Adding them as a co-author on commits that incorporate their
-expertise is a great way to provide credit.
+are working with has the domain knowledge but not necessarily know the best approach in
+terms of implementation. Their input should not go unacknowledged just because they
+didn't explicitly write the code. Adding them as a co-author on commits that incorporate
+their expertise is a great way to provide credit.
 
 ## How to declare co-authors
 
