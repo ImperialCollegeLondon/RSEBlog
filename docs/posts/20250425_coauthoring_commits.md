@@ -16,7 +16,7 @@ tags:
 In this blog post we explain how you can acknowledge contributions from collaborators in
 your software (or other version-controlled project) development with `git` via commit
 messages. This is a great way to encourage and reward collaboration in your projects,
-and acknowledge efforts that may otherwise go un-noticed.
+and acknowledge efforts that may otherwise go unnoticed.
 
 We assume that you are already familiar with version control - in particular with `git`;
 if this is not the case, feel free to check out our introductory course on using [git
