@@ -51,6 +51,7 @@ Dobson
 Druskat
 ECRI
 EDIA
+EDITMSG
 EPSRC
 ETL
 EmChem
@@ -206,6 +207,7 @@ cdot
 cff
 choropleth
 citable
+codebase
 coprocessors
 counterparty
 customisable
@@ -259,6 +261,7 @@ mdx
 minimalistic
 mirai
 modularity
+natively
 nd
 np
 numpy
@@ -272,6 +275,7 @@ plotly
 polars
 pre
 preprocessing
+pseudocode
 pyenv
 pyorderly
 qmd
