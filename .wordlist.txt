@@ -45,6 +45,7 @@ Dasgupta
 DataFrames
 DayMapChallenge
 Dependabot
+DesLauriers
 Dev
 Digital
 Dobson
@@ -96,6 +97,7 @@ JTBD
 Jupyter
 Kaur
 Kensington
+Kirstie
 Kishan
 LLMs
 LaTeX
@@ -112,6 +114,7 @@ Mirai
 MkDocs
 Modeling
 Nafiul
+Nanjala
 NumFOCUS
 O'Reilly
 OOP
@@ -250,6 +253,7 @@ iplantuml
 isclose
 jamesturner
 jcohen
+jfcoker
 linters
 ln
 lockdown
@@ -290,6 +294,7 @@ shellenv
 shortcode
 sqrt
 startuml
+stephwills
 sudo
 synonymously
 th
