@@ -9,7 +9,7 @@ authors:
     avatar: https://pxl-imperialacuk.terminalfour.net/fit-in/428x572/filters:upscale()/prod01/channel_2/media/images/people-list/Dewar.jpg
   HarmonicReflux:
     name: Benjamin J Scharpf
-    description: HPC and RSE Experience Programme
+    description: HPC and RSE Experience Programme (former member)
     avatar: https://pxl-imperialacuk.terminalfour.net/fit-in/428x572/filters:upscale()/prod01/channel_3/media/images/people-list/Benjamin_Scharpf.png
   cc-a:
     name: Chris Cave-Ayland
@@ -55,3 +55,11 @@ authors:
     name: Dan Davies
     description: Senior Research Software Engineer (former member)
     avatar: https://github.com/dandavies99.png
+  jfcoker:
+    name: Jack Coker
+    description: HPC and RSE Experience Programme
+    avatar: https://pxl-imperialacuk.terminalfour.net/fit-in/428x572/filters:upscale()/prod01/channel_3/media/images/people-list/jack_coker.png
+  stephwills:
+    name: Steph Wills
+    description: HPC and RSE Experience Programme
+    avatar: https://pxl-imperialacuk.terminalfour.net/fit-in/428x572/filters:upscale()/prod01/channel_3/media/images/people-list/stephwills.png
