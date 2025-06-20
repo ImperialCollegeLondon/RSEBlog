@@ -114,6 +114,7 @@ Mathjax
 Mirai
 MkDocs
 Modeling
+NOTSET
 Nafiul
 Nanjala
 NumFOCUS

@@ -25,7 +25,7 @@ To begin with, we can create a logger using `logger = getLogger(__name__)` and t
 | NOTSET | 0 | Placeholder  |
 | DEBUG | 10 | Helps diagnose problems with detailed information. |
 | INFO | 20 | Confirms that things are working as expected. |
-| WARNING | 30 | Indicates either something unexpected occured or there will be a problem in the near future. The software is still working as expected.|
+| WARNING | 30 | Indicates either something unexpected occurred or there will be a problem in the near future. The software is still working as expected.|
 | ERROR | 40 | A more serious problem and the software has not been able to perform some function. |
 | CRITICAL | 50 | A serious error which indicates that the program itself may be unable to continue running. |
 
