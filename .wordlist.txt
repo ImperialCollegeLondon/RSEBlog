@@ -24,6 +24,7 @@ CSV
 CSVY
 CUDA
 Carpentries
+ChatGTP
 Cheuk
 Choropleth
 Christidi
@@ -102,6 +103,7 @@ Kirstie
 Kishan
 LLMs
 LaTeX
+LabView
 LinkedIn
 Lumley
 MLOps
@@ -152,6 +154,7 @@ ReCoDE
 Rennie
 Reproducibility
 RevealJS
+Roundtable
 Rumbaugh
 SALC
 SPARQL
@@ -235,6 +238,7 @@ et
 european
 eval
 fi
+flashy
 focussed
 formatters
 frac
@@ -247,6 +251,7 @@ hackathon
 humaniverse
 hydrological
 ies
+impactful
 incentivises
 installable
 interpretability
@@ -288,11 +293,13 @@ rT
 repo
 repositoryr
 reproducibility
+roundtable
 scalable
 scipy
 se
 shellenv
 shortcode
+spectrometry
 sqrt
 startuml
 stephwills
