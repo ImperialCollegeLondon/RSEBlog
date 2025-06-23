@@ -308,6 +308,7 @@ rl
 scalable
 scipy
 se
+setLevel
 shellenv
 shortcode
 sqrt
