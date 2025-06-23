@@ -9,6 +9,7 @@ Andrie
 ArcGIS
 Arianna
 Atzert
+Ayland
 Backtesting
 Bhogal
 Bitbucket
@@ -24,6 +25,7 @@ CSV
 CSVY
 CUDA
 Carpentries
+Cave-Ayland
 Cheuk
 Choropleth
 Christidi
@@ -61,6 +63,7 @@ Emlyn
 Evelina
 Feregrino's
 Figshare
+FileHandler
 Fonnesbeck
 Frick
 Fundinger
@@ -82,6 +85,7 @@ GraphQL
 Gueant
 H2O.ai
 HPC
+HTTPHandler
 HackMD
 Hacktoberfest
 Haddad
@@ -114,8 +118,10 @@ Mathjax
 Mirai
 MkDocs
 Modeling
+NOTSET
 Nafiul
 Nanjala
+NullHandler
 NumFOCUS
 O'Reilly
 OOP
@@ -152,8 +158,10 @@ ReCoDE
 Rennie
 Reproducibility
 RevealJS
+RotatingFileHandler
 Rumbaugh
 SALC
+SMTPHandler
 SPARQL
 SWMM
 SWMManywhere
@@ -168,9 +176,11 @@ Shreve
 Slido
 SocRSE
 Springer
+StreamHandler
 TBC
 TUI
 Tierney
+TimedRotatingFileHandler
 TinyMarsh
 Tjukanov
 ToDo
@@ -199,12 +209,14 @@ Yu
 Zenodo
 Zsh
 actioned
+addHandler
 ai
 al
 alexdewar
 algorithmically
 backend
 backticks
+basicConfig
 ccache
 cdf
 cdot
@@ -212,6 +224,7 @@ cff
 choropleth
 citable
 codebase
+config
 coprocessors
 counterparty
 customisable
@@ -242,12 +255,14 @@ frictionless
 funder
 fusen
 geospatial
+getLogger
 github
 hackathon
 humaniverse
 hydrological
 ies
 incentivises
+init
 installable
 interpretability
 iplantuml
@@ -266,6 +281,7 @@ mdx
 minimalistic
 mirai
 modularity
+mylib
 natively
 nd
 np
@@ -281,6 +297,7 @@ polars
 pre
 preprocessing
 pseudocode
+py
 pyenv
 pyorderly
 qmd
@@ -288,13 +305,17 @@ rT
 repo
 repositoryr
 reproducibility
+rl
 scalable
 scipy
 se
+setLevel
 shellenv
 shortcode
 sqrt
 startuml
+stderr
+stdout
 stephwills
 sudo
 synonymously
