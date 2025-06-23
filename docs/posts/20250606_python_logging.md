@@ -67,19 +67,122 @@ Note: Levels can also be set for handlers, which means that the handler will onl
 
 This demonstration is based on a Python logging exercise by Chris Cave-Ayland, and it is available on [GitHub](https://github.com/cc-a/python_logging_exercises). It covers some common logging scenarios and how to implement them using Python's logging module.
 
-The structure of the files is as follows:
+??? "Directory Structure"
 
-```bash
-├── mylib/
-│   ├── __init__.py
-│   ├── module_a.py
-│   └── module_b.py
-├── README.md
-└── script1.py
-└── script2.py
-└── script3.py
-.
-.
-.
-└── script10.py
+    The directory structure for this demonstration is as follows: <!-- markdownlint-disable-line MD046 -->
+
+    ```plaintext
+    ├── mylib/
+    │   ├── __init__.py
+    │   ├── module_a.py
+    │   └── module_b.py
+    ├── README.md
+    └── script1.py
+    └── script2.py
+    .
+    .
+    .
+    └── script10.py
+    ```
+
+The `mylib` directory contains two modules, `module_a.py` and `module_b.py`, which contain functions that will be logged. The `script1.py` to `script10.py` files are scripts that call the functions from these modules.
+
+The `mylib/__init__.py` file is used to initialize the `mylib` package and contains the following code:
+
+```py
+from logging import getLogger
+
+from .module_a import A
+from .module_b import B
+
+logger = getLogger(__name__)
+
+
+def run():
+    print_logging_config()
+    a = A()
+    a.warn()
+    a.info()
+    b = B()
+    b.warn()
+    b.info()
+
+
+def print_logging_config():
+    rl = getLogger()
+    print(rl, "handlers:", rl.handlers)
+    print(logger, "handlers:", logger.handlers)
+    for logger_name in "mylib.module_a", "mylib.module_b":
+        ml = getLogger(logger_name)
+        print(ml, "handlers:", ml.handlers)
+    print()
 ```
+
+The `module_a.py` and `module_b.py` files contain classes `A` and `B`, respectively, which have methods that log messages at different levels. For example, `module_a.py` contains:
+
+```py
+from logging import getLogger
+
+logger = getLogger(__name__)
+
+
+class A:
+    def __init__(self):
+        logger.debug("Initialising A")
+
+    def info(self):
+        logger.info("Info from A")
+
+    def warn(self):
+        logger.warn("Warning from A")
+```
+
+Similarly, `module_b.py` contains:
+
+```py
+from logging import getLogger
+
+logger = getLogger(__name__)
+
+
+class B:
+    def __init__(self):
+        logger.debug("Initialising B")
+
+    def info(self):
+        logger.info("Info from B")
+
+    def warn(self):
+        logger.warn("Warning from B")
+```
+
+## Running the scripts
+
+### script1.py
+
+This script is used to run the `mylib` package and demonstrate the logging configuration. It imports the `run` function from `mylib` and calls it.
+
+```py
+from mylib import run
+
+run()
+```
+
+When you run `script1.py`, it will output the logging configuration and the log messages from the `A` and `B` classes. The output will look something like this:
+
+```plaintext
+root handlers: []
+mylib.module_a handlers: []
+mylib.module_b handlers: []
+mylib handlers: [<StreamHandler <stderr> (NOTSET)>]
+mylib.module_a handlers: [<StreamHandler <stderr> (NOTSET)>]
+mylib.module_b handlers: [<StreamHandler <stderr> (NOTSET)>]
+Initialising A
+Warning from A
+Info from A
+Initialising B
+Warning from B
+Info from B
+```
+
+This output shows that the root logger and the `mylib` logger have no handlers, while the `mylib.module_a` and `mylib.module_b` loggers have a `StreamHandler` that outputs to stderr. The log messages from the `A` and `B` classes are displayed as expected.
