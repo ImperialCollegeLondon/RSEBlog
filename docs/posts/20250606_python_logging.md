@@ -71,7 +71,7 @@ This demonstration is based on a Python logging exercise by Chris Cave-Ayland, a
 
     The directory structure for this demonstration is as follows: <!-- markdownlint-disable-line MD046 -->
 
-    ```plaintext
+    ```markdown
     ├── mylib/
     │   ├── __init__.py
     │   ├── module_a.py
@@ -87,7 +87,7 @@ This demonstration is based on a Python logging exercise by Chris Cave-Ayland, a
 
 The `mylib` directory contains two modules, `module_a.py` and `module_b.py`, which contain functions that will be logged. The `script1.py` to `script10.py` files are scripts that call the functions from these modules.
 
-The `mylib/__init__.py` file is used to initialize the `mylib` package and contains the following code:
+The `mylib/__init__.py` file is used to initialise the `mylib` package and contains the following code:
 
 ```py
 from logging import getLogger

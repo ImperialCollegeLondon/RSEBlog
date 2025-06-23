@@ -9,6 +9,7 @@ Andrie
 ArcGIS
 Arianna
 Atzert
+Ayland
 Backtesting
 Bhogal
 Bitbucket
@@ -221,6 +222,7 @@ cff
 choropleth
 citable
 codebase
+config
 coprocessors
 counterparty
 customisable
@@ -251,12 +253,14 @@ frictionless
 funder
 fusen
 geospatial
+getLogger
 github
 hackathon
 humaniverse
 hydrological
 ies
 incentivises
+init
 installable
 interpretability
 iplantuml
@@ -275,6 +279,7 @@ mdx
 minimalistic
 mirai
 modularity
+mylib
 natively
 nd
 np
@@ -290,6 +295,7 @@ polars
 pre
 preprocessing
 pseudocode
+py
 pyenv
 pyorderly
 qmd
@@ -297,6 +303,7 @@ rT
 repo
 repositoryr
 reproducibility
+rl
 scalable
 scipy
 se
