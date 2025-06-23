@@ -209,6 +209,7 @@ Yu
 Zenodo
 Zsh
 actioned
+addHandler
 ai
 al
 alexdewar
