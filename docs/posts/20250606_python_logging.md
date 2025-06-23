@@ -62,3 +62,24 @@ logger.addHandler(handler)  # add the handler to the logger
 ```
 
 Note: Levels can also be set for handlers, which means that the handler will only process messages of that level or higher. If a logger has multiple handlers, each handler can have its own level.
+
+## Demonstration
+
+This demonstration is based on a Python logging exercise by Chris Cave-Ayland, and it is available on [GitHub](https://github.com/cc-a/python_logging_exercises). It covers some common logging scenarios and how to implement them using Python's logging module.
+
+The structure of the files is as follows:
+
+```bash
+├── mylib/
+│   ├── __init__.py
+│   ├── module_a.py
+│   └── module_b.py
+├── README.md
+└── script1.py
+└── script2.py
+└── script3.py
+.
+.
+.
+└── script10.py
+```
