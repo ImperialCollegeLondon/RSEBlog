@@ -24,7 +24,7 @@ CSV
 CSVY
 CUDA
 Carpentries
-ChatGTP
+ChatGPT
 Cheuk
 Choropleth
 Christidi
