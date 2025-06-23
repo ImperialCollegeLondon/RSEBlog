@@ -61,6 +61,7 @@ Emlyn
 Evelina
 Feregrino's
 Figshare
+FileHandler
 Fonnesbeck
 Frick
 Fundinger
@@ -82,6 +83,7 @@ GraphQL
 Gueant
 H2O.ai
 HPC
+HTTPHandler
 HackMD
 Hacktoberfest
 Haddad
@@ -117,6 +119,7 @@ Modeling
 NOTSET
 Nafiul
 Nanjala
+NullHandler
 NumFOCUS
 O'Reilly
 OOP
@@ -153,8 +156,10 @@ ReCoDE
 Rennie
 Reproducibility
 RevealJS
+RotatingFileHandler
 Rumbaugh
 SALC
+SMTPHandler
 SPARQL
 SWMM
 SWMManywhere
@@ -169,9 +174,11 @@ Shreve
 Slido
 SocRSE
 Springer
+StreamHandler
 TBC
 TUI
 Tierney
+TimedRotatingFileHandler
 TinyMarsh
 Tjukanov
 ToDo
@@ -296,6 +303,8 @@ shellenv
 shortcode
 sqrt
 startuml
+stderr
+stdout
 stephwills
 sudo
 synonymously
