@@ -216,6 +216,7 @@ alexdewar
 algorithmically
 backend
 backticks
+basicConfig
 ccache
 cdf
 cdot
