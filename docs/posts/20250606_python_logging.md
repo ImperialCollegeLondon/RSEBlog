@@ -212,3 +212,30 @@ This output differs from that of `script1.py` because the root logger now has a 
 Warning from A
 Warning from B
 ```
+
+### script3.py
+
+```py
+import logging
+
+from mylib import run
+
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.DEBUG)
+
+run()
+```
+
+This script sets the logging level of the root logger to DEBUG, which means that all log messages of level DEBUG and above will be logged. When you run `script3.py`, it will output the following on the console:
+
+```output
+<RootLogger root (DEBUG)> handlers: []
+<Logger mylib (DEBUG)> handlers: []
+<Logger mylib.module_a (DEBUG)> handlers: []
+<Logger mylib.module_b (DEBUG)> handlers: []
+
+Warning from A
+Warning from B
+```
+
+This output shows that the root logger and the `mylib` logger now have their levels set to DEBUG, which means that all log messages of level DEBUG and above will be logged. However, since no handlers are added, the messages will not be sent anywhere except as output to the console only when the script is run. Notice that this output is similar to that of `script1.py`, but the log level is now DEBUG.
