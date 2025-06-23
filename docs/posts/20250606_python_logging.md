@@ -171,18 +171,13 @@ run()
 When you run `script1.py`, it will output the logging configuration and the log messages from the `A` and `B` classes. The output will look something like this:
 
 ```plaintext
-root handlers: []
-mylib.module_a handlers: []
-mylib.module_b handlers: []
-mylib handlers: [<StreamHandler <stderr> (NOTSET)>]
-mylib.module_a handlers: [<StreamHandler <stderr> (NOTSET)>]
-mylib.module_b handlers: [<StreamHandler <stderr> (NOTSET)>]
-Initialising A
+<RootLogger root (WARNING)> handlers: []
+<Logger mylib (WARNING)> handlers: []
+<Logger mylib.module_a (WARNING)> handlers: []
+<Logger mylib.module_b (WARNING)> handlers: []
+
 Warning from A
-Info from A
-Initialising B
 Warning from B
-Info from B
 ```
 
-This output shows that the root logger and the `mylib` logger have no handlers, while the `mylib.module_a` and `mylib.module_b` loggers have a `StreamHandler` that outputs to stderr. The log messages from the `A` and `B` classes are displayed as expected.
+This output shows that the root logger and the `mylib` logger have no handlers, and the log messages from the `A` and `B` classes are logged at the WARNING level.
