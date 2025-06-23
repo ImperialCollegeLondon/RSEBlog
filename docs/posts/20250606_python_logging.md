@@ -170,7 +170,7 @@ run()
 
 When you run `script1.py`, it will output the logging configuration and the log messages from the `A` and `B` classes. The output will look something like this:
 
-```plaintext
+```output
 <RootLogger root (WARNING)> handlers: []
 <Logger mylib (WARNING)> handlers: []
 <Logger mylib.module_a (WARNING)> handlers: []
@@ -181,3 +181,34 @@ Warning from B
 ```
 
 This output shows that the root logger and the `mylib` logger have no handlers, and the log messages from the `A` and `B` classes are logged at the WARNING level.
+
+### script2.py
+
+```py
+import logging
+
+from mylib import run
+
+root_logger = logging.getLogger()
+root_logger.addHandler(logging.FileHandler("./test.log"))
+
+run()
+```
+
+This script adds a `FileHandler` to the root logger, which will log messages to a file named `test.log`. When you run `script2.py`, it will create the `test.log` file and log the messages from the `A` and `B` classes.
+
+On running `script2.py`, the output on the console will be:
+
+```output
+<RootLogger root (WARNING)> handlers: [<FileHandler path_to_your_project\test.log (NOTSET)>]
+<Logger mylib (WARNING)> handlers: []
+<Logger mylib.module_a (WARNING)> handlers: []
+<Logger mylib.module_b (WARNING)> handlers: []
+```
+
+This output differs from that of `script1.py` because the root logger now has a `FileHandler` that will log messages to the `test.log` file. The messages stored in the `test.log` file will look like this:
+
+```output
+Warning from A
+Warning from B
+```
