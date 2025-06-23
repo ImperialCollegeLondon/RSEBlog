@@ -239,3 +239,29 @@ Warning from B
 ```
 
 This output shows that the root logger and the `mylib` logger now have their levels set to DEBUG, which means that all log messages of level DEBUG and above will be logged. However, since no handlers are added, the messages will not be sent anywhere except as output to the console only when the script is run. Notice that this output is similar to that of `script1.py`, but the log level is now DEBUG.
+
+### script4.py
+
+```py
+import logging
+
+from mylib import run
+
+logging.basicConfig()
+
+run()
+```
+
+This script uses the `basicConfig()` method to configure the logging system with default settings. When you run `script4.py`, it will output the following on the console:
+
+```output
+<RootLogger root (WARNING)> handlers: [<StreamHandler <stderr> (NOTSET)>]
+<Logger mylib (WARNING)> handlers: []
+<Logger mylib.module_a (WARNING)> handlers: []
+<Logger mylib.module_b (WARNING)> handlers: []
+
+WARNING:mylib.module_a:Warning from A
+WARNING:mylib.module_b:Warning from B
+```
+
+This output shows that the root logger now has a `StreamHandler` that sends log messages to the console (stderr). The log messages from the `A` and `B` classes are logged at the WARNING level, which is the default level set by `basicConfig()`.
