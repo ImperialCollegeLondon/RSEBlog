@@ -136,7 +136,7 @@ common tool to do that is `git`, which is a command line tool but that also has 
 graphical user interfaces for those less keen on the terminal.
 
 It is besides the point of this mini-post to explain how to do version control, so we
-will just refer to [our Introductory course on Git and GitHub](https://imperialcollegelondon.github.io/introductory_grad_school_git_course/).
+will just refer to [our Introductory course on Git and GitHub][intro git course].
 For the purposes of reproducibility, understanding the processes and tools described in
 this course is more than enough.
 
@@ -168,9 +168,8 @@ specially relevant snapshots of your code - e.g. creating releases - to make it 
 find the right versions with human readable names (e.g. `v1.0`, rather than `j245er...`,
 which is a commit hash).
 
-The same [introductory course](https://imperialcollegelondon.github.io/introductory_grad_school_git_course/)
-mentioned above includes instructions on how to use GitHub, so we will not provide more
-details here.
+The same [introductory course][intro git course] mentioned above includes instructions on
+how to use GitHub, so we will not provide more details here.
 
 !!! Note
     If you want to be a bit more thorough, you should archive the relevant versions of
@@ -186,3 +185,5 @@ and reproducible, but getting started and picking the low hanging fruit is very
 accessible, takes very little time and can go a long way to support your research. You
 can always refine things later, adding more tooling and creating a more complex
 structure for your code. But this is a good place to begin.
+
+[intro git course]: https://imperialcollegelondon.github.io/rse_introductory_git_course/
