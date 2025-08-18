@@ -169,6 +169,8 @@ SaranjeetKaur
 SatRdays
 Scharpf
 Scholes
+SciML
+SciPy
 Shreve
 Slido
 SocRSE
