@@ -289,9 +289,12 @@ polars
 pre
 preprocessing
 pseudocode
+pyOpenSci
+pyOpenSci's
 pyenv
 pyorderly
 qmd
+rOpenSci's
 rT
 repo
 repositoryr
