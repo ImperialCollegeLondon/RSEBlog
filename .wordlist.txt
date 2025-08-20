@@ -62,6 +62,7 @@ Emlyn
 Evelina
 Feregrino's
 Figshare
+Fitzjohn
 Fonnesbeck
 Frick
 Fundinger
@@ -73,6 +74,7 @@ GPUs
 GUIs
 Gabasova
 Gao
+Gaythorpe
 GeNN
 Gemma
 GeoJSON
@@ -167,6 +169,8 @@ SaranjeetKaur
 SatRdays
 Scharpf
 Scholes
+SciML
+SciPy
 Shreve
 Slido
 SocRSE
@@ -185,6 +189,7 @@ UKRI
 UML
 UTF
 Udoh
+VPD
 Validator's
 Vlissides
 Vries
@@ -286,9 +291,12 @@ polars
 pre
 preprocessing
 pseudocode
+pyOpenSci
+pyOpenSci's
 pyenv
 pyorderly
 qmd
+rOpenSci's
 rT
 repo
 repositoryr
