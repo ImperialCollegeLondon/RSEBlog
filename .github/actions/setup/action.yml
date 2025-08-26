@@ -1,9 +1,5 @@
 name: Set up
 description: Set up Python environment and install dependencies
-inputs:
-  python-version:
-    description: The Python version to use
-    required: true
 
 runs:
   using: "composite"
