@@ -11,7 +11,7 @@ tags:
   - Mapping
 ---
 
-
+<!-- markdownlint-disable MD059 -->
 # **The 30-Day Map Challenge**
 
 ![Map challenge overview](images/30day_map_challenge/30dmc_2024.png)
