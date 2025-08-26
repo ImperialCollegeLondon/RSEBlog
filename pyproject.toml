@@ -3,7 +3,7 @@ name = "RSEBlog"
 version = "0.1.0"
 description = "Blog for Imperial's Central RSE Team"
 authors = [{ name = "Imperial College London RSE Team", email = "ict-rse-team@imperial.ac.uk" }]
-requires-python = ">=3.9"
+requires-python = ">=3.13"
 dependencies = [
     "mkdocs>=1.6.0,<2",
     "mkdocs-material>=9.5.27,<10",
