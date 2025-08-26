@@ -11,13 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Poetry
-        run: pipx install poetry
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: poetry
-      - name: Install dependencies
-        run: poetry install
+      - uses: ./.github/actions/setup
       - name: Check that documentation builds cleanly with MkDocs
-        run: poetry run mkdocs build --strict
+        run: mkdocs build --strict
