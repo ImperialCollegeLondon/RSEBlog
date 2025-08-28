@@ -1,19 +1,21 @@
-[tool.poetry]
-name = "RSE Blog"
+[project]
+name = "RSEBlog"
 version = "0.1.0"
 description = "Blog for Imperial's Central RSE Team"
-authors = ["Imperial College London RSE Team <ict-rse-team@imperial.ac.uk>"]
-package-mode = false
+authors = [{ name = "Imperial College London RSE Team", email = "ict-rse-team@imperial.ac.uk" }]
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs>=1.6.0,<2",
+    "mkdocs-material>=9.5.27,<10",
+    "pre-commit>=3.7.1,<4",
+    "mkdocs-caption>=1.2.0,<2",
+    "python-markdown-math>=0.8,<0.9",
+    "mkdocs-rss-plugin>=1.15.0,<2",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4"
-mkdocs = "^1.6.0"
-mkdocs-material = "^9.5.27"
-pre-commit = "^3.7.1"
-mkdocs-caption = "^1.2.0"
-python-markdown-math = "^0.8"
-mkdocs-rss-plugin = "^1.15.0"
+[tool.uv]
+package = false
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"

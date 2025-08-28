@@ -1,0 +1,15 @@
+name: Set up
+description: Set up Python environment and install dependencies
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+        activate-environment: true
+
+    - name: Install project
+      shell: bash
+      run: uv sync --all-groups
