@@ -9,7 +9,7 @@ dependencies = [
     "mkdocs-material>=9.5.27,<10",
     "pre-commit>=3.7.1,<4",
     "mkdocs-caption>=1.2.0,<2",
-    "python-markdown-math>=0.8,<0.9",
+    "python-markdown-math>=0.8,<0.10",
     "mkdocs-rss-plugin>=1.15.0,<2",
 ]
 
