@@ -1,15 +1,13 @@
 ---
-date: 2025-12-10
+date: 2026-02-27
 authors:
   - stephwills
 categories:
-  - category_a
-  - category_b
-  - category_c
+  - Technology
 tags:
-  - tag_a
-  - tag_b
-  - tag_c
+  - Django
+  - Python
+  - Plotting
 ---
 
 # Plotting in Django with Bokeh
@@ -17,6 +15,8 @@ tags:
 Last year, I was involved in developing one of the RSE team's internal projects, [ProCAT](https://github.com/ImperialCollegeLondon/proCAT),  our internal web application for Project Charging and AnalyTics. ProCAT allow us to monitor key metrics such as time spent on project work and the remaining funding, automatically generating the monthly charges to be made to each funding source. It also helps the team to compare projected team capacity with anticipated workload, making it easier to plan ahead.
 
 We built ProCAT using [Django](https://www.djangoproject.com/), the RSE team's preferred framework for creating web applications. One important design choice was selecting which library to use for generating our analytics plots, which forms the subject of today's blogpost.
+
+<!-- more -->
 
 ## Choosing a plotting library
 
@@ -129,7 +129,7 @@ It is important to note that, to use these components, the BokehJS resources mus
 
 Following this, you should now have your Bokeh plot rendered in your Django view!
 
-![Example plot](images/bokeh_django/plot.png)
+![An initial Bokeh plot](images/bokeh_django/plot.png)
 
 ### Creating interactive widgets
 
@@ -197,7 +197,7 @@ layout = row(
 
 The layout can then be used to generate the HTML components to be added to the template, as shown above.
 
-![Example plot with widgets](images/bokeh_django/plot_with_widgets.png)
+![A plot using date picker widgets](images/bokeh_django/plot_with_widgets.png)
 
 ### Ajax data sources (plus more advanced widgets)
 
@@ -295,7 +295,7 @@ callback = CustomJS(
 
 Now, we should have a working plot using `AjaxDataSource`s with our `CheckboxButtonGroup` widget.
 
-![Example plot](images/bokeh_django/ajax_plot.png)
+![An Ajax plot with a checkbox button](images/bokeh_django/ajax_plot.png)
 
 ## Summary
 
