@@ -14,7 +14,7 @@ tags:
 
 Last year, I was involved in developing one of the RSE team's internal projects, [ProCAT](https://github.com/ImperialCollegeLondon/proCAT),  our internal web application for Project Charging and AnalyTics. ProCAT allow us to monitor key metrics such as time spent on project work and the remaining funding, automatically generating the monthly charges to be made to each funding source. It also helps the team to compare projected team capacity with anticipated workload, making it easier to plan ahead.
 
-We built ProCAT using [Django](https://www.djangoproject.com/), the RSE team's preferred framework for creating web applications. One important design choice was selecting which library to use for generating our analytics plots, which forms the subject of today's blogpost.
+We built ProCAT using [Django](https://www.djangoproject.com/), the RSE team's preferred framework for creating web applications. One important design choice was selecting which library to use for generating our analytics plots, which forms the subject of today's blog post.
 
 <!-- more -->
 
@@ -22,9 +22,9 @@ We built ProCAT using [Django](https://www.djangoproject.com/), the RSE team's p
 
 For ProCAT, the requirement was to provide interactive timeseries charts, allowing the user to zoom in, use tooltips, select the time range to be displayed and apply filters to select which data to display.
 
-In some of our past projects, we have used [Plotly Dash](https://django-plotly-dash.readthedocs.io/en/latest/index.html#), a framework well-suited to creating interactive, data-driven dashboards. However, based on these experiences, we decided to explore lighter-weight options that could render faster. As this was an internal project, it also provided a convenient opportunity to try out a new library. For this purpose, we chose to use [Bokeh](https://docs.bokeh.org/en/latest/#), a library for creating interactive visualizations powered by JavaScript.
+In some of our past projects, we have used [Plotly Dash](https://django-plotly-dash.readthedocs.io/en/latest/index.html#), a framework well-suited to creating interactive, data-driven dashboards. However, based on these experiences, we decided to explore lighter-weight options that could render faster. As this was an internal project, it also provided a convenient opportunity to try out a new library. For this purpose, we chose to use [Bokeh](https://docs.bokeh.org/en/latest/#), a library for creating interactive visualisations powered by JavaScript.
 
-Below, I will provide an easy tutorial to fulfill these requirements and begin creating your own visualizations!
+Below, I will provide an easy tutorial to fulfil these requirements and begin creating your own visualisations!
 
 ## Tutorial
 
@@ -32,7 +32,7 @@ Below, I will provide an easy tutorial to fulfill these requirements and begin c
 
 First, we'll run through how to create a basic plot in Bokeh and embed it in your Django application. As described in their [documentation](https://docs.bokeh.org/en/latest/docs/first_steps/first_steps_1.html), Bokeh combines a Python library, where you define your plot and the interactive functionality, and a JavaScript library, BokehJS, which works in the background to display your plots in the browser.
 
-The `bokeh.plotting` module contains all the necessary functions to create your visualization. To add data to  your plot, you need to define your [data source](https://docs.bokeh.org/en/latest/docs/user_guide/basic/data.html). The most common type of data source is the `ColumnDataSource` object; this is automatically created if you pass a list or array to your Bokeh function, but you can also create a `ColumnDataSource` yourself from a dictionary of data or a Pandas dataframe. Here, we use some example data stored in a csv to create the data source from a dataframe.
+The `bokeh.plotting` module contains all the necessary functions to create your visualisation. To add data to  your plot, you need to define your [data source](https://docs.bokeh.org/en/latest/docs/user_guide/basic/data.html). The most common type of data source is the `ColumnDataSource` object; this is automatically created if you pass a list or array to your Bokeh function, but you can also create a `ColumnDataSource` yourself from a dictionary of data or a Pandas dataframe. Here, we use some example data stored in a CSV to create the data source from a dataframe.
 
 ```py
 import pandas as pd
@@ -100,7 +100,7 @@ script, div = components(plot)
 
 This can then be added to Django's [context](https://docs.djangoproject.com/en/6.0/ref/templates/api/#django.template.Context) for use in the template.
 
-```python
+```py
 import bokeh
 
 # Within your Django view
@@ -181,7 +181,7 @@ end_picker.js_on_change("value", callback)
 
 ### Adding our Bokeh elements to a layout
 
-A useful feature in Bokeh is the ability to create [layouts](https://docs.bokeh.org/en/latest/docs/user_guide/basic/layouts.html), consisting of a grid of components (plots and widgets), making it easier to arrange and size the visualizations in your window. We can set the `sizing_mode`, determining how the dimensions of the plot change with the size of the window.
+A useful feature in Bokeh is the ability to create [layouts](https://docs.bokeh.org/en/latest/docs/user_guide/basic/layouts.html), consisting of a grid of components (plots and widgets), making it easier to arrange and size the visualisations in your window. We can set the `sizing_mode`, determining how the dimensions of the plot change with the size of the window.
 
 To create a layout with our plot and two widgets:
 
@@ -299,4 +299,4 @@ Now, we should have a working plot using `AjaxDataSource`s with our `CheckboxBut
 
 ## Summary
 
-Hopefully this blogpost provides a useful introduction to using Bokeh in Django and will help you to start creating your own visualizations. Overall, our conclusions from using this library are that it can be powerful for creating visually appealing, interactive visualizations, without requiring extensive JavaScript. While at some points it was challenging to work out some of the more complicated functionality due to a lack of examples to follow (for example, regarding widgets, callbacks and the Ajax data sources), we were able to create plots that fulfilled our requirements without having to run a separate Bokeh server. We look forward to building on what we've learnt using Bokeh in future RSE projects!
+Hopefully this blog post provides a useful introduction to using Bokeh in Django and will help you to start creating your own visualisations. Overall, our conclusions from using this library are that it can be powerful for creating visually appealing, interactive visualisations, without requiring extensive JavaScript. While at some points it was challenging to work out some of the more complicated functionality due to a lack of examples to follow (for example, regarding widgets, callbacks and the Ajax data sources), we were able to create plots that fulfilled our requirements without having to run a separate Bokeh server. We look forward to building on what we've learnt using Bokeh in future RSE projects!

@@ -5,6 +5,7 @@ AdrianDAlessandro
 Allard
 Alonso
 AlphaFold
+AnalyTics
 Andrie
 ArcGIS
 Arianna
@@ -14,6 +15,8 @@ Bhogal
 Bitbucket
 BlackScholesOption
 BoF
+Bokeh
+BokehJS
 Booch
 Bytewax
 CFF
@@ -31,6 +34,7 @@ Christidi
 Ciula
 Clockify
 Codecov
+ColumnDataSource
 ConcreteStrategy
 Coursera
 Creational
@@ -93,6 +97,7 @@ Hawes
 Homebrew
 Hopsworks
 Horsfall
+HoverTool
 Ilektra
 Intersectional
 JOSS
@@ -133,6 +138,7 @@ PYENV
 Pandoc
 Plotly
 Powershell
+ProCAT
 Py
 PyCSVY
 PyData
@@ -316,9 +322,11 @@ synonymously
 th
 tidymodels
 tidyverse
+timeseries
 timesheet
 timezones
 titlecase
+tooltips
 tsmbland
 uk
 uname
