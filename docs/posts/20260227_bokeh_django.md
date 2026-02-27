@@ -24,7 +24,7 @@ For ProCAT, the requirement was to provide interactive timeseries charts, allowi
 
 In some of our past projects, we have used [Plotly Dash](https://django-plotly-dash.readthedocs.io/en/latest/index.html#), a framework well-suited to creating interactive, data-driven dashboards. However, based on these experiences, we decided to explore lighter-weight options that could render faster. As this was an internal project, it also provided a convenient opportunity to try out a new library. For this purpose, we chose to use [Bokeh](https://docs.bokeh.org/en/latest/#), a library for creating interactive visualisations powered by JavaScript.
 
-Below, I will provide an easy tutorial to fulfil these requirements and begin creating your own visualisations!
+Below, I will provide an easy tutorial to fulfil these requirements and begin creating your own visualisations! Code for this tutorial is available on [GitHub](https://github.com/stephwills/bokeh-django-tutorial).
 
 ## Tutorial
 
@@ -43,7 +43,7 @@ df["dates"] = pd.to_datetime(df["dates"]).dt.date
 source = ColumnDataSource(df)
 ```
 
-The `figure` class creates a Bokeh figure for plotting. We can then plot our data; for line charts, this is done using the `line()` glyph method. The code snippet below also demonstrates how to define features such as the title, dimensions, background colour, axis range and labels.
+The `figure` class creates a Bokeh figure for plotting. We can then plot our data; for line charts, this is done using the `line()` glyph method. The code snippet below also demonstrates how to define features such as the title, dimensions, background colour, axis range and labels. We have defined a `plot_config` for convenience, consisting of a dictionary that maps the label names (column headings in the `ColumnDataSource`) to the colour of the associated line in the plot.
 
 ```py
 from bokeh.plotting import figure
@@ -139,7 +139,7 @@ To create the `DatePicker` widgets, we define some text to display, the default 
 
 ```py
 from datetime import date
-from bokeh.models.widgets import  DatePicker
+from bokeh.models.widgets import DatePicker
 
 start_picker = DatePicker(
     title="Start date:",
@@ -195,7 +195,14 @@ layout = row(
 )
 ```
 
-The layout can then be used to generate the HTML components to be added to the template, as shown above.
+The layout can then be used to generate the HTML components to be added to the template (as was done for the Bokeh plot):
+
+```py
+# Within your view's get_context_data method
+script, div = components(layout)
+context["script"] = script
+context["div"] = div
+```
 
 ![A plot using date picker widgets](images/bokeh_django/plot_with_widgets.png)
 
@@ -211,13 +218,20 @@ First, we create an `AjaxDataSource` for each trace, each pointing to a differen
 from bokeh.models import AjaxDataSource
 
 plot = figure(
-    title="An example plot with an Ajax datasource",
+    title="An example plot with an Ajax data source",
     height=500,
     width=800,
     x_axis_type="datetime"
 )
 plot.yaxis.axis_label = "Value"
 plot.xaxis.axis_label = "Date"
+
+# Plot config is the same as in the first plot
+plot_config= {
+    "series_A": "green",
+    "series_B": "orange",
+    "series_C": "blue"
+    }
 
 for label, colour in plot_config.items():
     source = AjaxDataSource(
