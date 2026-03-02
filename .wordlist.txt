@@ -16,9 +16,11 @@ Bitbucket
 BlackScholesOption
 BoF
 Bokeh
+Bokeh's
 BokehJS
 Booch
 Bytewax
+CDN
 CFF
 CPUs
 CRAN
@@ -304,6 +306,8 @@ pyorderly
 qmd
 rOpenSci's
 rT
+renderer
+renderers
 repo
 repositoryr
 reproducibility
