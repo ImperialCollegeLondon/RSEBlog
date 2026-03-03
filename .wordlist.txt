@@ -5,6 +5,7 @@ AdrianDAlessandro
 Allard
 Alonso
 AlphaFold
+AnalyTics
 Andrie
 ArcGIS
 Arianna
@@ -14,8 +15,12 @@ Bhogal
 Bitbucket
 BlackScholesOption
 BoF
+Bokeh
+Bokeh's
+BokehJS
 Booch
 Bytewax
+CDN
 CFF
 CPUs
 CRAN
@@ -31,6 +36,7 @@ Christidi
 Ciula
 Clockify
 Codecov
+ColumnDataSource
 ConcreteStrategy
 Coursera
 Creational
@@ -93,6 +99,7 @@ Hawes
 Homebrew
 Hopsworks
 Horsfall
+HoverTool
 Ilektra
 Intersectional
 JOSS
@@ -133,6 +140,7 @@ PYENV
 Pandoc
 Plotly
 Powershell
+ProCAT
 Py
 PyCSVY
 PyData
@@ -298,6 +306,8 @@ pyorderly
 qmd
 rOpenSci's
 rT
+renderer
+renderers
 repo
 repositoryr
 reproducibility
@@ -316,9 +326,11 @@ synonymously
 th
 tidymodels
 tidyverse
+timeseries
 timesheet
 timezones
 titlecase
+tooltips
 tsmbland
 uk
 uname
