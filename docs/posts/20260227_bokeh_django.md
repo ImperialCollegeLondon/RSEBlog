@@ -12,6 +12,8 @@ tags:
 
 # Plotting in Django with Bokeh
 
+![Django + Bokeh logos](images/bokeh_django/django_bokeh_logos.png){: .no-caption style="display:block;margin:auto;width:69%" }
+
 Last year, I was involved in developing one of the RSE team's internal projects, [ProCAT](https://github.com/ImperialCollegeLondon/proCAT),  our internal web application for Project Charging and AnalyTics. ProCAT allow us to monitor key metrics such as time spent on project work and the remaining funding, automatically generating the monthly charges to be made to each funding source. It also helps the team to compare projected team capacity with anticipated workload, making it easier to plan ahead.
 
 We built ProCAT using [Django](https://www.djangoproject.com/), the RSE team's preferred framework for creating web applications. One important design choice was selecting which library to use for generating our analytics plots, which forms the subject of today's blog post.
