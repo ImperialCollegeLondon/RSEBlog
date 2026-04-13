@@ -371,18 +371,19 @@ wheels = [
 
 [[package]]
 name = "mkdocs-rss-plugin"
-version = "1.17.9"
+version = "1.18.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cachecontrol", extra = ["filecache"] },
     { name = "gitpython" },
     { name = "mkdocs" },
+    { name = "properdocs" },
     { name = "requests" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ec/38/c18a11ff6f3141cbb8fb7c847fdf9deba05e05d658940a09f8f5b787c8fd/mkdocs_rss_plugin-1.17.9.tar.gz", hash = "sha256:1c30b192a73a46714c3c5f2f1fbc4b15850ed719106eb241de99891adb7e6258", size = 569625, upload-time = "2026-01-05T22:32:53.017Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/b7/6118c1c856257bd34c726d4eec568c5fae6224a0ae74dd18cb43cf446d82/mkdocs_rss_plugin-1.18.1.tar.gz", hash = "sha256:956a92c411963232097b76a2ea7efee4d9e0b8cba37c0d1646b4df261a5ed332", size = 572031, upload-time = "2026-04-10T12:11:44.114Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3d/c3/8315e728b5f91e5616451b4f4662fbcf33b316a1bbfbf6981a966ab982b8/mkdocs_rss_plugin-1.17.9-py3-none-any.whl", hash = "sha256:7aaa607d0a19f03343e83f4ee1b193e1d6f5af19b853546878c4b57fe406e0c4", size = 31354, upload-time = "2026-01-05T22:32:51.623Z" },
+    { url = "https://files.pythonhosted.org/packages/e7/04/34bd0fdf2554a7b1cc8f667d30f615c16bb4cc555ed4cefa4966836b8bdb/mkdocs_rss_plugin-1.18.1-py3-none-any.whl", hash = "sha256:c786e70ef987fbc7ec5aaabd46a007c7a0e3d7f87b283739d265d40a85ea0bec", size = 33059, upload-time = "2026-04-10T12:11:42.546Z" },
 ]
 
 [[package]]
@@ -462,6 +463,29 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/40/f1/6d86a29246dfd2e9b6237f0b5823717f60cad94d47ddc26afa916d21f525/pre_commit-4.5.1.tar.gz", hash = "sha256:eb545fcff725875197837263e977ea257a402056661f09dae08e4b149b030a61", size = 198232, upload-time = "2025-12-16T21:14:33.552Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5d/19/fd3ef348460c80af7bb4669ea7926651d1f95c23ff2df18b9d24bab4f3fa/pre_commit-4.5.1-py2.py3-none-any.whl", hash = "sha256:3b3afd891e97337708c1674210f8eba659b52a38ea5f822ff142d10786221f77", size = 226437, upload-time = "2025-12-16T21:14:32.409Z" },
+]
+
+[[package]]
+name = "properdocs"
+version = "1.6.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "ghp-import" },
+    { name = "jinja2" },
+    { name = "markdown" },
+    { name = "markupsafe" },
+    { name = "packaging" },
+    { name = "pathspec" },
+    { name = "platformdirs" },
+    { name = "pyyaml" },
+    { name = "pyyaml-env-tag" },
+    { name = "watchdog" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ec/29/f27a4e1eddf72ed3db6e47818fbafe6debbf09fd7051f9c1a007239b46ef/properdocs-1.6.7.tar.gz", hash = "sha256:adc7b16e562890af0e098a7e5b02e3a81c20894a87d6a28d345c9300de73c26e", size = 276141, upload-time = "2026-03-20T20:07:48.167Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bd/4d/fc923f5c85318ee8cc903566dc4e0ebe41b2dfc1d2ecf5546db232397ed6/properdocs-1.6.7-py3-none-any.whl", hash = "sha256:6fa0cfa2e01bf338f684892c8a506cf70ea88ae7f3479c933b6fa20168101cbd", size = 225406, upload-time = "2026-03-20T20:07:46.875Z" },
 ]
 
 [[package]]
@@ -572,7 +596,7 @@ requires-dist = [
     { name = "mkdocs", specifier = ">=1.6.0,<2" },
     { name = "mkdocs-caption", specifier = ">=1.2.0,<2" },
     { name = "mkdocs-material", specifier = ">=9.5.27,<10" },
-    { name = "mkdocs-rss-plugin", specifier = ">=1.15.0,<2" },
+    { name = "mkdocs-rss-plugin", specifier = ">=1.18.1,<2" },
     { name = "pre-commit", specifier = ">=3.7.1,<5" },
     { name = "python-markdown-math", specifier = ">=0.8,<0.10" },
 ]
