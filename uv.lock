@@ -371,7 +371,7 @@ wheels = [
 
 [[package]]
 name = "mkdocs-rss-plugin"
-version = "1.18.1"
+version = "1.19.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cachecontrol", extra = ["filecache"] },
@@ -381,9 +381,9 @@ dependencies = [
     { name = "requests" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/82/b7/6118c1c856257bd34c726d4eec568c5fae6224a0ae74dd18cb43cf446d82/mkdocs_rss_plugin-1.18.1.tar.gz", hash = "sha256:956a92c411963232097b76a2ea7efee4d9e0b8cba37c0d1646b4df261a5ed332", size = 572031, upload-time = "2026-04-10T12:11:44.114Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/22/e8/70055ec6d7105c0f7c84918e0f98180443b5065469b2877aca43067a5709/mkdocs_rss_plugin-1.19.0.tar.gz", hash = "sha256:0b9b7f14688393e5bd7d26a6dc14dfd2b228a8cdfe5b598a6677589b2159d957", size = 573045, upload-time = "2026-04-17T09:35:34.115Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e7/04/34bd0fdf2554a7b1cc8f667d30f615c16bb4cc555ed4cefa4966836b8bdb/mkdocs_rss_plugin-1.18.1-py3-none-any.whl", hash = "sha256:c786e70ef987fbc7ec5aaabd46a007c7a0e3d7f87b283739d265d40a85ea0bec", size = 33059, upload-time = "2026-04-10T12:11:42.546Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/00/1f2144fad080706c1ebebef83b7b5c0f8d80f9a2a06b33baabb94e33c84e/mkdocs_rss_plugin-1.19.0-py3-none-any.whl", hash = "sha256:5fdaffdee96745011c7c7786ed52b42a2d751f3aad84c188ffbedeb5a6e2994a", size = 33252, upload-time = "2026-04-17T09:35:32.372Z" },
 ]
 
 [[package]]
@@ -596,7 +596,7 @@ requires-dist = [
     { name = "mkdocs", specifier = ">=1.6.0,<2" },
     { name = "mkdocs-caption", specifier = ">=1.2.0,<2" },
     { name = "mkdocs-material", specifier = ">=9.5.27,<10" },
-    { name = "mkdocs-rss-plugin", specifier = ">=1.18.1,<2" },
+    { name = "mkdocs-rss-plugin", specifier = ">=1.19.0,<2" },
     { name = "pre-commit", specifier = ">=3.7.1,<5" },
     { name = "python-markdown-math", specifier = ">=0.8,<0.10" },
 ]
