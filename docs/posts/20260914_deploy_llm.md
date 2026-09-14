@@ -69,7 +69,7 @@ curl http://localhost:8000/v1/chat/completions \
                 "content": "In one sentence, what is Imperial College London?"
             }
         ],
-        "max_tokens": 100
+        "max_tokens": 50
     }'
 ```
 
