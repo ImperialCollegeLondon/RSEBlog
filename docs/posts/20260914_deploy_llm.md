@@ -20,13 +20,13 @@ In this article, we explore the process of private LLM deployment using Nvidia R
 
 HX3 is Imperial College London’s brand new HPC cluster dedicated entirely to GPU-accelerated compute workloads for AI teaching and research. This guide is mainly targeted at students and staff members at Imperial; If you are not an Imperial student or staff member, then try contacting your own institution’s HPC department; you may have access to equivalent infrastructure with which to follow along with this guide.
 
-## Accessing the HX3 Compute Cluster
+### Accessing the HX3 Compute Cluster
 
 You can request access to this compute environment by reaching out to your department’s HPC team. Depending on your requirements, you may be allocated a personal 'project' workspace, with which you can submit compute workloads using your personal quota. Otherwise, you may instead be added to a department-specific project with its own compute quota which is shared with others in your department.
 
 Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to runai.hx3.hpc.ic.ac.uk. NB you will need to either be connected directly to Imperial’s local network or connected via the Zscaler proxy service to access the interface.
 
-## The Run:ai Interface
+### The Run:ai Interface
 
 HX3 uses Nvidia’s Run:ai platform to submit and manage AI compute workloads. Run:ai has two interfaces: the web interface discussed already, which you can connect to by following the link above, and the Command Line Interface (CLI), which we will be using throughout the bulk of this guide. Before that, though, take a second to familiarise yourself with the web interface. From the landing page, you will see a page describing your submitted workloads, along with controls for starting, managing and deleting them. Deleted workloads may be accessed and restarted by following the 'Deleted workloads' on the navigation panel on the left. User settings, including API token generation, is accessed by clicking on your profile avatar in the top right of the page.
 
