@@ -73,7 +73,7 @@ curl http://localhost:8000/v1/chat/completions \
     }'
 ```
 
-You’ll see that the request is structured as JSON, with fields compatible with the OpenAI API format, which is quite standard in LLM inference. We first select the model we set up earlier, and then construct our query message’s content, using the user role. Note also our `max_tokens` choice of 100. The response you receive might look a little like this:
+You’ll see that the request is structured as JSON, with fields compatible with the OpenAI API format, which is quite standard in LLM inference. We first select the model we set up earlier, and then construct our query message’s content, using the `user` role. Note also our `max_tokens` choice of 50. The response you receive might look a little like this:
 
 ```text
 "role": "assistant",
