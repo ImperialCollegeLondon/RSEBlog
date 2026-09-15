@@ -215,7 +215,7 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
     }'
 ```
 
-Note the new `Authorization` header in our HTTP request, which contains our new access token. Assuming all has gone well, you'll notice that we get a non-empty response this time, meaning the inference server has accepted our access token and is allowing us to send queries to the LLM. Excellent. Now, with our inference server deployed and secure, let's look at a nifty little way to use our LLM: agentic coding in our IDE of choice.
+Note the new `Authorization` header in our HTTP request, which contains our new access token. Assuming all has gone well, you'll notice that we get a non-empty response this time, meaning the inference server has accepted our access token and is allowing us to send queries to the LLM. Excellent. Note that these access tokens periodically expire, so you may need to reqest another token if you suddenly start receiving empty responses later on. Now, with our inference server deployed and secure, let's look at a nifty little way to use our LLM: agentic coding in our IDE of choice.
 
 ## Using the LLM for Agentic Coding
 
