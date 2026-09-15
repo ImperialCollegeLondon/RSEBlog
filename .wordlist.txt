@@ -91,6 +91,7 @@ GraphQL
 Gueant
 H2O.ai
 HPC
+HX
 HackMD
 Hacktoberfest
 Haddad
@@ -110,6 +111,7 @@ Kaur
 Kensington
 Kirstie
 Kishan
+LLM
 LLMs
 LaTeX
 LabView
@@ -125,9 +127,12 @@ Mathjax
 Mirai
 MkDocs
 Modeling
+NIM
 Nafiul
 Nanjala
 NumFOCUS
+Nvidia
+Nvidia's
 O'Reilly
 OOP
 OSS
@@ -166,6 +171,7 @@ Reproducibility
 RevealJS
 Roundtable
 Rumbaugh
+Runai
 SALC
 SPARQL
 SWMM
@@ -213,6 +219,7 @@ YAML
 Yee
 Yu
 Zenodo
+Zscaler
 Zsh
 actioned
 ai
@@ -336,6 +343,7 @@ uk
 uname
 unconference
 usr
+vLLM
 walkthrough
 walkthroughs
 webform

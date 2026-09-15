@@ -24,7 +24,7 @@ HX3 is Imperial College London's brand new HPC cluster dedicated entirely to GPU
 
 You can request access to this compute environment by reaching out to your department's HPC representatives. Depending on your requirements, you may be allocated a personal 'project' workspace, with which you can submit compute workloads using your personal quota. Otherwise, you may instead be added to a department-specific project with its own compute quota which is shared with others in your department.
 
-Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to runai.hx3.hpc.ic.ac.uk. NB you will need to either be connected directly to Imperial's local network or connected via the Zscaler proxy service to access the interface.
+Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to <runai.hx3.hpc.ic.ac.uk>. NB you will need to either be connected directly to Imperial's local network or connected via the Zscaler proxy service to access the interface.
 
 ### The Run:ai Interface
 
@@ -219,9 +219,17 @@ Note the new `Authorization` header in our HTTP request, which contains our new 
 
 ## Using the LLM for Agentic Coding
 
-For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box.
+For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Before we do that, though, let's find a more capable model such as the `Qwen/Qwen3-14B` one we mentioned earlier. Delete the existing workload with `runai workload delete ${WORKLOAD}` and start an instance of our more capable LLM by running the following:
 
-TODO: agentic coding with vscode
+```bash
+runai inference submit ${WORKLOAD} \
+    -i vllm/vllm-openai:latest \
+    --gpu-devices-request 1 \
+    --serving-port "container=8000,authorization-type=authorizedUsersOrGroups,authorized-users=${RUNAI_USER},protocol=http" \
+    -- Qwen/Qwen3-14B
+```
+
+Note the change in tag to our new bigger model at the end of the command. Once it's running, let's launch `vscode` and configure our LLM as an agent.
 
 ## Final Notes
 
