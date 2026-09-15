@@ -208,7 +208,7 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
         "messages": [
             {
                 "role": "user",
-                "content": "How to cure the zoomies?"
+                "content": "Is my cat trying to kill me?"
             }
         ],
         "max_tokens": 1000
