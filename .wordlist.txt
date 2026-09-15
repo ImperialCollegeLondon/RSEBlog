@@ -2,6 +2,7 @@ APIs
 Abdelrazek
 Abhishek
 AdrianDAlessandro
+Agentic
 Allard
 Alonso
 AlphaFold
@@ -22,6 +23,7 @@ Booch
 Bytewax
 CDN
 CFF
+CLI
 CPUs
 CRAN
 CSP
@@ -222,6 +224,7 @@ Zenodo
 Zscaler
 Zsh
 actioned
+agentic
 ai
 al
 alexdewar
