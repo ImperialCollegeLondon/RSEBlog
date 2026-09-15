@@ -148,7 +148,7 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
                 "content": "What is the answer to life, the universe and everything?"
             }
         ],
-        "max_tokens": 100
+        "max_tokens": 1000
     }'
 ```
 
@@ -175,7 +175,7 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
                 "content": "What should I have for dinner tonight?"
             }
         ],
-        "max_tokens": 100
+        "max_tokens": 1000
     }'
 ```
 
@@ -197,7 +197,7 @@ RUNAI_TOKEN=$(
 )
 ```
 
-`jq` is simply a CLI tool for parsing and generating JSON expressions. All we are doing here is constructing a JSON `client_credentials` request with your `clientId` and `clientSecret`, passing it to the Run:ai `/api/v1/token` endpoint, and saving our new `accessToken` it returns in the environment variable `RUNAI_TOKEN`. Now let's try our inference server again, using our new access token. Again be mindful about single `'` and double `"` quotes. Environment variables are *not* substituted inside the former, only the latter.
+`jq` is simply a CLI tool for parsing and generating JSON expressions. All we are doing here is constructing JSON `client_credentials` request data with your `clientId` and `clientSecret`, passing it to the Run:ai `/api/v1/token` endpoint, and saving our new `accessToken` it returns in the environment variable `RUNAI_TOKEN`. Now let's try our inference server again, using our new access token. Again be mindful about single `'` and double `"` quotes. Environment variables are *not* substituted inside the former, only the latter.
 
 ```bash
 curl ${WORKLOAD_URL}/v1/chat/completions \
@@ -208,10 +208,10 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
         "messages": [
             {
                 "role": "user",
-                "content": "What should I have for dinner tonight?"
+                "content": "How to cure the zoomies?"
             }
         ],
-        "max_tokens": 100
+        "max_tokens": 1000
     }'
 ```
 
