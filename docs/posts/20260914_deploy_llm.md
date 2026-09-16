@@ -16,11 +16,6 @@ For better or worse, the age of the Large Language Model (LLM) has officially ar
 
 In this article, we explore the process of private LLM deployment using [Nvidia Run:ai][Run:ai] on Imperial College London's new [HX3 cluster][RCS_offerings] for AI computing. We begin with a short overview of the HX3 cluster and its usage, followed by a quick look over the software stack we will be utilising for our deployment, including its web and command line interfaces. Finally, we get down to business and deploy our own model onto the HX3 cluster and play around with it a little.
 
-[RCS_offerings]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/
-[Run:ai]: https://www.nvidia.com/en-gb/software/run-ai/
-[NIM]: https://www.nvidia.com/en-gb/ai-data-science/products/nim-microservices/
-[vLLM]: https://vllm.ai/
-
 ## Imperial HX3
 
 HX3 is Imperial College London's brand new HPC cluster dedicated entirely to GPU-accelerated compute workloads for AI teaching and research. This guide is mainly targeted at students and staff members at Imperial; If you are not an Imperial student or staff member, then try contacting your own institution's HPC department; you may have access to equivalent infrastructure with which to follow along with this guide.
@@ -62,7 +57,7 @@ It's worth unpacking the previous command a bit, as several things are happening
 1. `-i vllm/vllm-openai:latest`. This instructs Run:ai to load the vLLM and OpenAI container, which is a pre-built environment containing the inference server itself, which is vLLM with an OpenAI API layer.
 1. `--gpu-devices-request 1` requests a single GPU for the workload.
 1. `--serving-port 8000` exposes the workload's vLLM inference server on port 8000.
-1. `Qwen/Qwen3-0.6B` is the <huggingface.co> identifier for the model we are using.
+1. `Qwen/Qwen3-0.6B` is the [Hugging Face][HuggingFace] identifier for the model we are using.
 
 NB there are some good reasons you might want to request a different number of GPUs. You may have noticed when calling `runai project list` that the returned table has a column named `Allocated GPUs`. Depending on your quota, two other scenarios may exist: your GPU quota may be less than, or greater than one. Additionally, if your project is shared with other users, you may find that there is not enough quota left after other workloads for your job to request a whole GPU. If there is not enough quota for your job, you may request 'fractional' GPU usage, where some fraction of a non-full GPU is requested instead. Although only proportionate GPU memory is reserved, it's a viable option when not enough GPU quota exists. For a fractional half GPU request, for example, replace `--gpu-devices-request 1` in your `submit` call with `--gpu-request-type portion --gpu-portion-request 0.5`, and your workload will run on half of a shared GPU. On the other hand, if your remaining GPU quota is above one, you might consider requesting more to run a bigger model faster. This, however, is outside the scope of this guide.
 
@@ -145,7 +140,7 @@ The response I get now is:
 "content": "<think>\nOkay, the user is asking for a one-sentence definition of Imperial College London. Let me start by recalling what I know about the institution. Imperial College London is a prestigious university located in London, UK, known for its strong academic programs and research. I need to make sure the sentence is concise and includes key details like location, type of institution, and notable aspects.\n\nFirst, I should mention the university's name. Then, its location. Next, the type of institution. Also, the reputation or achievements. Let me check if there's any specific information I should include. For example, the fact that it's a public institution or its focus areas. Maybe include something about its reputation in the field of education or research.\n\nWait, the user wants it in one sentence. So I need to combine these elements without adding unnecessary words. Let me structure it: \"Imperial College London is a prestigious UK university located in London, offering a wide range of academic programs and research opportunities.\" That seems to cover location, type, and purpose. Let me double-check if there's any other important detail that's missing. No, that should be sufficient. I think that's the correct answer.\n</think>\n\nImperial College London is a prestigious UK university located in London, offering a wide range of academic programs and research opportunities.",
 ```
 
-Interesting... We can see that this model in particular uses many of its allocated tokens on the 'thinking' phase, before starting to write its final response. Clearly some experimentation is called for! There is a huge selection of models to try from Hugging Face and other AI container sources we can try. The `Qwen/Qwen3-14B` model is a Slightly bigger and more capable version of the model we are using now, or alternatively there are many more to choose from. Before we do that, though, let's make sure that our inference server is secure from other users.
+Interesting... We can see that this model in particular uses many of its allocated tokens on the 'thinking' phase, before starting to write its final response. Clearly some experimentation is called for! There is a huge selection of models to try from [Hugging Face][HuggingFace] and other AI container sources we can try. The `Qwen/Qwen3-14B` model is a Slightly bigger and more capable version of the model we are using now, or alternatively there are many more to choose from. Before we do that, though, let's make sure that our inference server is secure from other users.
 
 ## Adding Token-Based Authentication
 
@@ -339,3 +334,9 @@ Your URL will look slightly different, depending on your project and workload na
 Thanks for staying with us until the end! You should hopefully feel a little more confident about configuring and deploying your own instances of LLM models on HX3 and trying some new models. Before you leave us, though, just a few extra points that should be kept in mind whilst experimenting. First, please be a good citizen! Shut down your LLMs once you are done with them to free up resources for someone else. You can check which workloads are still running with `runai workload list`, and delete a workflow by running `runai workload delete <workload>`. Second, if doing anything more than testing a model for a short while, you are strongly advised to add token-based authentication to your model, to prevent others from accessing and abusing it. Reach out to your department's HPC representatives if you are unsure whether you need it or require assistance in setting it up. Finally, if you are deploying the same model over and over, consider setting up persistent caching to prevent Run:ai from downloading and compiling the same model over and over, saving bandwidth and speeding up deployment significantly. And now, with that done, go and have some fun!
 
 This post was written by a human.
+
+[RCS_offerings]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/
+[Run:ai]: https://www.nvidia.com/en-gb/software/run-ai/
+[NIM]: https://www.nvidia.com/en-gb/ai-data-science/products/nim-microservices/
+[vLLM]: https://vllm.ai/
+[HuggingFace]: https://huggingface.co/
