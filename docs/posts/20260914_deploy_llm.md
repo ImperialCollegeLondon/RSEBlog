@@ -12,9 +12,14 @@ tags:
 
 # Deploying an LLM Inference Server
 
-For better or worse, the age of the Large Language Model (LLM) has officially arrived. With it comes fresh new opportunities and problems for humanity, such as increased worker productivity alongside massively increased energy demand and job displacement. The widespread adoption of LLMs from just a few key suppliers brings other issues, such as vendor dependence and data security concerns. Besides this, private research and development of these models continues at a blistering pace. Because of the needs of researchers and private vendors, and perhaps also the other issues, a new trend has emerged whereby private instances of LLMs are deployed locally on personally owned or rented infrastructure. New software stacks, such as the open source vLLM, or Nvidia's proprietary NIM, have appeared to fill the niche of LLM deployment and administration.
+For better or worse, the age of the Large Language Model (LLM) has officially arrived. With it comes fresh new opportunities and problems for humanity, such as increased worker productivity alongside massively increased energy demand and job displacement. The widespread adoption of LLMs from just a few key suppliers brings other issues, such as vendor dependence and data security concerns. Besides this, private research and development of these models continues at a blistering pace. Because of the needs of researchers and private vendors, and perhaps also the other issues, a new trend has emerged whereby private instances of LLMs are deployed locally on personally owned or rented infrastructure. New software stacks, such as the [open source vLLM][vLLM], or [Nvidia's proprietary NIM][NIM], have appeared to fill the niche of LLM deployment and administration.
 
-In this article, we explore the process of private LLM deployment using Nvidia Run:ai on Imperial College London's new HX3 cluster for AI computing. We begin with a short overview of the HX3 cluster and its usage, followed by a quick look over the software stack we will be utilising for our deployment, including its web and command line interfaces. Finally, we get down to business and deploy our own model onto the HX3 cluster and play around with it a little.
+In this article, we explore the process of private LLM deployment using [Nvidia Run:ai][Run:ai] on Imperial College London's new [HX3 cluster][RCS_offerings] for AI computing. We begin with a short overview of the HX3 cluster and its usage, followed by a quick look over the software stack we will be utilising for our deployment, including its web and command line interfaces. Finally, we get down to business and deploy our own model onto the HX3 cluster and play around with it a little.
+
+[RCS_offerings]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/
+[Run:ai]: https://www.nvidia.com/en-gb/software/run-ai/
+[NIM]: https://www.nvidia.com/en-gb/ai-data-science/products/nim-microservices/
+[vLLM]: https://vllm.ai/
 
 ## Imperial HX3
 
