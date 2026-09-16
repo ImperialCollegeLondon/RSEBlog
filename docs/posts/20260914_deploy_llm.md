@@ -28,7 +28,7 @@ Once appropriate access has been granted, you may proceed to the web interface o
 
 ### The Run:ai Interface
 
-HX3 uses Nvidia's Run:ai platform to submit and manage AI compute workloads. Run:ai has two interfaces: the web interface discussed already, which you can connect to by following the link above, and the Command Line Interface (CLI), which we will be using throughout the bulk of this guide. Before that, though, take a second to familiarise yourself with the web interface. From the landing page, you will see a page describing your submitted workloads, along with controls for starting, managing and deleting them. Deleted workloads may be accessed and restarted by following the 'Deleted workloads' on the navigation panel on the left. User settings, including API token generation, is accessed by clicking on your profile avatar in the top right of the page.
+HX3 uses [Nvidia's Run:ai][Run:ai] platform to submit and manage AI compute workloads. Run:ai has two interfaces: the web interface discussed already, which you can connect to by following the link above, and the Command Line Interface (CLI), which we will be using throughout the bulk of this guide. Before that, though, take a second to familiarise yourself with the web interface. From the landing page, you will see a page describing your submitted workloads, along with controls for starting, managing and deleting them. Deleted workloads may be accessed and restarted by following the 'Deleted workloads' on the navigation panel on the left. User settings, including API token generation, is accessed by clicking on your profile avatar in the top right of the page.
 
 ![The HX3 Run:ai Web Interface](images/deploy_llm/runai_web.png)
 
