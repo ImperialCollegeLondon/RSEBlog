@@ -162,7 +162,7 @@ runai inference submit ${WORKLOAD} \
     -- Qwen/Qwen3-0.6B
 ```
 
-The only difference from our previous `submit` call is the value of our `--serving-port` option. Here, we are instructing Run:ai to only allow users which we have added to the option's comma-delimited `authorised-users` list to access the inference server. Once we are up and running again, try to send another query:
+The only difference from our previous `submit` call is the value of our `--serving-port` option. Here, we are instructing Run:ai to only allow users which we have added to the option's colon-delimited `authorised-users` list to access the inference server. Once we are up and running again, try to send another query:
 
 ```bash
 curl ${WORKLOAD_URL}/v1/chat/completions \
