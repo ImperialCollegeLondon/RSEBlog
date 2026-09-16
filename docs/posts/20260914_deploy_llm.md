@@ -294,7 +294,7 @@ You'll see in the output that our LLM has correctly determined that it needs to 
 
 ### Using the LLM for Agentic Coding
 
-For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll configure our LLM as a coding agent.
+For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll start configuring our LLM as a coding agent.
 
 TODO: `vscode` agent
 

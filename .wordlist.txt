@@ -302,6 +302,7 @@ numpy
 ons
 param
 parameterisation
+parsers
 pdfs
 performant
 plantuml
