@@ -36,7 +36,7 @@ Since we will be using the CLI client, click the question mark icon in the top r
 
 Run:ai workloads can be classified as one of three things: either 'Workspace', 'Training' or 'Inference'. A workspace is useful as spaces for developing and running Jupyter notebooks in an isolated container environment. The training workload, as you might expect, is a specialised environment from which AI models can be trained in a controlled and repeatable manner. Since the LLM models we will be using have already been fully trained, we will be using the inference workload type, used for deploying fully trained AI models and exposing them to users via a web API.
 
-Let's begin by listing our submitted workloads with `runai workload list`. If you are part of a department-wide project group, you may see several workloads submitted by others in your group, along with their status. If you have been allocated a fresh project group, the returned list will be empty as we have not submitted anything yet. Let's fix that. Decide a name for the workload and set the environment variable `WORKLOAD` with it. I'll use `WORKLOAD=my-test-llm`, but you may need to pick another one if this one is already taken. Our next command is as follows:
+Let's begin by listing our submitted workloads with `runai workload list`. If you are part of a department-wide project group, you may see several workloads submitted by others in your group, along with their status. If you have been allocated a fresh project group, the returned list will be empty as we have not submitted anything yet. Let's fix that. Decide a name for the workload and set the environment variable `WORKLOAD` with it. I'll use `WORKLOAD=vllm-smoke`, but you may need to pick another one if this one is already taken. Our next command is as follows:
 
 ```bash
 runai inference submit ${WORKLOAD} \
@@ -294,9 +294,31 @@ You'll see in the output that our LLM has correctly determined that it needs to 
 
 ### Using the LLM for Agentic Coding
 
-For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll start configuring our LLM as a coding agent.
+For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll start configuring our LLM as a coding agent. In the text box at the top of the main window, type `> Chat: Manage Language Models` to bring up the LLM management window. Then click `Add Models` in the top right, followed by `Custom Endpoint`. Give it a name, such as `Imperial HX3`, copy the contents of `echo ${RUNAI_TOKEN}` into the `API Key` text box, and select the `Chat Completions` API. Finally, in the JSON configuration text window that pops up, fill in the remaining fields. Mine looks as follows:
 
-TODO: `vscode` agent
+```json
+[
+    {
+        "name": "Imperial HX3",
+        "vendor": "customendpoint",
+        "apiType": "chat-completions",
+        "apiKey": "${input:chat.lm.secret.-6e57da46}",
+        "models": [
+            {
+                "id": "Qwen/Qwen3-14B",
+                "name": "Qwen3 14B - HX3",
+                "url": "https://vllm-smoke-runai-rse-testing.runai-inference.hx3.hpc.ic.ac.uk/v1/chat/completions",
+                "toolCalling": true,
+                "vision": false,
+                "contextWindow": 40960,
+                "maxOutputTokens": 16000
+            }
+        ]
+    }
+]
+```
+
+Your URL will look slightly different, depending on your project and workload name. Run `echo ${WORKLOAD_URL}/v1/chat/completions`, and set your URL to the result. Remember that your Run:ai API token will expire, and will need periodic updating via the LLM management window. With this done, reload `vscode` by typing `> Developer: Reload Window` in the top command bar, then open the agent chat panel with `> Chat: Open Chat`. We can now select our shiny new LLM agent at the bottom of the agent panel (you may need to click `Other Models` and scroll down). Mine is named `Qwen3 14B - HX3`, as per my JSON configuration. Now comes the fun part; give it a spin inside your own `vscode` code project. In the agent chat window, with our agent selected, type some queries such as `tell me the first line of README.md`, `Write a file at the root of this repository named test.txt with contents 'hello world'.`, or even deliberately break something in your project and send resulting errors to the agent, then watching various agent models try to address your queries. Happy experimenting! It's been a long journey, but that is all for now. I hope you've had fun and learnt something. Stay tuned for some more advanced guides on using Imperial's new HPC infrastructure in future issues.
 
 ## Final Notes
 
