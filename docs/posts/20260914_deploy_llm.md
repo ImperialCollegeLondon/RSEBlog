@@ -24,7 +24,7 @@ HX3 is Imperial College London's brand new HPC cluster dedicated entirely to GPU
 
 You can request access to this compute environment by reaching out to your department's HPC representatives. Depending on your requirements, you may be allocated a personal 'project' workspace, with which you can submit compute workloads using your personal quota. Otherwise, you may instead be added to a department-specific project with its own compute quota which is shared with others in your department.
 
-Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to <runai.hx3.hpc.ic.ac.uk>. NB you will need to either be connected directly to Imperial's local network or connected via the Zscaler proxy service to access the interface.
+Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to <https://runai.hx3.hpc.ic.ac.uk>. NB you will need to either be connected directly to Imperial's local network or connected via the Zscaler proxy service to access the interface.
 
 ### The Run:ai Interface
 
