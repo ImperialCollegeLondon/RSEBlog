@@ -303,7 +303,7 @@ You'll see in the output that our LLM has correctly determined that it needs to 
 
 ### Using the LLM for Agentic Coding
 
-For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll start configuring our LLM as a coding agent. In the text box at the top of the main window, type `> Chat: Manage Language Models` to bring up the LLM management window. Then click `Add Models` in the top right, followed by `Custom Endpoint`. Give it a name, such as `Imperial HX3`, copy the contents of `echo ${RUNAI_TOKEN}` into the `API Key` text box, and select the `Chat Completions` API. Finally, in the JSON configuration text window that pops up, fill in the remaining fields. Mine looks as follows:
+For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the [Visual Studio Code][VSCode] IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll start configuring our LLM as a coding agent. In the text box at the top of the main window, type `> Chat: Manage Language Models` to bring up the LLM management window. Then click `Add Models` in the top right, followed by `Custom Endpoint`. Give it a name, such as `Imperial HX3`, copy the contents of `echo ${RUNAI_TOKEN}` into the `API Key` text box, and select the `Chat Completions` API. Finally, in the JSON configuration text window that pops up, fill in the remaining fields. Mine looks as follows:
 
 ```json
 [
@@ -340,3 +340,4 @@ This post was written by a human.
 [NIM]: https://www.nvidia.com/en-gb/ai-data-science/products/nim-microservices/
 [vLLM]: https://vllm.ai/
 [HuggingFace]: https://huggingface.co/
+[VSCode]: https://code.visualstudio.com/
