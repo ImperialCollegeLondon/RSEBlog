@@ -215,21 +215,88 @@ curl ${WORKLOAD_URL}/v1/chat/completions \
     }'
 ```
 
-Note the new `Authorization` header in our HTTP request, which contains our new access token. Assuming all has gone well, you'll notice that we get a non-empty response this time, meaning the inference server has accepted our access token and is allowing us to send queries to the LLM. Excellent. Note that these access tokens periodically expire, so you may need to reqest another token if you suddenly start receiving empty responses later on. Now, with our inference server deployed and secure, let's look at a nifty little way to use our LLM: agentic coding in our IDE of choice.
+Note the new `Authorization` header in our HTTP request, which contains our new access token. Assuming all has gone well, you'll notice that we get a non-empty response this time, meaning the inference server has accepted our access token and is allowing us to send queries to the LLM. Excellent. Note that these access tokens periodically expire, so you may need to reqest another token if you suddenly start receiving empty responses later on. Now, with our inference server deployed and secure, let's look at a nifty little way to use our LLM: tool calling.
 
-## Using the LLM for Agentic Coding
+## LLM Tool Calling
 
-For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Before we do that, though, let's find a more capable model such as the `Qwen/Qwen3-14B` one we mentioned earlier. Delete the existing workload with `runai workload delete ${WORKLOAD}` and start an instance of our more capable LLM by running the following:
+To start with, let's find a more capable model such as the `Qwen/Qwen3-14B` one we mentioned earlier. Delete the existing workload with `runai workload delete ${WORKLOAD}` and start an instance of our more capable LLM by running the following:
 
 ```bash
 runai inference submit ${WORKLOAD} \
     -i vllm/vllm-openai:latest \
     --gpu-devices-request 1 \
     --serving-port "container=8000,authorization-type=authorizedUsersOrGroups,authorized-users=${RUNAI_USER},protocol=http" \
-    -- Qwen/Qwen3-14B
+    -- Qwen/Qwen3-14B \
+    --enable-auto-tool-choice \
+    --tool-call-parser hermes \
+    --reasoning-parser qwen3
 ```
 
-Note the change in tag to our new bigger model at the end of the command. Once it's running, let's launch `vscode` and configure our LLM as an agent.
+Note the change in tag to our new bigger model at the end of the command. Note also the new options being passed to the model: `--enable-auto-tool-choice` and `--tool-call-parser hermes` enables automatic tool selection and parses the model's output into OpenAI API-compatible tool call messages. Both the `Qwen3` models we have tried so far recommend the `hermes` parser, but other models may need different tool parsers. Finally, `--reasoning-parser qwen3` is required to parse the `Qwen3` models' `<think>...</think>` syntax we have been seeing when model thinking is enabled. Now onto LLM tool use.
+
+### A Simple Tool Calling Example
+
+Now that our shiny new inference server is running, let's look into LLM tool usage more generally with an example. We will offer a dummy local `get_weather` tool to our LLM to see what tool requests actually look like before moving onto something more complicated. Run the following in your terminal:
+
+```bash
+curl ${WORKLOAD_URL}/v1/chat/completions \
+    -H "Authorization: Bearer ${RUNAI_TOKEN}" \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "model": "Qwen/Qwen3-14B",
+        "messages": [{
+            "role": "user",
+            "content": "What is the weather in London? Use the weather tool."
+        }],
+        "tools": [{
+            "type": "function",
+            "function": {
+                "name": "get_weather",
+                "description": "Get the current weather for a city",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "city": {
+                            "type": "string"
+                        }
+                    },
+                    "required": ["city"]
+                }
+            }
+        }],
+        "tool_choice": "auto"
+    }' | jq
+```
+
+Note that we piped the response into the `jq` JSON parser, for nicely formatted output. Our response should contain something like the following:
+
+```text
+"role": "assistant",
+"content": null,
+"refusal": null,
+"annotations": null,
+"audio": null,
+"function_call": null,
+"tool_calls": [
+  {
+    "id": "chatcmpl-tool-aaefba00c341c8c5",
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "arguments": "{\"city\": \"London\"}"
+    }
+  }
+],
+"reasoning": "\nOkay, the user is asking about the weather in London and wants me to use the weather tool. Let me check the available functions. There's a function called get_weather that takes a city parameter. The required parameter is city, which in this case is London. So I need to call get_weather with city set to London. I'll make sure to format the tool call correctly in JSON inside the XML tags.\n"
+```
+
+You'll see in the output that our LLM has correctly determined that it needs to run our dummy `get_weather` tool with a single `city` argument equal to `London`. This dummy tool does nothing, but you might be already imagining some more useful tools we could implement, such as `write_file` or `set_alarm`, which we can give our LLM access to. Now let's see if we can get our model to do agentic coding in an IDE.
+
+### Using the LLM for Agentic Coding
+
+For the purposes of checking agentic coding out using a private LLM deployment, let's make use of the 'Visual Studio Code' IDE, henceforth `vscode`, which is freely available on most operating systems, and already supports using custom LLM servers straight out of the box. Get started by launching `vscode`, and we'll configure our LLM as a coding agent.
+
+TODO: `vscode` agent
 
 ## Final Notes
 
