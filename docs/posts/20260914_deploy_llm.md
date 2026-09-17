@@ -61,7 +61,7 @@ It's worth unpacking the previous command a bit, as several things are happening
 1. `-i vllm/vllm-openai:latest`. This instructs Run:ai to load the vLLM and OpenAI container, which is a pre-built environment containing the inference server itself, which is the vLLM OpenAI-compatible server image.
 1. `--gpu-devices-request 1` requests a single GPU for the workload.
 1. `--serving-port 8000` exposes the workload's vLLM inference server on port 8000.
-1. `Qwen/Qwen3-0.6B` is the [Hugging Face][HuggingFace] identifier for the model we are using.
+1. `Qwen/Qwen3-0.6B` is the [Hugging Face][HuggingFace] tag for the model we are using.
 
 NB there are some good reasons you might want to request a different number of GPUs. You may have noticed when calling `runai project list` that the returned table has a column named `Allocated GPUs`. Depending on your quota, two other scenarios may exist: your GPU quota may be less than, or greater than one. Additionally, if your project is shared with other users, you may find that there is not enough quota left after other workloads for your job to request a whole GPU. If there is not enough quota for your job, you may request 'fractional' GPU usage, where some fraction of a non-full GPU is requested instead. Although only proportionate GPU memory is reserved, it's a viable option when not enough GPU quota exists. For a fractional half GPU request, for example, replace `--gpu-devices-request 1` in your `submit` call with `--gpu-request-type portion --gpu-portion-request 0.5`, and your workload will run on half of a shared GPU. On the other hand, if your remaining GPU quota is above one, you might consider requesting more to run a bigger model faster. This, however, is outside the scope of this guide.
 
@@ -69,7 +69,7 @@ By now, our LLM should be up and running on a HX3 node, as evident in the worklo
 
 ## Sending Requests to the LLM
 
-Let's start simple. We will use the command line program `curl` to send HTTP requests to our inference server's API. Run the following command in your terminal:
+Our goal in this section is to see how to construct LLM requests, and see what LLM responses look like, through the OpenAI-compatible interfacing API. We will also learn how to send and receive these messages using command line tools. We chose `Qwen/Qwen3-0.6B` earlier as it is a (relatively) small model that is good enough to demonstrate basic usage. Let's start simple. We will use the command line program `curl` to send HTTP requests to our inference server's API. For this, we must construct a message which selects the correct model to use, tells the model we are acting as a user and specifies the content of our message. Run the following command in your terminal:
 
 ```bash
 curl http://localhost:8000/v1/chat/completions \
@@ -86,7 +86,7 @@ curl http://localhost:8000/v1/chat/completions \
     }'
 ```
 
-You'll see that the request is structured as JSON, with fields compatible with the OpenAI API format, which is quite standard in LLM inference. We first select the model we set up earlier, and then construct our query message's content, using the `user` role. Note also our `max_tokens` choice of 50. The response you receive might look a little like this:
+You'll see that the request is structured as JSON, with fields compatible with the OpenAI API format, which is quite standard in LLM inference. For `model`, we specify the model's tag (the one we set up earlier is `Qwen/Qwen3-0.6B`), and each `message` specifies its sender's `role` (which is `user` here) and its `content`. Note also our `max_tokens` choice of 50. The response you receive might look a little like this:
 
 ```text
 "role": "assistant",
