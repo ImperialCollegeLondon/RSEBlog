@@ -16,6 +16,10 @@ For better or worse, the age of the Large Language Model (LLM) has officially ar
 
 In this article, we explore the process of private LLM deployment using [Nvidia Run:ai][Run:ai] on Imperial College London's new [HX3 cluster][RCS_offerings] for AI computing. We begin with a short overview of the HX3 cluster and its usage, followed by a quick look over the software stack we will be utilising for our deployment, including its web and command line interfaces. Finally, we get down to business and deploy our own model onto the HX3 cluster and play around with it a little.
 
+## Prerequisites
+
+This guide will make heavy use of [Bash][bash], the popular command interpreter shell for UNIX systems, though [Z shell][zsh] or similar will also work. Linux and Mac users will have at least one of these alredy installed, but Windows users will need to set up and use the [Windows Subsystem for Linux (WSL)][WSL] to follow along. Other tools, such as `curl` and `jq` are usually available on these systems, but are easilly installable if not using that system's package manager. With our software dependencies now ready, let's first talk about [Imperial's HX3 compute cluster][RCS_offerings].
+
 ## Imperial HX3
 
 HX3 is Imperial College London's brand new HPC cluster dedicated entirely to GPU-accelerated compute workloads for AI teaching and research. This guide is mainly targeted at students and staff members at Imperial; if you are not an Imperial student or staff member, then try contacting your own institution's HPC department; you may have access to equivalent infrastructure with which to follow along with this guide.
@@ -336,6 +340,9 @@ Thanks for staying with us until the end! You should hopefully feel a little mor
 This post was written by a human.
 
 [RCS_offerings]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/
+[bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+[zsh]: https://en.wikipedia.org/wiki/Z_shell
+[WSL]: https://learn.microsoft.com/en-gb/windows/wsl/
 [Run:ai]: https://www.nvidia.com/en-gb/software/run-ai/
 [NIM]: https://www.nvidia.com/en-gb/ai-data-science/products/nim-microservices/
 [vLLM]: https://vllm.ai/
