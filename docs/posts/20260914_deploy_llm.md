@@ -18,7 +18,7 @@ In this article, we explore the process of private LLM deployment using [Nvidia 
 
 ## Prerequisites
 
-This guide will make heavy use of [Bash][bash], the popular command interpreter shell for UNIX systems, though [Z shell][zsh] or similar will also work. Linux and Mac users will have at least one of these alredy installed, but Windows users will need to set up and use the [Windows Subsystem for Linux (WSL)][WSL] to follow along. Other tools, such as `curl` and `jq` are usually available on these systems, but are easilly installable if not using that system's package manager. With our software dependencies now ready, let's first talk about [Imperial's HX3 compute cluster][RCS_offerings].
+This guide will make heavy use of [Bash][bash], the popular command interpreter shell for UNIX systems, though [Z shell][zsh] or similar will also work. Linux and Mac users will have at least one of these already installed, but Windows users will need to set up and use the [Windows Subsystem for Linux (WSL)][WSL] to follow along. Other tools, such as `curl` and `jq` are usually available on these systems, but are easily installable if not using that system's package manager. With our software dependencies now ready, let's first talk about [Imperial's HX3 compute cluster][RCS_offerings].
 
 ## Imperial HX3
 

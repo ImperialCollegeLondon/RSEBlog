@@ -213,6 +213,7 @@ Vlissides
 Vries
 WHPC
 WSIMOD
+WSL
 Weblate
 Weinzierl
 Wiecki
