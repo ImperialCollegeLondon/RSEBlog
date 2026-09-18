@@ -156,6 +156,7 @@ PyData
 PyMC
 QGIS
 Quazi
+RCS
 RDF
 README
 RESTful
