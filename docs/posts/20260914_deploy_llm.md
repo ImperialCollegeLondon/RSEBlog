@@ -28,7 +28,7 @@ HX3 is Imperial College London's brand new HPC cluster dedicated entirely to GPU
 
 ### Accessing the HX3 Compute Cluster
 
-You can request access to this compute environment by reaching out to your department's RCS associates. Depending on your requirements, you may be allocated a personal 'project' workspace, with which you can submit compute workloads using your personal quota. Otherwise, you may instead be added to a department-specific project with its own compute quota which is shared with others in your department.
+You can request access to this compute environment by reaching out to [your department's RCS associates][RCS_associates]. Depending on your requirements, you may be allocated a personal 'project' workspace, with which you can submit compute workloads using your personal quota. Otherwise, you may instead be added to a department-specific project with its own compute quota which is shared with others in your department.
 
 Once appropriate access has been granted, you may proceed to the web interface of HX3, used to submit and manage workloads. For Imperial users, the web interface is accessible by pointing your web browser to <https://runai.hx3.hpc.ic.ac.uk>. NB you will need to either be connected directly to Imperial's local network or connected via the Zscaler proxy service to access the interface.
 
@@ -337,10 +337,11 @@ Your URL will look slightly different, depending on your project and workload na
 
 ## Final Notes
 
-Thanks for staying with us until the end! You should hopefully feel a little more confident about configuring and deploying your own instances of LLM models on HX3 and trying some new models. Before you leave us, though, just a few extra points that should be kept in mind whilst experimenting. First, please be a good citizen! Shut down your LLMs once you are done with them to free up resources for someone else. You can check which workloads are still running with `runai workload list`, and delete a workflow by running `runai workload delete <workload>`. Second, if doing anything more than testing a model for a short while, you are strongly advised to add token-based authentication to your model, to prevent others from accessing and abusing it. Reach out to your department's RCS associates if you are unsure whether you need it or require assistance in setting it up. Finally, if you are deploying the same model over and over, consider setting up persistent caching to prevent Run:ai from downloading and compiling the same model over and over, saving bandwidth and speeding up deployment significantly. And now, with that done, go and have some fun!
+Thanks for staying with us until the end! You should hopefully feel a little more confident about configuring and deploying your own instances of LLM models on HX3 and trying some new models. Before you leave us, though, just a few extra points that should be kept in mind whilst experimenting. First, please be a good citizen! Shut down your LLMs once you are done with them to free up resources for someone else. You can check which workloads are still running with `runai workload list`, and delete a workflow by running `runai workload delete <workload>`. Second, if doing anything more than testing a model for a short while, you are strongly advised to add token-based authentication to your model, to prevent others from accessing and abusing it. Reach out to [your department's RCS associates][RCS_associates] if you are unsure whether you need it or require assistance in setting it up. Finally, if you are deploying the same model over and over, consider setting up persistent caching to prevent Run:ai from downloading and compiling the same model over and over, saving bandwidth and speeding up deployment significantly. And now, with that done, go and have some fun!
 
 This post was written by a human.
 
+[RCS_associates]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/about/operational-structure/
 [RCS_offerings]: https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/service-offering/
 [bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [zsh]: https://en.wikipedia.org/wiki/Z_shell
