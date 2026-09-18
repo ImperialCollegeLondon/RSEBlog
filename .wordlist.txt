@@ -2,6 +2,7 @@ APIs
 Abdelrazek
 Abhishek
 AdrianDAlessandro
+Agentic
 Allard
 Alonso
 AlphaFold
@@ -22,6 +23,7 @@ Booch
 Bytewax
 CDN
 CFF
+CLI
 CPUs
 CRAN
 CSP
@@ -91,6 +93,7 @@ GraphQL
 Gueant
 H2O.ai
 HPC
+HX
 HackMD
 Hacktoberfest
 Haddad
@@ -110,6 +113,8 @@ Kaur
 Kensington
 Kirstie
 Kishan
+LLM
+LLM's
 LLMs
 LaTeX
 LabView
@@ -125,12 +130,16 @@ Mathjax
 Mirai
 MkDocs
 Modeling
+NIM
 Nafiul
 Nanjala
 NumFOCUS
+Nvidia
+Nvidia's
 O'Reilly
 OOP
 OSS
+OpenAI
 OptionPriceStrategy
 PDFs
 PDM
@@ -147,6 +156,7 @@ PyData
 PyMC
 QGIS
 Quazi
+RCS
 RDF
 README
 RESTful
@@ -166,6 +176,7 @@ Reproducibility
 RevealJS
 Roundtable
 Rumbaugh
+Runai
 SALC
 SPARQL
 SWMM
@@ -203,6 +214,7 @@ Vlissides
 Vries
 WHPC
 WSIMOD
+WSL
 Weblate
 Weinzierl
 Wiecki
@@ -213,8 +225,10 @@ YAML
 Yee
 Yu
 Zenodo
+Zscaler
 Zsh
 actioned
+agentic
 ai
 al
 alexdewar
@@ -291,6 +305,7 @@ numpy
 ons
 param
 parameterisation
+parsers
 pdfs
 performant
 plantuml
@@ -336,6 +351,7 @@ uk
 uname
 unconference
 usr
+vLLM
 walkthrough
 walkthroughs
 webform

@@ -1,0 +1,4 @@
+dirs:
+  - .
+ignorePatterns:
+  - pattern: '^https://.*\.hpc\.ic\.ac\.uk(?:/|$)'
