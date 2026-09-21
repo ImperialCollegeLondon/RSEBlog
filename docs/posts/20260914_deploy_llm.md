@@ -16,6 +16,8 @@ For better or worse, the age of the Large Language Model (LLM) has officially ar
 
 In this article, we explore the process of deploying a private LLM inference server using [Nvidia Run:ai][Run:ai] on Imperial College London's new [HX3 cluster][RCS_offerings] for AI computing. There are several reasons we might want such a thing. Perhaps we wish to automate some menial tasks that are too difficult to write scripts for, or use it as a personal code reviewer when using sensitive data or software. Maybe we want it to help us stay organised in our workplace, or monitor some critical system. Maybe we just want it to chat with. All of these are made possible with a private inference server once you understand how to use its Application Programming Interface (API), and understand how external tools like file readers are exposed to the LLM. All of this and more will be discussed in this guide, along with step-by-step instructions to follow along with, so keep reading if that sounds like your thing.
 
+<!-- more -->
+
 We begin with a short overview of the HX3 cluster and its usage, followed by a quick look over the software stack we will be utilising for our deployment, including its web and command line interfaces. Finally, we get down to business and deploy our own model onto the HX3 cluster and play around with it a little.
 
 ## Prerequisites
